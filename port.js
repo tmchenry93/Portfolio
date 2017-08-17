@@ -218,7 +218,7 @@ $(document).ready(function(){
 			demo: "https://tmchenry93.github.io/quiz/quiz",
 			thumb:"./artThumbnails/runner",
 			image: "./artThumbnails/runnersQuiz.png",
-			script: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+			script: "Javascript, JQuery, CSS, Bootstrap, HTML. \n This is a trivia assignment with multiple choice and a timer.  In this project, I was using Javascript and JQuery to control the html page based on time. \n  Being a competitive student-athlete for ten years, races started out against the people around you and ended with you against the clock.  So to me, there are no excuses.  ON YOUR MARK, GET SET, *BOOOOM* ",
 			artType: "Runner's Quiz"
 		}, 
 
@@ -227,7 +227,7 @@ $(document).ready(function(){
 			demo: "https://tmchenry93.github.io/gifs/buttons",
 			thumb:"./artThumbnails/gif",
 			image: "./artThumbnails/gifs.png",
-			script: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+			script: "API, Javascript, JQuery, HTML, CSS. \n With this application, I am using a Giphy API to dynamically create gifs based off of user input.  The user input creates buttons which allow the gifs to be about that specific topic. Clicking on the images will allow it to move and clicking it a second time will stop the motion.  In the demo you will start out with some of my personal favorites topics as button choices.  Create more buttons and see what comes back.  Enjoy!",
 			artType: "Gifs"
 		},
 
