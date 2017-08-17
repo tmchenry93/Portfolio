@@ -1,0 +1,396 @@
+body {
+	font-family: 'Raleway', sans-serif;
+}
+
+/* ----------------------------------------------------------------- */
+/* this section is styling the main landing page */
+	#mainContainer {
+		background-color: #fff;
+	}
+
+	#mainCover1 {
+		height: 100vh;
+		background-color: #fff;
+		z-index: 2;
+	} 
+
+	#mainCover2 {
+		height: 100vh;
+		background-color: #fff;
+		z-index: 2;
+	}
+
+	#mainCover3 {
+		height: 100vh;
+		background-color: #fff;
+		z-index: 2;
+	}
+
+/* ----------------------------------------------------------------- */
+/* these are the lines and everything within those i.e. links to about section and portfolio */
+	#line1 {
+		width: 100%;
+		height: 25px;
+		position: absolute;
+		right: 0;
+		top: 55%;
+		text-align: right;
+		padding-right: 1%;
+		background:  #f3b13d; /* For browsers that do not support gradients */
+	    background: -webkit-linear-gradient(-90deg,  #f3b13d, #d4d8d7); /* For Safari 5.1 to 6.0 */
+	    background: -o-linear-gradient(-90deg,  #f3b13d, #d4d8d7); /* For Opera 11.1 to 12.0 */
+	    background: -moz-linear-gradient(-90deg,  #f3b13d, #d4d8d7); /* For Firefox 3.6 to 15 */
+	    background: linear-gradient(-90deg,  #f3b13d, #d4d8d7); /* Standard syntax */
+	    z-index: 2;
+	}
+
+
+	#line2 {
+		width: 100%;
+		height: 25px;
+		position: absolute;
+		right: 0;
+		top: 50%;
+		text-align: right;
+		padding-right: 1%;
+		background:  #f3b13d; /* For browsers that do not support gradients */
+	    background: -webkit-linear-gradient(-45deg,  #f3b13d, #d4d8d7); /* For Safari 5.1 to 6.0 */
+	    background: -o-linear-gradient(-45deg,  #f3b13d, #d4d8d7); /* For Opera 11.1 to 12.0 */
+	    background: -moz-linear-gradient(-45deg,  #f3b13d, #d4d8d7); /* For Firefox 3.6 to 15 */
+	    background: linear-gradient(-45deg,  #f3b13d, #d4d8d7); /* Standard syntax */
+	    z-index: 2;
+	}
+
+	#line3 {
+		width: 100%;
+		height: 25px;
+		position: absolute;
+		right: 0;
+		top: 45%;
+		text-align: right;
+		padding-right: 1%;
+		background:  #f3b13d; /* For browsers that do not support gradients */
+	    background: -webkit-linear-gradient(-90deg,  #f3b13d, #d4d8d7); /* For Safari 5.1 to 6.0 */
+	    background: -o-linear-gradient(-90deg,  #f3b13d, #d4d8d7); /* For Opera 11.1 to 12.0 */
+	    background: -moz-linear-gradient(-90deg,  #f3b13d, #d4d8d7); /* For Firefox 3.6 to 15 */
+	    background: linear-gradient(-90deg,  #f3b13d, #d4d8d7); /* Standard syntax */
+	    z-index: 2;
+	}
+
+	#line4 {
+		width: 100%;
+		height: 25px;
+		position: absolute;
+		right: 0;
+		top: 40%;
+		text-align: left;
+		background-color: #000;
+		z-index: 2;
+		padding-left: 6.5%;
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	#line5 {
+		width: 100%;
+		height: 25px;
+		position: absolute;
+		right: 0;
+		top: 35%;
+		text-align: left;
+		background-color: #000;
+		padding-left: 6.5%;
+		z-index: 2;
+		display: inline-block;
+	}
+
+	#line6 {
+		width: 100%;
+		height: 25px;
+		position: absolute;
+		right: 0;
+		top: 55%;
+		text-align: right;
+		padding-right: 1%;
+		background:  #f3b13d; /* For browsers that do not support gradients */
+	    background: -webkit-linear-gradient(-90deg,  #d4d8d7, #f3b13d); /* For Safari 5.1 to 6.0 */
+	    background: -o-linear-gradient(-90deg,  #d4d8d7, #f3b13d); /* For Opera 11.1 to 12.0 */
+	    background: -moz-linear-gradient(-90deg,  #d4d8d7, #f3b13d); /* For Firefox 3.6 to 15 */
+	    background: linear-gradient(-90deg,  #d4d8d7, #f3b13d); /* Standard syntax */
+	    z-index: 2;
+	}
+
+	#line7 {
+		width: 100%;
+		height: 25px;
+		position: absolute;
+		right: 0;
+		top: 50%;
+		text-align: right;
+		padding-right: 1%;
+		background:  #f3b13d; /* For browsers that do not support gradients */
+	    background: -webkit-linear-gradient(-45deg,  #d4d8d7, #f3b13d); /* For Safari 5.1 to 6.0 */
+	    background: -o-linear-gradient(-45deg,  #d4d8d7, #f3b13d); /* For Opera 11.1 to 12.0 */
+	    background: -moz-linear-gradient(-45deg,  #d4d8d7, #f3b13d); /* For Firefox 3.6 to 15 */
+	    background: linear-gradient(-45deg,  #d4d8d7, #f3b13d); /* Standard syntax */
+	    z-index: 2;
+	}
+
+	#line8 {
+		width: 100%;
+		height: 25px;
+		position: absolute;
+		right: 0;
+		top: 45%;
+		text-align: right;
+		padding-right: 1%;
+		background:  #f3b13d; /* For browsers that do not support gradients */
+	    background: -webkit-linear-gradient(-90deg,  #d4d8d7, #f3b13d); /* For Safari 5.1 to 6.0 */
+	    background: -o-linear-gradient(-90deg,  #d4d8d7, #f3b13d); /* For Opera 11.1 to 12.0 */
+	    background: -moz-linear-gradient(-90deg,  #d4d8d7, #f3b13d); /* For Firefox 3.6 to 15 */
+	    background: linear-gradient(-90deg,  #d4d8d7, #f3b13d); /* Standard syntax */
+	    z-index: 2;
+	}
+
+/* ----------------------------------------------------------------- */
+/* these are the styling of the elements within the mainCoverContainer */
+	#introCover {
+		position: absolute;
+		height: 55%;
+	    top: 45%;
+	    left: 0;
+		z-index: 3;
+		padding-left: 6%;
+		padding-right: 6%;
+		padding-top: 1%;
+		padding-bottom: 1%;
+		margin-bottom: 2%;
+		overflow: scroll;
+		display: none;
+	}
+
+	#description {
+		z-index: 2;
+	}
+
+	#linking > a > img {
+		width: 7%;
+		height: auto;
+		margin-right: 1.5%;
+		display: inline-block;
+	}
+
+	#signature {
+	    top: 22.75%;
+	    position: absolute;
+	    left: 0;
+	    z-index: 1;
+	}
+
+	#folio {
+		color: #fff;
+		font-size: 85%;
+		margin-top: 4px;
+	}
+
+	#folio:hover {
+		color: darkgray;
+	}
+
+	#about {
+		color: #fff;
+		font-size: 85%;
+		margin-top: 4px;
+	} 
+
+	#about:hover {
+		color: darkgray;
+	}
+
+
+/* ----------------------------------------------------------------- */
+/* this section is styling the navigation bar on the portfolio page */
+	#navBar {
+		width: 100%;
+		height: 4vh;
+		margin-bottom: 1%;
+		display: none;
+		color: #fff;
+		background-color: #000;
+		z-index: 1;
+	}
+
+	#artLink {
+		color: #fff;
+		margin-top: 5.5px;
+	}
+
+	#codeLink {
+		color: #fff;
+		margin-top: 5.5px;
+	}
+
+	#artLink > a:hover {
+		text-decoration-line: none;
+		color: gray;
+	}
+
+	#codeLink > a:hover {
+		text-decoration-line: none;
+		color: gray;
+	}
+
+	#art > a:hover {
+		text-decoration-line: none;
+	}
+
+	#code > a:hover {
+		text-decoration-line: none;
+	}
+
+	.glyphicon-home {
+		color: #fff;
+		margin-top: 5.5px;
+	}
+
+	.glyphicon-home:hover {
+		color: #f3b13d;
+	}
+
+	#x{
+		color: #fff;
+		margin-top: 5.5px;
+	}
+
+	#x:hover {
+		color: red;
+	}
+
+
+/* ----------------------------------------------------------------- */
+/* this section is styling the portfolio page body */
+	#portfolioBody {
+		width: 100%;
+		height: 95vh;
+	    top: 5%;
+	    overflow: scroll;
+	    position: absolute;
+	    padding: 5%;
+		z-index: 0;
+	}
+
+	#portfolio {
+		width: 100%;
+		height: 95vh;
+		display: none;
+	    top: 5%;
+	 	z-index: 0;
+	}
+
+/* ----------------------------------------------------------------- */
+/* this section is styling the thumb container and the actual thumbnails */
+	#thumbContainer {
+		display: none;
+		height: 95vh;
+		z-index: 0;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	#artThumbs {
+		z-index: 0;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	#codeThumbs {
+		z-index: 0;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.codingScreenShots {
+		width: 50%;
+		height: auto;
+	}
+
+	.artThumbnails {
+		display: inline-block;
+		margin: 2.5%;
+		border-radius: 5%;
+		color: #000;
+		width: 15vw;
+	    height: 15vw;
+	    z-index: 0;
+	    position: relative;
+	    overflow: hidden;
+	    border: 1px solid #000;
+	}
+
+	.codeThumbnails {
+		display: inline-block;
+		margin: 2.5%;
+		overflow: hidden;
+		background-position: right;
+		border-radius: 5%;
+		color: #000;
+		width: 15vw;
+	    height: 15vw;
+	    z-index: 0;
+	    border: 1px solid #000;
+	}
+
+	.artThumbnails:hover {
+		border-width: 0;
+	}
+
+	.codeThumbnails:hover {
+		border-width: 0;
+	}
+
+
+/* ----------------------------------------------------------------- */
+/* this section is styling the portfolio page once the thumbs are clicked on and the work is being presented */
+	.title {
+		text-align: center;
+		margin: 3%;
+		font-size: 100%;
+	} 
+
+	.codeTitle {
+		font-size: 30px;
+	}
+
+	.projectDescription {
+		margin-top: 2.5%;
+	}
+
+	#portfolio > #carousel-example-generic {
+		max-height: 100%;  
+		max-width: 100%; 
+		position: absolute;  
+		top: 0;  
+		bottom: 0;  
+		left: 0;  
+		right: 0;  
+		margin: auto;
+	}
+
+	.carousel-control.left, .carousel-control.right {
+	    background-image: none;
+	}
+
+	.carousel-inner > .item {
+		height: 90vh;
+	}
+
+	.carousel-inner > .item img {
+		max-height: 100%;  
+		max-width: 100%; 
+		position: absolute;  
+		top: 0;  
+		bottom: 0;  
+		left: 0;  
+		right: 0;  
+		margin: auto;
+	}
