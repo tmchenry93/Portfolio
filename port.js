@@ -46,6 +46,7 @@ $(document).ready(function(){
 			index: 1,
 			thumb: "./artThumbnails/typeThumb", 
 			images: ["./typography/beautifulLogo.jpg", "./typography/irishRedAle.png", "./typography/paradise.jpg", "./typography/winterSpiceAle.jpg"],
+			title: [],
 			artType: "hand drawn font"
 		},
 
@@ -53,7 +54,7 @@ $(document).ready(function(){
 			index: 2,
 			thumb: "./abstract/03.jpg", 
 			images: ["./abstract/01.jpg", "./abstract/03.jpg", "./abstract/iHatePrettyThings"],
-			title: ["Untitled", "Afternoon in the park", "I Hate Pretty Things" ],
+			title: ["Illusions at Sea", "Afternoon in the park", "I Hate Pretty Things" ],
 			artType: "abstract"
 		}, 
 
@@ -69,6 +70,7 @@ $(document).ready(function(){
 			index: 4,
 			thumb: "./patterns/patternsplantfloral.jpg", 
 			images: ["./patterns/charlotte.jpg", "./patterns/plants2.png", "./patterns/patternsplantfloral.jpg"],
+			title: [],
 			artType: "patterns"
 		}
 	];
@@ -148,6 +150,7 @@ $(document).ready(function(){
 
 			var mainCaption = $("<div>");
 			mainCaption.addClass("carousel-caption");
+			mainCaption.append(art[artNumber].title[0]);
 			mainItem.append(mainCaption);
 
 		for (var i = 1; i < art[artNumber].images.length; i++){	
@@ -162,6 +165,7 @@ $(document).ready(function(){
 
 			var caption = $("<div>");
 			caption.addClass("carousel-caption " + i);
+			caption.append(art[artNumber].title[i]);
 			item.append(caption)
 		}
 
