@@ -5,7 +5,7 @@ $(document).ready(function(){
 		$("#mainContainer").hide("blind", 1500);
 		$("#portfolioBody").show("fade", 2500);
 		$("#navBar").show("fade", 2000);
-		$("#thumbContainer").show("fade", 2500);
+		$("#thumbContainer").show("fade");
 	});
 
 	// this function shows the bio section
@@ -96,7 +96,7 @@ $(document).ready(function(){
 
 	// this function creates the thumbnails
 	function createThumbnails(){
-		$("#thumbContainer").show("fade", 2500);
+		// $("#thumbContainer").show("fade", 2500);
 
 		for (var i= 0; i< art.length; i++){
 			var displaySquare = $("<div>");
