@@ -3,8 +3,8 @@ $(document).ready(function(){
 	// this function opens up the portfolio page
 	$("#folio").click(function(){
 		$("#mainContainer").hide("blind", 1500);
-		$("#portfolioBody").show("fade", 2500);
-		$("#navBar").show("fade", 2000);
+		$("#portfolioBody").show("fade", 1500);
+		$("#navBar").show("fade", 1000);
 		$("#thumbContainer").show("fade");
 	});
 
@@ -17,7 +17,7 @@ $(document).ready(function(){
 	$("#contact").click(function(){
 		$("#contactInfo").show("blind", 1500);
 		$("#mainContainer").hide("blind", 1500);
-		$("#contactNavBar").show("fade", 2000);
+		$("#contactNavBar").show("fade", 1000);
 	});
 
 	// this function exits out of the carousel so you can choose another frame
@@ -29,12 +29,12 @@ $(document).ready(function(){
 
 	// this function brings us back to the main page 
 	$(".glyphicon-home").click(function(){
-		$("#mainContainer").show("blind", 1500);
+		$("#mainContainer").show("blind", 1000);
 		$("#portfolioBody").hide("fade", 2000);
 		$("#contactInfo").hide("fade", 2000);
 		$("#portfolio").hide();
 		$("#portfolio").empty();
-		$("#thumbContainer").hide("fade", 4000);
+		$("#thumbContainer").hide("fade");
 		$("#contactNavBar").hide();
 		$("#navBar").hide();
 	});
@@ -96,7 +96,6 @@ $(document).ready(function(){
 
 	// this function creates the thumbnails
 	function createThumbnails(){
-		// $("#thumbContainer").show("fade", 2500);
 
 		for (var i= 0; i< art.length; i++){
 			var displaySquare = $("<div>");
@@ -228,7 +227,7 @@ $(document).ready(function(){
 			demo: "https://tmchenry93.github.io/HelloWorld",
 			thumb:"./artThumbnails/hellologo",
 			image: "./artThumbnails/helloWorld.png",
-			script: "<p style='font-size: 16px; font-weight: bolder;'>API, Google Firebase, Javascript, JQuery, Bootstrap, CSS, HTML</p>",
+			script: "<p style='font-size: 16px; font-weight: bolder;'>API, Google Firebase, Javascript, JQuery, Bootstrap, CSS, HTML</p><p>What is the first thing we do when planning a trip?  Search for things to do.  The first thing that pop up in our search engine are tourist guides and generic reviews.  Hello World was created for travelers of all backgrounds to share experiences and places in a journal entry.  You can get to know your fellow travelers and their stories around the country by searching a particular city or add your own experience to the communual journal.</p>",
 			artType: "Hello World"
 		}, 
 
@@ -255,7 +254,7 @@ $(document).ready(function(){
 			demo: "https://tmchenry93.github.io/TrainProject/train",
 			thumb:"./artThumbnails/train", 
 			image: "./artThumbnails/train.png",
-			script: "<p style='font-size: 16px; font-weight: bolder;'>Google Firebase, MomentJS, Javascript, JQuery, Bootstrap, CSS, HTML</p>",
+			script: "<p style='font-size: 16px; font-weight: bolder;'>Google Firebase, MomentJS, Javascript, JQuery, Bootstrap, CSS, HTML</p><p>This train schedule website takes user input to create a new train.  With the information taken, MomentJS is used to calculate the train's arrival time and how many minutes the train is away in real time.",
 			artType: "Train Project"
 		}
 	];
@@ -269,7 +268,6 @@ $(document).ready(function(){
 			displaySquare.append("<div class='title'>" + code[i].artType + "</div>");
 			displaySquare.append("<img src='" + code[i].thumb + "'/>");
 			displaySquare.attr("attributeNumber", i);
-			// displaySquare.attr("thumbName", art[i].artType);
 			$("#codeThumbs").append(displaySquare).show("fade", 2500);
 		}
 	};
