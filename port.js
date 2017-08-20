@@ -2,7 +2,7 @@ $(document).ready(function(){
 
 	// this function opens up the portfolio page
 	$("#folio").click(function(){
-		$("#mainContainer").toggle("blind", 1500);
+		$("#mainContainer").hide("blind", 1500);
 		$("#portfolioBody").show("fade", 2500);
 		$("#navBar").show("fade", 2000);
 		$("#thumbContainer").show("fade", 2500);
@@ -11,6 +11,13 @@ $(document).ready(function(){
 	// this function shows the bio section
 	$("#about").click(function(){
 		$("#introCover").toggle("fade");
+	});
+
+	// this function shows the contact section
+	$("#contact").click(function(){
+		$("#contactInfo").show("blind", 1500);
+		$("#mainContainer").hide("blind", 1500);
+		$("#contactNavBar").show("fade", 2000);
 	});
 
 	// this function exits out of the carousel so you can choose another frame
@@ -24,10 +31,18 @@ $(document).ready(function(){
 	$(".glyphicon-home").click(function(){
 		$("#mainContainer").show("blind", 1500);
 		$("#portfolioBody").hide("fade", 2000);
+		$("#contactInfo").hide("fade", 2000);
 		$("#portfolio").hide();
 		$("#portfolio").empty();
-		$("#thumbContainer").show("fade", 4000);
+		$("#thumbContainer").hide("fade", 4000);
+		$("#contactNavBar").hide();
 		$("#navBar").hide();
+	});
+
+	// this button makes the resume div appear
+	// this is a toggle class on the div
+	$("#viewResume").click(function(){
+		$("#resume").toggle("fade");
 	});
 
 	// ---------------------------------------------------------------------
@@ -213,7 +228,7 @@ $(document).ready(function(){
 			demo: "https://tmchenry93.github.io/HelloWorld",
 			thumb:"./artThumbnails/hellologo",
 			image: "./artThumbnails/helloWorld.png",
-			script: "",
+			script: "<p style='font-size: 16px; font-weight: bolder;'>API, Google Firebase, Javascript, JQuery, Bootstrap, CSS, HTML</p>",
 			artType: "Hello World"
 		}, 
 
@@ -222,7 +237,7 @@ $(document).ready(function(){
 			demo: "https://tmchenry93.github.io/quiz/quiz",
 			thumb:"./artThumbnails/runner",
 			image: "./artThumbnails/runnersQuiz.png",
-			script: "Javascript, JQuery, CSS, Bootstrap, HTML. \n This is a trivia assignment with multiple choice and a timer.  In this project, I was using Javascript and JQuery to control the html page based on time. \n  Being a competitive student-athlete for ten years, races started out against the people around you and ended with you against the clock.  So to me, there are no excuses.  ON YOUR MARK, GET SET, *BOOOOM* ",
+			script: "<p style='font-size: 16px; font-weight: bolder;'>Javascript, JQuery, CSS, Bootstrap, HTML.</p><p>This is a trivia assignment with multiple choice and a timer.  In this project, I was using Javascript and JQuery to control the html page based on time.  Being a competitive student-athlete for ten years, races started out against the people around you and ended with you against the clock.  So to me, there are no excuses.  ON YOUR MARK, GET SET, *BOOOOM* </p>",
 			artType: "Runner's Quiz"
 		}, 
 
@@ -231,7 +246,7 @@ $(document).ready(function(){
 			demo: "https://tmchenry93.github.io/gifs/buttons",
 			thumb:"./artThumbnails/gif",
 			image: "./artThumbnails/gifs.png",
-			script: "API, Javascript, JQuery, HTML, CSS. \n With this application, I am using a Giphy API to dynamically create gifs based off of user input.  The user input creates buttons which allow the gifs to be about that specific topic. Clicking on the images will allow it to move and clicking it a second time will stop the motion.  In the demo you will start out with some of my personal favorites topics as button choices.  Create more buttons and see what comes back.  Enjoy!",
+			script: "<p style='font-size: 16px; font-weight: bolder;'>API, Javascript, JQuery, HTML, CSS.</p><p>With this application, I am using a Giphy API to dynamically create gifs based off of user input.  The user input creates buttons which allow the gifs to be about that specific topic. Clicking on the images will allow it to move and clicking it a second time will stop the motion.  In the demo you will start out with some of my personal favorites topics as button choices.  Create more buttons and see what comes back.  Enjoy!</p>",
 			artType: "Gifs"
 		},
 
@@ -240,7 +255,7 @@ $(document).ready(function(){
 			demo: "https://tmchenry93.github.io/TrainProject/train",
 			thumb:"./artThumbnails/train", 
 			image: "./artThumbnails/train.png",
-			script: "",
+			script: "<p style='font-size: 16px; font-weight: bolder;'>Google Firebase, MomentJS, Javascript, JQuery, Bootstrap, CSS, HTML</p>",
 			artType: "Train Project"
 		}
 	];
