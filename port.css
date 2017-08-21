@@ -7,6 +7,9 @@ body {
 /* this section is styling the main landing page */
 	#mainContainer {
 		background-color: #fff;
+		/*border-width: 25px 15px 0 0;
+		border-color: #000;
+		border-style: solid;*/
 	}
 
 	#mainCover1 {
@@ -118,7 +121,6 @@ body {
 		z-index: 2;
 		display: inline-block;
 	}
-
 
 	#line7 {
 		width: 100%;
