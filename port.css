@@ -7,15 +7,15 @@ body {
 /* this section is styling the main landing page */
 	#mainContainer {
 		background-color: #fff;
-		/*border-width: 25px 15px 0 0;
-		border-color: #000;
-		border-style: solid;*/
 	}
 
 	#mainCover1 {
 		height: 100vh;
 		background-color: #fff;
 		z-index: 2;
+		border-width: 0 1px 0 0;
+		border-color: #000;
+		border-style: solid;
 	} 
 
 	#mainCover2 {
@@ -28,6 +28,9 @@ body {
 		height: 100vh;
 		background-color: #fff;
 		z-index: 2;
+		border-width: 0 0 0 5px;
+		border-color: #000;
+		border-style: solid;
 	}
 
 
@@ -96,6 +99,10 @@ body {
 		vertical-align: middle;
 	}
 
+	/*#line4:hover {
+		background-color: lightgray;
+	}*/
+
 	#line5 {
 		width: 100%;
 		height: 25px;
@@ -109,6 +116,10 @@ body {
 		display: inline-block;
 	}
 
+	/*#line5:hover {
+		background-color: lightgray;
+	}
+*/
 	#line6 {
 		width: 100%;
 		height: 25px;
@@ -121,6 +132,10 @@ body {
 		z-index: 2;
 		display: inline-block;
 	}
+
+	/*#line6:hover {
+		background-color: lightgray;
+	}*/
 
 	#line7 {
 		width: 100%;
@@ -200,7 +215,7 @@ body {
 	#signature {
 	    top: 17.5%;
 	    position: absolute;
-	    left: 0;
+	    left: 2%;
 	    z-index: 1;
 	}
 
@@ -211,7 +226,7 @@ body {
 	}
 
 	#folio:hover {
-		color: darkgray;
+		color: gray;
 	}
 
 	#about {
@@ -221,7 +236,7 @@ body {
 	} 
 
 	#about:hover {
-		color: darkgray;
+		color: gray;
 	}
 
 	#contact {
@@ -231,7 +246,7 @@ body {
 	}
 
 	#contact:hover {
-		color: darkgray;
+		color: gray;
 	}
 
 
@@ -396,11 +411,11 @@ body {
 	}
 
 	.artThumbnails:hover {
-		border-width: 0;
+		border-width: 2.5px;
 	}
 
 	.codeThumbnails:hover {
-		border-width: 0;
+		border-width: 2.5px;
 	}
 
 
