@@ -60,7 +60,7 @@ $(document).ready(function(){
 		{
 			index: 1,
 			thumb: "./artThumbnails/typeThumb", 
-			images: ["./typography/beautifulLogo.jpg", "./typography/irishRedAle.png", "./typography/paradise.jpg", "./typography/winterSpiceAle.jpg"],
+			images: ["./typography/beautifulLogo.jpg", "./typography/irishRedAle.png", "./typography/paradise.png", "./typography/winterSpiceAle.jpg"],
 			title: [],
 			artType: "hand drawn font"
 		},
@@ -68,8 +68,8 @@ $(document).ready(function(){
 		{
 			index: 2,
 			thumb: "./abstract/03.jpg", 
-			images: ["./abstract/01.jpg", "./abstract/03.jpg", "./abstract/iHatePrettyThings"],
-			title: ["Illusions at Sea", "Afternoon in the park", "I Hate Pretty Things" ],
+			images: ["./abstract/01.jpg", "./abstract/03.jpg", "./abstract/iHatePrettyThings", "./abstract/brainChild.jpg"],
+			title: ["Illusions at Sea", "Afternoon in the park", "I Hate Pretty Things", "Brainchild" ],
 			artType: "abstract"
 		}, 
 
@@ -78,13 +78,13 @@ $(document).ready(function(){
 			thumb: "./logos/mchenryTeam.jpg",
 			images: ["./logos/ACP", "./logos/mchenryTeam.jpg"],
 			title: ["Photography Logo", "Real Estate Logo"],
-			artType: "logos"
+			artType: "vector illustrations"
 		},
 
 		{	
 			index: 4,
 			thumb: "./patterns/patternsplantfloral.jpg", 
-			images: ["./patterns/charlotte.jpg", "./patterns/plants2.png", "./patterns/patternsplantfloral.jpg"],
+			images: ["./patterns/charlotte.jpg", "./patterns/patternsplantfloral.jpg", "./patterns/plantscopy.png"],
 			title: [],
 			artType: "patterns"
 		}
@@ -255,7 +255,7 @@ $(document).ready(function(){
 			thumb:"./artThumbnails/train", 
 			image: "./artThumbnails/train.png",
 			script: "<p style='font-size: 16px; font-weight: bolder;'>Google Firebase, MomentJS, Javascript, JQuery, Bootstrap, CSS, HTML</p><p>This train schedule website takes user input to create a new train.  With the information taken, MomentJS is used to calculate the train's arrival time and how many minutes the train is away in real time.",
-			artType: "Train Project"
+			artType: "Train Schedule"
 		}
 	];
 
