@@ -76,8 +76,8 @@ $(document).ready(function(){
 		{ 
 			index: 3,
 			thumb: "./logos/mchenryTeam.jpg",
-			images: ["./logos/ACP", "./logos/mchenryTeam.jpg"],
-			title: ["Photography Logo", "Real Estate Logo"],
+			images: ["./logos/ACP", "./logos/mchenryTeam.jpg", "./logos/ESO.jpg"],
+			title: ["Photography Logo", "Real Estate Logo", "Endurance Sports Outfitters"],
 			artType: "vector illustrations"
 		},
 
