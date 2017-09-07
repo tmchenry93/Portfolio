@@ -25,6 +25,10 @@ $(document).ready(function(){
 		$("#portfolio").hide();
 		$("#portfolio").empty();
 		$("#thumbContainer").show();
+		document.getElementById("x").style.color = "black";
+		document.getElementById("artLink").style.color = "white";
+		document.getElementById("codeLink").style.color = "white";
+
 	});
 
 	// this function brings us back to the main page 
@@ -116,6 +120,11 @@ $(document).ready(function(){
 	// ---------------------------------------------------------------------
 	// this function will allow the images to scroll within the mainArtDiv
 	$(".artThumbnails").click(function(){
+
+		document.getElementById("x").style.color = "white";
+		document.getElementById("artLink").style.color = "black";
+		document.getElementById("codeLink").style.color = "black";
+
 		$this = $(this);
 		var artNumber = $(this).attr("attributeNumber");
 
@@ -280,6 +289,9 @@ $(document).ready(function(){
 	// ---------------------------------------------------------------------
 	// this function will allow the code body to appear with an image and a demo button 
 	$(".codeThumbnails").click(function(){
+
+		document.getElementById("x").style.color = "white";
+
 		$this = $(this);
 		var codeNumber = $(this).attr("attributeNumber");
 
