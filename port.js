@@ -55,9 +55,9 @@ $(document).ready(function(){
 	var art = [
 		{	
 			index: 0,
-			thumb: "./figures/marcus.jpg", 
-			images: ["./figures/image2.png", "./figures/marcus.jpg", "./figures/sketch.jpg"],
-			title: ["3-hour Study", "Serenity", "30-min Study" ],
+			thumb: "", 
+			images: ["./figures/sketch.jpg"],
+			title: ["30-min Study"],
 			artType: "figures"
 		},
 
@@ -79,18 +79,26 @@ $(document).ready(function(){
 
 		{ 
 			index: 3,
-			thumb: "./logos/mchenryTeam.jpg",
-			images: ["./logos/ACP", "./logos/mchenryTeam.jpg", "./logos/ESO.jpg"],
-			title: ["Photography Logo", "Real Estate Logo", "Endurance Sports Outfitters"],
+			thumb: "./logos/ACP",
+			images: ["./logos/ACP", "./logos/ESOmockup.jpg"],
+			title: ["Photography Logo", "Endurance Sports Outfitters"],
 			artType: "vector illustrations"
 		},
 
 		{	
 			index: 4,
-			thumb: "./patterns/patternsplantfloral.jpg", 
-			images: ["./patterns/charlotte.jpg", "./patterns/patternsplantfloral.jpg", "./patterns/plantscopy.png"],
+			thumb: "./patterns/charlotte.jpg", 
+			images: ["./patterns/charlotte", "./patterns/plantfloral.png", "./patterns/plantPattern.png"],
 			title: [],
 			artType: "patterns"
+		},
+		 
+		{
+			index: 5,
+			thumb: "./penguinCover.jpg",
+			images: ["./layouts/WPCF.jpg", "./layouts/adventureComic.png"],
+			title: ["Why Penguins Can't Fly (Published)", "Comic Cover"],
+			artType: "Layouts"
 		}
 	];
 
