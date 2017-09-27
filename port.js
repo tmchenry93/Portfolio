@@ -8,16 +8,11 @@ $(document).ready(function(){
 		$("#thumbContainer").show("fade");
 	});
 
-	// this function shows the bio section
-	$("#about").click(function(){
-		$("#introCover").toggle("fade");
-	});
-
 	// this function shows the contact section
-	$("#contact").click(function(){
-		$("#contactInfo").show("blind", 1500);
+	$("#aboutTab").click(function(){
+		$("#aboutInfo").show("blind", 1500);
 		$("#mainContainer").hide("blind", 1500);
-		$("#contactNavBar").show("fade", 1000);
+		$("#aboutNavBar").show("fade", 1000);
 	});
 
 	// this function exits out of the carousel so you can choose another frame
@@ -35,11 +30,11 @@ $(document).ready(function(){
 	$(".glyphicon-home").click(function(){
 		$("#mainContainer").show("blind", 1000);
 		$("#portfolioBody").hide("fade", 2000);
-		$("#contactInfo").hide("fade", 2000);
+		$("#aboutInfo").hide("fade", 2000);
 		$("#portfolio").hide();
 		$("#portfolio").empty();
 		$("#thumbContainer").hide("fade");
-		$("#contactNavBar").hide();
+		$("#aboutNavBar").hide();
 		$("#navBar").hide();
 	});
 
@@ -95,7 +90,7 @@ $(document).ready(function(){
 		 
 		{
 			index: 5,
-			thumb: "./penguinCover.jpg",
+			thumb: "./layouts/penguinCover.jpg",
 			images: ["./layouts/WPCF.jpg", "./layouts/adventureComic.png"],
 			title: ["Why Penguins Can't Fly (Published)", "Comic Cover"],
 			artType: "Layouts"
@@ -333,4 +328,6 @@ $(document).ready(function(){
 	});
 
 });
+
+// $(document).on("onmouseover", ".artThumbnails", imageEvent);
 

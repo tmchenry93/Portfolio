@@ -14,11 +14,34 @@ body {
 	font-family: 'Raleway', sans-serif;
 }
 
+@keyframes dash {
+	to {
+		stroke-dashoffset: 0;
+	}
+}
+
+.sign {
+	stroke-dasharray: 1000;
+	stroke-dashoffset: 1000;
+	animation: dash 2s linear forwards;
+}
 
 /* ----------------------------------------------------------------- */
 /* this section is styling the main landing page */
 	#mainContainer {
-		background-color: #fff;
+		/*background-color: #fff;*/
+	}
+
+	#background {
+		height: 100vh;
+		width: 100%;
+		position: absolute;
+		z-index: 0;
+		background: #fff/* For browsers that do not support gradients */
+	    background: -webkit-linear-gradient(-90deg, #fff, #d4d8d7); /* For Safari 5.1 to 6.0 */
+	    background: -o-linear-gradient(-90deg, #fff, #d4d8d7); /* For Opera 11.1 to 12.0 */
+	    background: -moz-linear-gradient(-90deg, #fff, #d4d8d7); /* For Firefox 3.6 to 15 */
+	    background: linear-gradient(-90deg, #fff, #d4d8d7); /* Standard syntax */
 	}
 
 	#mainCover1 {
@@ -42,28 +65,13 @@ body {
 
 /* ----------------------------------------------------------------- */
 /* these are the lines and everything within those i.e. links to about section, portfolio section and contact section */
-	#line1 {
-		width: 100%;
-		height: 25px;
-		position: absolute;
-		left: 0;
-		top: 35%;
-		text-align: right;
-		padding-right: 1%;
-		background:  #f3b13d; /* For browsers that do not support gradients */
-	    background: -webkit-linear-gradient(-90deg,  #f3b13d, #d4d8d7); /* For Safari 5.1 to 6.0 */
-	    background: -o-linear-gradient(-90deg,  #f3b13d, #d4d8d7); /* For Opera 11.1 to 12.0 */
-	    background: -moz-linear-gradient(-90deg,  #f3b13d, #d4d8d7); /* For Firefox 3.6 to 15 */
-	    background: linear-gradient(-90deg,  #f3b13d, #d4d8d7); /* Standard syntax */
-	    z-index: 2;
-	}
 
 	#line2 {
 		width: 100%;
-		height: 25px;
+		height: 3%;
 		position: absolute;
 		left: 0;
-		top: 30%;
+		top: 42.5%;
 		text-align: right;
 		padding-right: 1%;
 		background:  #f3b13d; /* For browsers that do not support gradients */
@@ -76,10 +84,10 @@ body {
 
 	#line3 {
 		width: 100%;
-		height: 25px;
+		height: 3%;
 		position: absolute;
 		left: 0;
-		top: 40%;
+		top: 47.5%;
 		text-align: right;
 		padding-right: 1%;
 		background:  #f3b13d; /* For browsers that do not support gradients */
@@ -92,10 +100,10 @@ body {
 
 	#line4 {
 		width: 100%;
-		height: 25px;
+		height: 3%;
 		position: absolute;
 		right: 0;
-		top: 35%;
+		top: 50%;
 		text-align: left;
 		background-color: #000;
 		z-index: 2;
@@ -105,28 +113,29 @@ body {
 		/* This section calls the slideInFromLeft animation we defined above */
 		animation: 2.25s ease-out 0s 1 slideInFromLeft;
 	}
-
-	#line5 {
+	
+	#line10 {
 		width: 100%;
-		height: 25px;
+		height: 3%;
 		position: absolute;
 		right: 0;
-		top: 30%;
-		text-align: left;
-		background-color: #000;
-		padding-left: 6.5%;
-		z-index: 2;
-		display: inline-block;
-		/* This section calls the slideInFromLeft animation we defined above */
-		animation: 2s ease-out 0s 1 slideInFromLeft;
+		top: 52.5%;
+		text-align: right;
+		padding-right: 1%;
+		background:  #f3b13d; /* For browsers that do not support gradients */
+	    background: -webkit-linear-gradient(-90deg, #f3b13d, #d4d8d7);  For Safari 5.1 to 6.0 
+	    background: -o-linear-gradient(-90deg, #f3b13d, #d4d8d7); /* For Opera 11.1 to 12.0 */
+	    background: -moz-linear-gradient(-90deg, #f3b13d, #d4d8d7); /* For Firefox 3.6 to 15 */
+	    background: linear-gradient(-90deg, #f3b13d, #d4d8d7); /* Standard syntax */
+	  	z-index: 2;
 	}
 
 	#line6 {
 		width: 100%;
-		height: 25px;
+		height: 3%;
 		position: absolute;
 		right: 0;
-		top: 40%;
+		top: 45%;
 		text-align: left;
 		background-color: #000;
 		padding-left: 6.5%;
@@ -138,10 +147,10 @@ body {
 
 	#line7 {
 		width: 100%;
-		height: 25px;
+		height: 3%;
 		position: absolute;
 		right: 0;
-		top: 35%;
+		top: 42.5%;
 		text-align: right;
 		padding-right: 1%;
 		background:  #f3b13d; /* For browsers that do not support gradients */
@@ -149,15 +158,15 @@ body {
 	    background: -o-linear-gradient(-90deg,  #d4d8d7, #f3b13d); /* For Opera 11.1 to 12.0 */
 	    background: -moz-linear-gradient(-90deg,  #d4d8d7, #f3b13d); /* For Firefox 3.6 to 15 */
 	    background: linear-gradient(-90deg,  #d4d8d7, #f3b13d); /* Standard syntax */
-	    z-index: 2;
+	  	z-index: 2;
 	}
 
 	#line8 {
 		width: 100%;
-		height: 25px;
+		height: 3%;
 		position: absolute;
 		right: 0;
-		top: 30%;
+		top: 47.5%;
 		text-align: right;
 		padding-right: 1%;
 		background:  #f3b13d; /* For browsers that do not support gradients */
@@ -170,10 +179,10 @@ body {
 
 	#line9 {
 		width: 100%;
-		height: 25px;
+		height: 3%;
 		position: absolute;
 		right: 0;
-		top: 40%;
+		top: 52.5%;
 		text-align: right;
 		padding-right: 1%;
 		background:  #f3b13d; /* For browsers that do not support gradients */
@@ -208,21 +217,49 @@ body {
 
 	#description {
 		z-index: 2;
-		/*overflow: scroll;*/
+		text-align: left;
+		position: absolute;
+		left: 10%;
+		top: 22.5%;
+	}
+
+	#contact {
+		position: absolute;
+		right: 5%;
+		text-align: right;
+	}
+
+	#contactTitle {
+		position: absolute;
+		right: 10%;
+	}
+
+	#information {
+		position: absolute;
+		right: 5%;
+		text-align: right;
+		top: 22.5%;
 	}
 
 	#linking > a > img {
-		width: 4%;
+		width: 10%;
 		height: auto;
 		margin-right: 1.5%;
 		display: inline-block;
 	}
 
 	#signature {
-	    top: 17.5%;
 	    position: absolute;
+	    top: 22.5%;
 	    left: 4%;
-	    z-index: 1;
+	    z-index: 2;
+	}
+
+	#sign {
+		top: 10%;
+		position: absolute;
+		width: 90%;
+		z-index: 2;
 	}
 
 	#folio {
@@ -245,14 +282,10 @@ body {
 		color: gray;
 	}
 
-	#contact {
+	#aboutTab {
 		color: #fff;
 		font-size: 85%;
 		margin-top: 4px;
-	}
-
-	#contact:hover {
-		color: gray;
 	}
 
 
@@ -335,7 +368,7 @@ body {
 
 /* ----------------------------------------------------------------- */
 /* this section is styling the contact page body */
-	#contactInfo {
+	#aboutInfo {
 		width: 100%;
 		height: 95vh;
 		top: 5%;
@@ -346,7 +379,7 @@ body {
 		display: none;
 	}
 
-	#contactNavBar {
+	#aboutNavBar {
 		width: 100%;
 		height: 4vh;
 		margin-bottom: 1%;
@@ -356,9 +389,7 @@ body {
 		z-index: 1;
 	}
 
-	#resume {
-		display: none;
-	}
+
 /* ----------------------------------------------------------------- */
 /* this section is styling the thumb container and the actual thumbnails */
 	#thumbContainer {
@@ -391,12 +422,12 @@ body {
 		margin: 2.5%;
 		border-radius: 5%;
 		color: #000;
-		width: 15vw;
-	    height: 15vw;
+		width: 12.5vw;
+	    height: 12.5vw;
 	    z-index: 0;
 	    position: relative;
 	    overflow: hidden;
-	    box-shadow: 7.5px 7.5px 2.5px #888888;
+	    border: .25px solid #000;
 	}
 
 	.codeThumbnails {
@@ -406,18 +437,18 @@ body {
 		background-position: right;
 		border-radius: 5%;
 		color: #000;
-		width: 15vw;
-	    height: 15vw;
+	    width: 12.5vw;
+	    height: 12.5vw;
 	    z-index: 0;
-	    box-shadow: 7.5px 7.5px 2.5px #888888;
+	    border: .25px solid #000;
 	}
 
 	.artThumbnails:hover {
-		border: 1px solid #000;
+		box-shadow: 7.5px 7.5px 2.5px #888888;
 	}
 
 	.codeThumbnails:hover {
-		border: 1px solid #000;
+		box-shadow: 7.5px 7.5px 2.5px #888888;
 	}
 
 
@@ -425,8 +456,9 @@ body {
 /* this section is styling the portfolio page once the thumbs are clicked on and the work is being presented */
 	.title {
 		text-align: center;
-		margin: 3%;
 		font-size: 100%;
+		margin: auto;
+		left: 10%;
 	} 
 
 	.codeTitle {
@@ -451,7 +483,7 @@ body {
 	
 	.carousel-caption {
 		color: #000;
-		background:  #fff; /* For browsers that do not support gradients */
+		background: #fff; /* For browsers that do not support gradients */
 	}
 
 	.carousel-control.left, .carousel-control.right {
@@ -473,3 +505,5 @@ body {
 		right: 0;  
 		margin: auto;
 	}
+
+
