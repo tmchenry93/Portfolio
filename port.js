@@ -294,6 +294,8 @@ $(document).ready(function(){
 	$(".codeThumbnails").click(function(){
 
 		document.getElementById("x").style.color = "white";
+		document.getElementById("artLink").style.color = "black";
+		document.getElementById("codeLink").style.color = "black";
 
 		$this = $(this);
 		var codeNumber = $(this).attr("attributeNumber");
