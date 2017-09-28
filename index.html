@@ -23,7 +23,6 @@
 <!-- /////////////////////////////////////////////////////////////////////// -->
 <!-- this is where the home page layout is constructed -->
 <div id="mainContainer" class="row">
-	<div id="background"></div>
 
 	<div id="mainCover1" class="col-xs-4 col-sm-4 col-md-5">
 		<div id="line1"></div>
@@ -98,7 +97,6 @@
 		</div>
 
 	</div>
-	</div>
 	<!-- /////////////////////////////////////////////////////////////////////// -->
 
 	<!-- /////////////////////////////////////////////////////////////////////// -->
@@ -107,27 +105,43 @@
 	<div id="portfolioBody" class="row">
 		<div class="col-xs-12 col-sm-12 col-md-12">
 			
-			<!-- <center> -->
 			<div id="thumbContainer">
-			<div style="font-size: 30px;">
-				Portfolio
+
+				<div style="font-size: 32.5px; height: 5vh;">
+					Portfolio
+				</div>
+		
+				<hr>
+				
+				<a name="artPortfolio">
+
+					<div id="art" style="font-size: 20px; color: darkgray; height: 7.5vh;">
+						Art
+					</div>
+
+				</a>
+
+				<!-- <span class="glyphicon glyphicon-menu-left"></span> -->
+				<div style="height: 25vh; width: 100%; overflow-x: auto; white-space: nowrap;" id="artThumbs"></div>
+				<!-- <span class="glyphicon glyphicon-menu-right"></span> -->
+				
+				<hr>
+
+				<a name="codePortfolio">
+
+					<div id="code" style="font-size: 20px; color: darkgray; height: 7.5vh;">
+						Web Design + Development
+					</div>
+
+				</a>
+
+				<div style="height: 25vh; width: 100%; overflow-x: auto; white-space: nowrap;" id="codeThumbs"></div>
+
 			</div>
 	
-			<hr>
+			<div id="portfolio"></div>
+		</div>
 
-				<a name="artPortfolio"><div id="art" style="font-size: 20px; color: darkgray;">Art</div></a>
-				<div id="artThumbs"></div>
-			
-			<hr>
-
-				<a name="codePortfolio"><div id="code" style="font-size: 20px; color: darkgray;">Web Design + Development</div></a>
-				<div id="codeThumbs"></div>
-			</div>
-			</div>
-		
-				<div id="portfolio"></div>
-
-			<!-- </center> -->
 	</div>
 	</center>
 	<!-- /////////////////////////////////////////////////////////////////////// -->
@@ -154,31 +168,35 @@
 	<!-- this is the Bio and contact page body -->
 	<div id="aboutInfo" class="row">
 
-		<div class="col-xs-1 col-sm-1 col-md-1"></div>
+		<div class="row">
 
-		<div class="col-xs-4 col-sm-4 col-md-4">
-			
-			<div id="aboutTitle" style="font-size: 30px;">About Me</div>
+			<div class="col-xs-1 col-sm-1 col-md-1"></div>
+
+			<div class="col-xs-4 col-sm-4 col-md-4">
+				
+				<div id="aboutTitle" style="font-size: 32.5px;">About Me</div>
+
+			</div>
+
+			<div class="col-xs-2 col-sm-2 col-md-2"></div>
+
+			<div class="col-xs-4 col-sm-4 col-md-4">
+
+				<!-- <p id="contact" style="font-size: 32.5px; text-align: right;">
+
+					Let's Get Connected!
+
+				</p>
+ -->
+			</div>
+
+			<div class="col-xs-1 col-sm-1 col-md-1"></div>
 
 		</div>
 
-		<div class="col-xs-2 col-sm-2 col-md-2"></div>
+			<hr>
 
-		<div class="col-xs-4 col-sm-4 col-md-4">
-
-			<p id="contact" style="font-size: 30px; color: darkgray;">
-
-				Let's Get Connected!
-
-			</p>
-
-		</div>
-
-		<div class="col-xs-1 col-sm-1 col-md-1"></div>
-
-	<!-- </div> -->
-
-	<!-- <div class="row"> -->
+		<div class="row">
 
 			<div class="col-xs-1 col-sm-1 col-md-1"></div>
 
@@ -215,6 +233,7 @@
 		</div>
 
 	</div>
+	
 </div>
 <!-- /////////////////////////////////////////////////////////////////////// -->
 

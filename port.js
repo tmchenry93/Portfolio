@@ -53,7 +53,7 @@ $(document).ready(function(){
 			thumb: "", 
 			images: ["./figures/sketch.jpg"],
 			title: ["30-min Study"],
-			artType: "figures"
+			artType: "Figures"
 		},
 
 		{
@@ -61,15 +61,15 @@ $(document).ready(function(){
 			thumb: "./artThumbnails/typeThumb", 
 			images: ["./typography/beautifulLogo.jpg", "./typography/irishRedAle.png", "./typography/paradise.png", "./typography/winterSpiceAle.jpg"],
 			title: [],
-			artType: "hand drawn font"
+			artType: "Hand Drawn Font"
 		},
 
 		{
 			index: 2,
-			thumb: "./abstract/03.jpg", 
+			thumb: "./abstract/iHatePrettyThings", 
 			images: ["./abstract/01.jpg", "./abstract/03.jpg", "./abstract/iHatePrettyThings", "./abstract/brainChild.jpg"],
 			title: ["Illusions at Sea", "Afternoon in the park", "I Hate Pretty Things", "Brainchild" ],
-			artType: "abstract"
+			artType: "Abstract"
 		}, 
 
 		{ 
@@ -77,15 +77,15 @@ $(document).ready(function(){
 			thumb: "./logos/ACP",
 			images: ["./logos/ACP", "./logos/ESOmockup.jpg"],
 			title: ["Photography Logo", "Endurance Sports Outfitters"],
-			artType: "vector illustrations"
+			artType: "Vector Illustrations"
 		},
 
 		{	
 			index: 4,
-			thumb: "./patterns/charlotte.jpg", 
+			thumb: "./patterns/patternsplantfloral.jpg", 
 			images: ["./patterns/charlotte", "./patterns/plantfloral.png", "./patterns/plantPattern.png"],
 			title: [],
-			artType: "patterns"
+			artType: "Patterns"
 		},
 		 
 		{
@@ -108,7 +108,7 @@ $(document).ready(function(){
 			var displaySquare = $("<div>");
 			displaySquare.addClass("artThumbnails");
 			displaySquare.append("<div class='title'>" + art[i].artType + "</div>");
-			displaySquare.append("<img src='" + art[i].thumb + "'/>");
+			displaySquare.append("<img class='img' src='" + art[i].thumb + "'/>");
 			displaySquare.attr("attributeNumber", i);
 			displaySquare.attr("thumbName", art[i].artType);
 			$("#artThumbs").append(displaySquare);
@@ -278,7 +278,7 @@ $(document).ready(function(){
 			var displaySquare = $("<div>");
 			displaySquare.addClass("codeThumbnails");
 			displaySquare.append("<div class='title'>" + code[i].artType + "</div>");
-			displaySquare.append("<img src='" + code[i].thumb + "'/>");
+			displaySquare.append("<img class='img' src='" + code[i].thumb + "'/>");
 			displaySquare.attr("attributeNumber", i);
 			$("#codeThumbs").append(displaySquare).show("fade", 2500);
 		}

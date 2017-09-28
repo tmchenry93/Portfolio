@@ -14,51 +14,46 @@ body {
 	font-family: 'Raleway', sans-serif;
 }
 
-@keyframes dash {
-	to {
-		stroke-dashoffset: 0;
-	}
+hr {
+	color: #BADA55;
 }
-
-.sign {
-	stroke-dasharray: 1000;
-	stroke-dashoffset: 1000;
-	animation: dash 2s linear forwards;
-}
-
 /* ----------------------------------------------------------------- */
 /* this section is styling the main landing page */
-	#mainContainer {
-		/*background-color: #fff;*/
-	}
-
-	#background {
-		height: 100vh;
-		width: 100%;
-		position: absolute;
-		z-index: 0;
-		background: #fff/* For browsers that do not support gradients */
-	    background: -webkit-linear-gradient(-90deg, #fff, #d4d8d7); /* For Safari 5.1 to 6.0 */
-	    background: -o-linear-gradient(-90deg, #fff, #d4d8d7); /* For Opera 11.1 to 12.0 */
-	    background: -moz-linear-gradient(-90deg, #fff, #d4d8d7); /* For Firefox 3.6 to 15 */
-	    background: linear-gradient(-90deg, #fff, #d4d8d7); /* Standard syntax */
-	}
 
 	#mainCover1 {
 		height: 100vh;
-		background-color: #fff;
+		border-width: 0 0 1px 0;
+		border-color: #000;
+		border-style: solid;
+		/*background-color: #fff;*/
+		background: #fff/* For browsers that do not support gradients */
+	    background: -webkit-linear-gradient(-90deg, #fff, #fffff3); /* For Safari 5.1 to 6.0 */
+	    background: -o-linear-gradient(-90deg, #fff, #fffff3); /* For Opera 11.1 to 12.0 */
+	    background: -moz-linear-gradient(-90deg, #fff, #fffff3); /* For Firefox 3.6 to 15 */
+	    background: linear-gradient(-90deg, #fff, #fffff3); /* Standard syntax */
 		z-index: 3;
 	} 
 
 	#mainCover2 {
 		height: 100vh;
 		background-color: #fff;
+		border-width: 0 0 1px 0;
+		border-color: #000;
+		border-style: solid;
 		z-index: 2;
 	}
 
 	#mainCover3 {
 		height: 100vh;
-		background-color: #fff;
+		/*background-color: #fff;*/
+		border-width: 0 0 1px 0;
+		border-color: #000;
+		border-style: solid;
+		background: #fff/* For browsers that do not support gradients */
+	    background: -webkit-linear-gradient(-90deg, #fffff3, #fff); /* For Safari 5.1 to 6.0 */
+	    background: -o-linear-gradient(-90deg, #fffff3, #fff); /* For Opera 11.1 to 12.0 */
+	    background: -moz-linear-gradient(-90deg, #fffff3, #fff); /* For Firefox 3.6 to 15 */
+	    background: linear-gradient(-90deg, #fffff3, #fff); /* Standard syntax */
 		z-index: 2;
 	}
 
@@ -110,6 +105,7 @@ body {
 		padding-left: 6.5%;
 		display: inline-block;
 		vertical-align: middle;
+		/*box-shadow: 7.5px 7.5px 2.5px #888888;*/
 		/* This section calls the slideInFromLeft animation we defined above */
 		animation: 2.25s ease-out 0s 1 slideInFromLeft;
 	}
@@ -127,6 +123,7 @@ body {
 	    background: -o-linear-gradient(-90deg, #f3b13d, #d4d8d7); /* For Opera 11.1 to 12.0 */
 	    background: -moz-linear-gradient(-90deg, #f3b13d, #d4d8d7); /* For Firefox 3.6 to 15 */
 	    background: linear-gradient(-90deg, #f3b13d, #d4d8d7); /* Standard syntax */
+	  	box-shadow: 0 4.5px 4.5px #888888;
 	  	z-index: 2;
 	}
 
@@ -141,6 +138,7 @@ body {
 		padding-left: 6.5%;
 		z-index: 2;
 		display: inline-block;
+		/*box-shadow: 7.5px 7.5px 2.5px #888888;*/
 		/* This section calls the slideInFromLeft animation we defined above */
 		animation: 1.75s ease-out 0s 1 slideInFromLeft;
 	}
@@ -190,6 +188,7 @@ body {
 	    background: -o-linear-gradient(-90deg,  #d4d8d7, #f3b13d); /* For Opera 11.1 to 12.0 */
 	    background: -moz-linear-gradient(-90deg,  #d4d8d7, #f3b13d); /* For Firefox 3.6 to 15 */
 	    background: linear-gradient(-90deg,  #d4d8d7, #f3b13d); /* Standard syntax */
+	    box-shadow: 0 4.5px 4.5px #888888;
 	    z-index: 2;
 	}
 	  
@@ -218,14 +217,14 @@ body {
 	#description {
 		z-index: 2;
 		text-align: left;
-		position: absolute;
-		left: 10%;
+		position: relative;
+		left: 0;
 		top: 22.5%;
 	}
 
 	#contact {
-		position: absolute;
-		right: 5%;
+		position: relative;
+		right: 0;
 		text-align: right;
 	}
 
@@ -235,8 +234,8 @@ body {
 	}
 
 	#information {
-		position: absolute;
-		right: 5%;
+		position: relative;
+		right: 0;
 		text-align: right;
 		top: 22.5%;
 	}
@@ -350,9 +349,7 @@ body {
 		width: 100%;
 		height: 95vh;
 	    top: 5%;
-	    overflow: scroll;
 	    position: absolute;
-	    padding: 5%;
 		z-index: 0;
 		display: none;
 	}
@@ -372,9 +369,8 @@ body {
 		width: 100%;
 		height: 95vh;
 		top: 5%;
-		overflow: scroll;
+		margin-top: 5%;
 		position: absolute;
-		padding: 5%;
 		z-index: 0;
 		display: none;
 	}
@@ -394,7 +390,7 @@ body {
 /* this section is styling the thumb container and the actual thumbnails */
 	#thumbContainer {
 		display: none;
-		height: 95vh;
+		padding-top: 3.5%;
 		z-index: 0;
 		margin-left: auto;
 		margin-right: auto;
@@ -420,35 +416,53 @@ body {
 	.artThumbnails {
 		display: inline-block;
 		margin: 2.5%;
-		border-radius: 5%;
+		margin-left: 5%;
 		color: #000;
-		width: 12.5vw;
-	    height: 12.5vw;
+		width: 10.5vw;
+	    height: 10.5vw;
 	    z-index: 0;
 	    position: relative;
 	    overflow: hidden;
-	    border: .25px solid #000;
+	    border: 1px solid #000;
 	}
 
 	.codeThumbnails {
 		display: inline-block;
 		margin: 2.5%;
+		margin-left: 5%;
 		overflow: hidden;
 		background-position: right;
-		border-radius: 5%;
 		color: #000;
-	    width: 12.5vw;
-	    height: 12.5vw;
+	    width: 10.5vw;
+	    height: 10.5vw;
 	    z-index: 0;
-	    border: .25px solid #000;
+	    border: 1px solid #000;
 	}
 
 	.artThumbnails:hover {
 		box-shadow: 7.5px 7.5px 2.5px #888888;
+		border: 5px double #000;
+	}
+
+	.artThumbnails:hover .title{
+		display: block;
+	}
+
+	.artThumbnails:hover .img{
+		display: none;
 	}
 
 	.codeThumbnails:hover {
 		box-shadow: 7.5px 7.5px 2.5px #888888;
+		border: 5px double #000;
+	}
+
+	.codeThumbnails:hover .title{
+		display: block;
+	}
+
+	.codeThumbnails:hover .img{
+		display: none;
 	}
 
 
@@ -456,13 +470,16 @@ body {
 /* this section is styling the portfolio page once the thumbs are clicked on and the work is being presented */
 	.title {
 		text-align: center;
-		font-size: 100%;
+		position: relative;
+		font-size: 14px;
 		margin: auto;
-		left: 10%;
+		display: none;
+		top: 30%;
 	} 
 
 	.codeTitle {
 		font-size: 30px;
+		margin-top: 3.5%;
 	}
 
 	.projectDescription {
