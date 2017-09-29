@@ -59,7 +59,7 @@ $(document).ready(function(){
 		{
 			index: 1,
 			thumb: "./artThumbnails/typeThumb", 
-			images: ["./typography/beautifulLogo.jpg", "./typography/irishRedAle.png", "./typography/paradise.png", "./typography/winterSpiceAle.jpg"],
+			images: ["./typography/beautifulLogo.jpg", "./typography/paradise.png", "./typography/winterSpiceAle.jpg"],
 			title: [],
 			artType: "Hand Drawn Font"
 		},
@@ -74,7 +74,7 @@ $(document).ready(function(){
 
 		{ 
 			index: 3,
-			thumb: "./logos/ACP",
+			thumb: "./artThumbnails/ESO",
 			images: ["./logos/ACP", "./logos/ESOmockup.jpg"],
 			title: ["Photography Logo", "Endurance Sports Outfitters"],
 			artType: "Vector Illustrations"
@@ -106,7 +106,7 @@ $(document).ready(function(){
 
 		for (var i= 0; i< art.length; i++){
 			var displaySquare = $("<div>");
-			displaySquare.addClass("artThumbnails");
+			displaySquare.addClass("artThumbnails thumb" + i);
 			displaySquare.append("<div class='title'>" + art[i].artType + "</div>");
 			displaySquare.append("<img class='img' src='" + art[i].thumb + "'/>");
 			displaySquare.attr("attributeNumber", i);
@@ -117,6 +117,106 @@ $(document).ready(function(){
 
 	// calling the function so it can generate the thumbnails
 	createThumbnails();
+
+	// creating the component which allows you to see what thumbnail you are hovering over
+	// this lets the viewer know whether or not they have seen all the thumbnails or if they need to keep scrolling horizontally
+	function createThumbComponent(){
+
+		for (var i=0; i< art.length; i ++){
+			var component= $("<div>");
+			component.addClass("component component" + i);
+			component.attr("number", i);
+			$("#artComponent").append(component);
+		}
+
+	};
+
+	// calling the function so it can generate the thumbnail components on the DOM
+	createThumbComponent();
+
+	
+	// these variables are defining the element which will be changed when hovering another element
+	var hoverOn1 = function(){
+	    
+		$(".component0").css("background-color", "black");
+			
+	};
+
+	var hoverOff1 = function(){
+		
+		$(".component0").css("background-color", "white");
+
+	};
+
+	var hoverOn2 = function(){
+	    
+		$(".component1").css("background-color", "black");
+			
+	};
+
+	var hoverOff2 = function(){
+		
+		$(".component1").css("background-color", "white");
+
+	};
+
+	var hoverOn3 = function(){
+	    
+		$(".component2").css("background-color", "black");
+			
+	};
+
+	var hoverOff3 = function(){
+		
+		$(".component2").css("background-color", "white");
+
+	};
+
+	var hoverOn4 = function(){
+	    
+		$(".component3").css("background-color", "black");
+			
+	};
+
+	var hoverOff4 = function(){
+		
+		$(".component3").css("background-color", "white");
+
+	};
+
+	var hoverOn5 = function(){
+	    
+		$(".component4").css("background-color", "black");
+			
+	};
+
+	var hoverOff5 = function(){
+		
+		$(".component4").css("background-color", "white");
+
+	};
+
+	var hoverOn6 = function(){
+	    
+		$(".component5").css("background-color", "black");
+			
+	};
+
+	var hoverOff6 = function(){
+		
+		$(".component5").css("background-color", "white");
+
+	};
+	
+	// This is calling for the particular element to change on mouseover and mouseleave methods
+	$('.thumb0').mouseover(hoverOn1).mouseleave(hoverOff1);
+	$('.thumb1').mouseover(hoverOn2).mouseleave(hoverOff2);
+	$('.thumb2').mouseover(hoverOn3).mouseleave(hoverOff3);
+	$('.thumb3').mouseover(hoverOn4).mouseleave(hoverOff4);
+	$('.thumb4').mouseover(hoverOn5).mouseleave(hoverOff5);
+	$('.thumb5').mouseover(hoverOn6).mouseleave(hoverOff6);
+
+
 
 	// ---------------------------------------------------------------------
 
@@ -276,7 +376,7 @@ $(document).ready(function(){
 	function createCodeThumbnails(){
 		for (var i= 0; i< code.length; i++){
 			var displaySquare = $("<div>");
-			displaySquare.addClass("codeThumbnails");
+			displaySquare.addClass("codeThumbnails codeThumb" + i);
 			displaySquare.append("<div class='title'>" + code[i].artType + "</div>");
 			displaySquare.append("<img class='img' src='" + code[i].thumb + "'/>");
 			displaySquare.attr("attributeNumber", i);
@@ -287,7 +387,79 @@ $(document).ready(function(){
 	// calling the function so it can generate the thumbnails
 	createCodeThumbnails();
 
+	// creating the component which allows you to see what thumbnail you are hovering over
+	// this lets the viewer know whether or not they have seen all the thumbnails or if they need to keep scrolling horizontally
+	function createCodeThumbComponent(){
+
+		for (var i=0; i< code.length; i ++){
+			var component= $("<div>");
+			component.addClass("component codeComponent" + i);
+			$("#codeComponent").append(component);
+		}
+
+	};
+
+	// calling the function so it can generate the thumbnail components on the DOM
+	createCodeThumbComponent();
+
 	// ---------------------------------------------------------------------
+
+
+	// these variables are defining the element which will be changed when hovering another element
+	var hoverOn1 = function(){
+	    
+		$(".codeComponent0").css("background-color", "black");
+			
+	};
+
+	var hoverOff1 = function(){
+		
+		$(".codeComponent0").css("background-color", "white");
+
+	};
+
+	var hoverOn2 = function(){
+	    
+		$(".codeComponent1").css("background-color", "black");
+			
+	};
+
+	var hoverOff2 = function(){
+		
+		$(".codeComponent1").css("background-color", "white");
+
+	};
+
+	var hoverOn3 = function(){
+	    
+		$(".codeComponent2").css("background-color", "black");
+			
+	};
+
+	var hoverOff3 = function(){
+		
+		$(".codeComponent2").css("background-color", "white");
+
+	};
+
+	var hoverOn4 = function(){
+	    
+		$(".codeComponent3").css("background-color", "black");
+			
+	};
+
+	var hoverOff4 = function(){
+		
+		$(".codeComponent3").css("background-color", "white");
+
+	};
+	
+	// This is calling for the particular element to change on mouseover and mouseleave methods
+	$('.codeThumb0').mouseover(hoverOn1).mouseleave(hoverOff1);
+	$('.codeThumb1').mouseover(hoverOn2).mouseleave(hoverOff2);
+	$('.codeThumb2').mouseover(hoverOn3).mouseleave(hoverOff3);
+	$('.codeThumb3').mouseover(hoverOn4).mouseleave(hoverOff4);
+
 
 	// ---------------------------------------------------------------------
 	// this function will allow the code body to appear with an image and a demo button 
@@ -331,5 +503,4 @@ $(document).ready(function(){
 
 });
 
-// $(document).on("onmouseover", ".artThumbnails", imageEvent);
 
