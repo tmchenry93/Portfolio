@@ -50,7 +50,7 @@ $(document).ready(function(){
 	var art = [
 		{	
 			index: 0,
-			thumb: "", 
+			thumb: "./artThumbnails/figureThumbnail", 
 			images: ["./figures/sketch.jpg"],
 			title: ["30-min Study"],
 			artType: "Figures"
@@ -356,7 +356,7 @@ $(document).ready(function(){
 			index: 3,
 			demo: "https://tmchenry93.github.io/gifs/buttons",
 			thumb:"./artThumbnails/gif",
-			image: "./artThumbnails/gifs.png",
+			image: "./artThumbnails/gifs",
 			script: "<p style='font-size: 16px; font-weight: bolder;'>API, Javascript, JQuery, HTML, CSS.</p><p>With this application, I am using a Giphy API to dynamically create gifs based off of user input.  The user input creates buttons which allow the gifs to be about that specific topic. Clicking on the images will allow it to move and clicking it a second time will stop the motion.  In the demo you will start out with some of my personal favorites topics as button choices.  Create more buttons and see what comes back.  Enjoy!</p>",
 			artType: "Gifs"
 		},
