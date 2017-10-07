@@ -14,10 +14,6 @@ body {
 	font-family: 'Raleway', sans-serif;
 }
 
-hr {
-	color: #BADA55;
-}
-
 
 /* ----------------------------------------------------------------- */
 /* this section is styling the main landing page */
@@ -69,11 +65,11 @@ hr {
 		top: 42.5%;
 		text-align: right;
 		padding-right: 1%;
-		background:  #f3b13d; /* For browsers that do not support gradients */
-	    background: -webkit-linear-gradient(-45deg,  #f3b13d, #d4d8d7); /* For Safari 5.1 to 6.0 */
-	    background: -o-linear-gradient(-45deg,  #f3b13d, #d4d8d7); /* For Opera 11.1 to 12.0 */
-	    background: -moz-linear-gradient(-45deg,  #f3b13d, #d4d8d7); /* For Firefox 3.6 to 15 */
-	    background: linear-gradient(-45deg,  #f3b13d, #d4d8d7); /* Standard syntax */
+		background:  #de805b; /* For browsers that do not support gradients */
+	    background: -webkit-linear-gradient(-45deg,  #de805b, #d4d8d7); /* For Safari 5.1 to 6.0 */
+	    background: -o-linear-gradient(-45deg,  #de805b, #d4d8d7); /* For Opera 11.1 to 12.0 */
+	    background: -moz-linear-gradient(-45deg,  #de805b, #d4d8d7); /* For Firefox 3.6 to 15 */
+	    background: linear-gradient(-45deg,  #de805b, #d4d8d7); /* Standard syntax */
 	    z-index: 2;
 	}
 
@@ -85,11 +81,11 @@ hr {
 		top: 47.5%;
 		text-align: right;
 		padding-right: 1%;
-		background:  #f3b13d; /* For browsers that do not support gradients */
-	    background: -webkit-linear-gradient(-90deg,  #f3b13d, #d4d8d7); /* For Safari 5.1 to 6.0 */
-	    background: -o-linear-gradient(-90deg,  #f3b13d, #d4d8d7); /* For Opera 11.1 to 12.0 */
-	    background: -moz-linear-gradient(-90deg,  #f3b13d, #d4d8d7); /* For Firefox 3.6 to 15 */
-	    background: linear-gradient(-90deg,  #f3b13d, #d4d8d7); /* Standard syntax */
+		background:  #de805b; /* For browsers that do not support gradients */
+	    background: -webkit-linear-gradient(-90deg,  #de805b, #d4d8d7); /* For Safari 5.1 to 6.0 */
+	    background: -o-linear-gradient(-90deg,  #de805b, #d4d8d7); /* For Opera 11.1 to 12.0 */
+	    background: -moz-linear-gradient(-90deg,  #de805b, #d4d8d7); /* For Firefox 3.6 to 15 */
+	    background: linear-gradient(-90deg,  #de805b, #d4d8d7); /* Standard syntax */
 	    z-index: 2;
 	}
 
@@ -117,11 +113,11 @@ hr {
 		top: 52.5%;
 		text-align: right;
 		padding-right: 1%;
-		background:  #f3b13d; /* For browsers that do not support gradients */
-	    background: -webkit-linear-gradient(-90deg, #f3b13d, #d4d8d7);  /*For Safari 5.1 to 6.0 */
-	    background: -o-linear-gradient(-90deg, #f3b13d, #d4d8d7); /* For Opera 11.1 to 12.0 */
-	    background: -moz-linear-gradient(-90deg, #f3b13d, #d4d8d7); /* For Firefox 3.6 to 15 */
-	    background: linear-gradient(-90deg, #f3b13d, #d4d8d7); /* Standard syntax */
+		background:  #de805b; /* For browsers that do not support gradients */
+	    background: -webkit-linear-gradient(-90deg, #de805b, #d4d8d7);  /*For Safari 5.1 to 6.0 */
+	    background: -o-linear-gradient(-90deg, #de805b, #d4d8d7); /* For Opera 11.1 to 12.0 */
+	    background: -moz-linear-gradient(-90deg, #de805b, #d4d8d7); /* For Firefox 3.6 to 15 */
+	    background: linear-gradient(-90deg, #de805b, #d4d8d7); /* Standard syntax */
 	  	box-shadow: 0 4.5px 4.5px #888888;
 	  	z-index: 2;
 	}
@@ -149,11 +145,11 @@ hr {
 		top: 42.5%;
 		text-align: right;
 		padding-right: 1%;
-		background:  #f3b13d; /* For browsers that do not support gradients */
-	    background: -webkit-linear-gradient(-90deg,  #d4d8d7, #f3b13d); /* For Safari 5.1 to 6.0 */
-	    background: -o-linear-gradient(-90deg,  #d4d8d7, #f3b13d); /* For Opera 11.1 to 12.0 */
-	    background: -moz-linear-gradient(-90deg,  #d4d8d7, #f3b13d); /* For Firefox 3.6 to 15 */
-	    background: linear-gradient(-90deg,  #d4d8d7, #f3b13d); /* Standard syntax */
+		background:  #de805b; /* For browsers that do not support gradients */
+	    background: -webkit-linear-gradient(-90deg,  #d4d8d7, #de805b); /* For Safari 5.1 to 6.0 */
+	    background: -o-linear-gradient(-90deg,  #d4d8d7, #de805b); /* For Opera 11.1 to 12.0 */
+	    background: -moz-linear-gradient(-90deg,  #d4d8d7, #de805b); /* For Firefox 3.6 to 15 */
+	    background: linear-gradient(-90deg,  #d4d8d7, #de805b); /* Standard syntax */
 	  	z-index: 2;
 	}
 
@@ -165,11 +161,11 @@ hr {
 		top: 47.5%;
 		text-align: right;
 		padding-right: 1%;
-		background:  #f3b13d; /* For browsers that do not support gradients */
-	    background: -webkit-linear-gradient(-45deg,  #d4d8d7, #f3b13d); /* For Safari 5.1 to 6.0 */
-	    background: -o-linear-gradient(-45deg,  #d4d8d7, #f3b13d); /* For Opera 11.1 to 12.0 */
-	    background: -moz-linear-gradient(-45deg,  #d4d8d7, #f3b13d); /* For Firefox 3.6 to 15 */
-	    background: linear-gradient(-45deg,  #d4d8d7, #f3b13d); /* Standard syntax */
+		background:  #de805b; /* For browsers that do not support gradients */
+	    background: -webkit-linear-gradient(-45deg,  #d4d8d7, #de805b); /* For Safari 5.1 to 6.0 */
+	    background: -o-linear-gradient(-45deg,  #d4d8d7, #de805b); /* For Opera 11.1 to 12.0 */
+	    background: -moz-linear-gradient(-45deg,  #d4d8d7, #de805b); /* For Firefox 3.6 to 15 */
+	    background: linear-gradient(-45deg,  #d4d8d7, #de805b); /* Standard syntax */
 	    z-index: 2;
 	}
 
@@ -181,11 +177,11 @@ hr {
 		top: 52.5%;
 		text-align: right;
 		padding-right: 1%;
-		background:  #f3b13d; /* For browsers that do not support gradients */
-	    background: -webkit-linear-gradient(-90deg,  #d4d8d7, #f3b13d); /* For Safari 5.1 to 6.0 */
-	    background: -o-linear-gradient(-90deg,  #d4d8d7, #f3b13d); /* For Opera 11.1 to 12.0 */
-	    background: -moz-linear-gradient(-90deg,  #d4d8d7, #f3b13d); /* For Firefox 3.6 to 15 */
-	    background: linear-gradient(-90deg,  #d4d8d7, #f3b13d); /* Standard syntax */
+		background:  #de805b; /* For browsers that do not support gradients */
+	    background: -webkit-linear-gradient(-90deg,  #d4d8d7, #de805b); /* For Safari 5.1 to 6.0 */
+	    background: -o-linear-gradient(-90deg,  #d4d8d7, #de805b); /* For Opera 11.1 to 12.0 */
+	    background: -moz-linear-gradient(-90deg,  #d4d8d7, #de805b); /* For Firefox 3.6 to 15 */
+	    background: linear-gradient(-90deg,  #d4d8d7, #de805b); /* Standard syntax */
 	    box-shadow: 0 4.5px 4.5px #888888;
 	    z-index: 2;
 	}
@@ -296,6 +292,7 @@ hr {
 		color: #fff;
 		background-color: #000;
 		z-index: 1;
+		position: fixed;
 	}
 
 	#artLink {
@@ -332,10 +329,10 @@ hr {
 	}
 
 	.glyphicon-home:hover {
-		color: #f3b13d;
+		color: #de805b;
 	}
 
-	#x{
+	#x {
 		color: black;
 		margin-top: 5.5px;
 	}
@@ -381,6 +378,7 @@ hr {
 		color: #fff;
 		background-color: #000;
 		z-index: 1;
+		position: fixed;
 	}
 
 
@@ -420,10 +418,9 @@ hr {
 	.artThumbnails {
 		display: inline-block;
 		margin: 2.5%;
-		margin-left: 5%;
 		color: #000;
-		width: 12vw;
-	    height: 12vw;
+		width: 25vw;
+	    height: 15vw;
 	    z-index: 0;
 	    position: relative;
 	    overflow: hidden;
@@ -433,19 +430,24 @@ hr {
 	.codeThumbnails {
 		display: inline-block;
 		margin: 2.5%;
-		margin-left: 5%;
 		overflow: hidden;
 		background-position: right;
 		color: #000;
-	    width: 12vw;
-	    height: 12vw;
+	    width: 25vw;
+	    height: 15vw;
 	    z-index: 0;
 	    border: 1px solid #000;
+	}
+
+	.img {
+		height: 15vw;
+		width: auto;
 	}
 
 	.artThumbnails:hover {
 		box-shadow: 7.5px 7.5px 2.5px #888888;
 		border: 5px double #000;
+		/*background-color: lightgray;*/
 	}
 
 	.artThumbnails:hover .title{
@@ -459,6 +461,7 @@ hr {
 	.codeThumbnails:hover {
 		box-shadow: 7.5px 7.5px 2.5px #888888;
 		border: 5px double #000;
+		/*background-color: lightgray;*/
 	}
 
 	.codeThumbnails:hover .title{
@@ -469,26 +472,17 @@ hr {
 		display: none;
 	}
 	
-	.component {
-		width: 12.5px;
-		height: 12.5px;
-		margin: 2%;
-		border: 1px solid #000;
-		border-radius: 50%;
-		background-color: white;
-		display: inline-block;
-	}
-
 
 /* ----------------------------------------------------------------- */
 /* this section is styling the portfolio page once the thumbs are clicked on and the work is being presented */
 	.title {
 		text-align: center;
 		position: relative;
-		font-size: 100%;
+		font-size: 2vw;
+		/*font-size: 100%;*/
 		margin: auto;
 		display: none;
-		top: 30%;
+		top: 40%;
 	} 
 
 	.codeTitle {

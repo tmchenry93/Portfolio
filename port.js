@@ -58,8 +58,8 @@ $(document).ready(function(){
 
 		{
 			index: 1,
-			thumb: "./artThumbnails/typeThumb", 
-			images: ["./typography/beautifulLogo.jpg", "./typography/paradise.png", "./typography/winterSpiceAle.jpg"],
+			thumb: "./artThumbnails/type", 
+			images: ["./typography/beautifulLogo.jpg", "./typography/paradise.png", "./typography/simulacra.jpg"],
 			title: [],
 			artType: "Hand Drawn Font"
 		},
@@ -74,7 +74,7 @@ $(document).ready(function(){
 
 		{ 
 			index: 3,
-			thumb: "./artThumbnails/ESO",
+			thumb: "./logos/ESOmockup.jpg",
 			images: ["./logos/ACP", "./logos/ESOmockup.jpg"],
 			title: ["Photography Logo", "Endurance Sports Outfitters"],
 			artType: "Vector Illustrations"
@@ -82,24 +82,32 @@ $(document).ready(function(){
 
 		{	
 			index: 4,
-			thumb: "./patterns/patternsplantfloral.jpg", 
-			images: ["./patterns/charlotte", "./patterns/plantfloral.png", "./patterns/plantPattern.png"],
+			thumb: "./patterns/charlotte", 
+			images: ["./patterns/charlotte", "./patterns/plantfloral.png", "./patterns/plantPattern.png", "./patterns/fingerprint"],
 			title: [],
 			artType: "Patterns"
 		},
 		 
 		{
 			index: 5,
-			thumb: "./layouts/penguinCover.jpg",
-			images: ["./layouts/WPCF.jpg", "./layouts/adventureComic.png"],
-			title: ["Why Penguins Can't Fly (Published)", "Comic Cover"],
+			thumb: "./layouts/mimosa",
+			images: ["./layouts/WPCF.jpg", "./layouts/adventureComic.png", "./layouts/mimosa"],
+			title: ["Why Penguins Can't Fly (Published)", "Comic Cover", "Gallery Poster"],
 			artType: "Layouts"
+		},
+
+		{
+			index: 6,
+			thumb: "./layouts/beerBrand",
+			images: ["./typography/winterSpiceAle.jpg", "./layouts/beerBrand"],
+			title: ["Beer #1", "Beer Label"],
+			artType: "Beer Brand"
 		}
 	];
 
 
 
-	var thumbNames = ["patterns", "paintings", "digital illustrations", "design work"];
+	// var thumbNames = ["patterns", "paintings", "digital illustrations", "design work"];
 
 	// this function creates the thumbnails
 	function createThumbnails(){
@@ -117,105 +125,6 @@ $(document).ready(function(){
 
 	// calling the function so it can generate the thumbnails
 	createThumbnails();
-
-	// creating the component which allows you to see what thumbnail you are hovering over
-	// this lets the viewer know whether or not they have seen all the thumbnails or if they need to keep scrolling horizontally
-	function createThumbComponent(){
-
-		for (var i=0; i< art.length; i ++){
-			var component= $("<div>");
-			component.addClass("component component" + i);
-			component.attr("number", i);
-			$("#artComponent").append(component);
-		}
-
-	};
-
-	// calling the function so it can generate the thumbnail components on the DOM
-	createThumbComponent();
-
-	
-	// these variables are defining the element which will be changed when hovering another element
-	var hoverOn1 = function(){
-	    
-		$(".component0").css("background-color", "black");
-			
-	};
-
-	var hoverOff1 = function(){
-		
-		$(".component0").css("background-color", "white");
-
-	};
-
-	var hoverOn2 = function(){
-	    
-		$(".component1").css("background-color", "black");
-			
-	};
-
-	var hoverOff2 = function(){
-		
-		$(".component1").css("background-color", "white");
-
-	};
-
-	var hoverOn3 = function(){
-	    
-		$(".component2").css("background-color", "black");
-			
-	};
-
-	var hoverOff3 = function(){
-		
-		$(".component2").css("background-color", "white");
-
-	};
-
-	var hoverOn4 = function(){
-	    
-		$(".component3").css("background-color", "black");
-			
-	};
-
-	var hoverOff4 = function(){
-		
-		$(".component3").css("background-color", "white");
-
-	};
-
-	var hoverOn5 = function(){
-	    
-		$(".component4").css("background-color", "black");
-			
-	};
-
-	var hoverOff5 = function(){
-		
-		$(".component4").css("background-color", "white");
-
-	};
-
-	var hoverOn6 = function(){
-	    
-		$(".component5").css("background-color", "black");
-			
-	};
-
-	var hoverOff6 = function(){
-		
-		$(".component5").css("background-color", "white");
-
-	};
-	
-	// This is calling for the particular element to change on mouseover and mouseleave methods
-	$('.thumb0').mouseover(hoverOn1).mouseleave(hoverOff1);
-	$('.thumb1').mouseover(hoverOn2).mouseleave(hoverOff2);
-	$('.thumb2').mouseover(hoverOn3).mouseleave(hoverOff3);
-	$('.thumb3').mouseover(hoverOn4).mouseleave(hoverOff4);
-	$('.thumb4').mouseover(hoverOn5).mouseleave(hoverOff5);
-	$('.thumb5').mouseover(hoverOn6).mouseleave(hoverOff6);
-
 
 
 	// ---------------------------------------------------------------------
@@ -337,16 +246,16 @@ $(document).ready(function(){
 		{
 			index: 0,
 			demo: "https://tmchenry93.github.io/HelloWorld",
-			thumb:"./artThumbnails/hellologo",
+			thumb:"./artThumbnails/helloWorld.png",
 			image: "./artThumbnails/helloWorld.png",
-			script: "<p style='font-size: 16px; font-weight: bolder;'>API, Google Firebase, Javascript, JQuery, Bootstrap, CSS, HTML</p><p>What is the first thing we do when planning a trip?  Search for things to do.  The first thing that pop up in our search engine are tourist guides and generic reviews.  Hello World was created for travelers of all backgrounds to share experiences and places in a journal entry.  You can get to know your fellow travelers and their stories around the country by searching a particular city or add your own experience to the communual journal.</p>",
+			script: "<p style='font-size: 16px; font-weight: bolder;'>API, Google Firebase, Javascript, JQuery, Bootstrap, CSS, HTML</p><p>What is the first thing we do when planning a trip?  Search for things to do.  The first thing that pop up in our search engine are tourist guides and generic reviews.  Hello World was created for travelers of all backgrounds to share experiences and places in a journal entry.  You can get to know your fellow travelers and their stories around the country by searching a particular city or add your own experience to the communal journal.</p>",
 			artType: "Hello World"
 		}, 
 
 		{
 			index: 2,
 			demo: "https://tmchenry93.github.io/quiz/quiz",
-			thumb:"./artThumbnails/runner",
+			thumb:"./artThumbnails/runnersQuiz",
 			image: "./artThumbnails/runnersQuiz.png",
 			script: "<p style='font-size: 16px; font-weight: bolder;'>Javascript, JQuery, CSS, Bootstrap, HTML.</p><p>This is a trivia assignment with multiple choice and a timer.  In this project, I was using Javascript and JQuery to control the html page based on time.  Being a competitive student-athlete for ten years, races started out against the people around you and ended with you against the clock.  So to me, there are no excuses.  ON YOUR MARK, GET SET, *BOOOOM* </p>",
 			artType: "Runner's Quiz"
@@ -355,7 +264,7 @@ $(document).ready(function(){
 		{	
 			index: 3,
 			demo: "https://tmchenry93.github.io/gifs/buttons",
-			thumb:"./artThumbnails/gif",
+			thumb:"./artThumbnails/gifs",
 			image: "./artThumbnails/gifs",
 			script: "<p style='font-size: 16px; font-weight: bolder;'>API, Javascript, JQuery, HTML, CSS.</p><p>With this application, I am using a Giphy API to dynamically create gifs based off of user input.  The user input creates buttons which allow the gifs to be about that specific topic. Clicking on the images will allow it to move and clicking it a second time will stop the motion.  In the demo you will start out with some of my personal favorites topics as button choices.  Create more buttons and see what comes back.  Enjoy!</p>",
 			artType: "Gifs"
@@ -386,79 +295,6 @@ $(document).ready(function(){
 
 	// calling the function so it can generate the thumbnails
 	createCodeThumbnails();
-
-	// creating the component which allows you to see what thumbnail you are hovering over
-	// this lets the viewer know whether or not they have seen all the thumbnails or if they need to keep scrolling horizontally
-	function createCodeThumbComponent(){
-
-		for (var i=0; i< code.length; i ++){
-			var component= $("<div>");
-			component.addClass("component codeComponent" + i);
-			$("#codeComponent").append(component);
-		}
-
-	};
-
-	// calling the function so it can generate the thumbnail components on the DOM
-	createCodeThumbComponent();
-
-	// ---------------------------------------------------------------------
-
-
-	// these variables are defining the element which will be changed when hovering another element
-	var hoverOn1 = function(){
-	    
-		$(".codeComponent0").css("background-color", "black");
-			
-	};
-
-	var hoverOff1 = function(){
-		
-		$(".codeComponent0").css("background-color", "white");
-
-	};
-
-	var hoverOn2 = function(){
-	    
-		$(".codeComponent1").css("background-color", "black");
-			
-	};
-
-	var hoverOff2 = function(){
-		
-		$(".codeComponent1").css("background-color", "white");
-
-	};
-
-	var hoverOn3 = function(){
-	    
-		$(".codeComponent2").css("background-color", "black");
-			
-	};
-
-	var hoverOff3 = function(){
-		
-		$(".codeComponent2").css("background-color", "white");
-
-	};
-
-	var hoverOn4 = function(){
-	    
-		$(".codeComponent3").css("background-color", "black");
-			
-	};
-
-	var hoverOff4 = function(){
-		
-		$(".codeComponent3").css("background-color", "white");
-
-	};
-	
-	// This is calling for the particular element to change on mouseover and mouseleave methods
-	$('.codeThumb0').mouseover(hoverOn1).mouseleave(hoverOff1);
-	$('.codeThumb1').mouseover(hoverOn2).mouseleave(hoverOff2);
-	$('.codeThumb2').mouseover(hoverOn3).mouseleave(hoverOff3);
-	$('.codeThumb3').mouseover(hoverOn4).mouseleave(hoverOff4);
 
 
 	// ---------------------------------------------------------------------
