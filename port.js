@@ -48,13 +48,13 @@ $(document).ready(function(){
 	// this will generate the art thumbnails 
 	// this is the object of images and thumbnails
 	var art = [
-		{	
-			index: 0,
-			thumb: "./artThumbnails/figureThumbnail", 
-			images: ["./figures/sketch.jpg"],
-			title: ["30-min Study"],
-			artType: "Figures"
-		},
+		// {	
+		// 	index: 0,
+		// 	thumb: "./artThumbnails/figureThumbnail", 
+		// 	images: ["./figures/sketch.jpg"],
+		// 	title: ["30-min Study"],
+		// 	artType: "Figures"
+		// },
 
 		{
 			index: 1,
@@ -94,15 +94,15 @@ $(document).ready(function(){
 			images: ["./layouts/WPCF.jpg", "./layouts/adventureComic.png", "./layouts/mimosa"],
 			title: ["Why Penguins Can't Fly (Published)", "Comic Cover", "Gallery Poster"],
 			artType: "Layouts"
-		},
-
-		{
-			index: 6,
-			thumb: "./layouts/beerBrand",
-			images: ["./typography/winterSpiceAle.jpg", "./layouts/beerBrand"],
-			title: ["Beer #1", "Beer Label"],
-			artType: "Beer Brand"
 		}
+
+		// {
+		// 	index: 6,
+		// 	thumb: "./beerBrand/beerBrand",
+		// 	images: ["./beerBrand/winterSpiceAle.jpg", "./beerBrand/f&hbeer.png", "./beerBrand/beerBrand"],
+		// 	title: ["Beer #1", "Beer Logo", "Beer Label"],
+		// 	artType: "Beer Brand"
+		// }
 	];
 
 
