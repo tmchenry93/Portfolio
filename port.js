@@ -75,8 +75,8 @@ $(document).ready(function(){
 		{ 
 			index: 3,
 			thumb: "./logos/ESOmockup.jpg",
-			images: ["./logos/ACP", "./logos/ESOmockup.jpg"],
-			title: ["Photography Logo", "Endurance Sports Outfitters"],
+			images: ["./logos/ACP", "./logos/ESOmockup.jpg", "./beerBrand/beerBrand"],
+			title: ["Photography Logo", "Endurance Sports Outfitters", "Beer Label"],
 			artType: "Vector Illustrations"
 		},
 
