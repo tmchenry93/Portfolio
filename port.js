@@ -75,8 +75,8 @@ $(document).ready(function(){
 		{ 
 			index: 3,
 			thumb: "./logos/ESOmockup.jpg",
-			images: ["./logos/ACP", "./logos/ESOmockup.jpg", "./beerBrand/beerBrand"],
-			title: ["Photography Logo", "Endurance Sports Outfitters", "Beer Label"],
+			images: ["./logos/ACP", "./logos/ESOmockup.jpg"],
+			title: ["Photography Logo", "Endurance Sports Outfitters"],
 			artType: "Vector Illustrations"
 		},
 
@@ -94,15 +94,15 @@ $(document).ready(function(){
 			images: ["./layouts/WPCF.jpg", "./layouts/adventureComic.png", "./layouts/mimosa"],
 			title: ["Why Penguins Can't Fly (Published)", "Comic Cover", "Gallery Poster"],
 			artType: "Layouts"
-		}
+		},
 
-		// {
-		// 	index: 6,
-		// 	thumb: "./beerBrand/beerBrand",
-		// 	images: ["./beerBrand/winterSpiceAle.jpg", "./beerBrand/f&hbeer.png", "./beerBrand/beerBrand"],
-		// 	title: ["Beer #1", "Beer Logo", "Beer Label"],
-		// 	artType: "Beer Brand"
-		// }
+		{
+			index: 6,
+			thumb: "./beerBrand/beerBrand",
+			images: ["./beerBrand/winterSpiceAle.jpg", "./beerBrand/f&hbeer.png", "./beerBrand/beerBrand"],
+			title: ["Beer #1", "Beer Logo", "Beer Label"],
+			artType: "Beer Brand"
+		}
 	];
 
 
@@ -246,6 +246,7 @@ $(document).ready(function(){
 		{
 			index: 0,
 			demo: "https://tmchenry93.github.io/HelloWorld",
+			github: "https://github.com/tmchenry93/HelloWorld",
 			thumb:"./artThumbnails/helloWorld.png",
 			image: "./artThumbnails/helloWorld.png",
 			script: "<p style='font-size: 16px; font-weight: bolder;'>API, Google Firebase, Javascript, JQuery, Bootstrap, CSS, HTML</p><p>What is the first thing we do when planning a trip?  Search for things to do.  The first thing that pop up in our search engine are tourist guides and generic reviews.  Hello World was created for travelers of all backgrounds to share experiences and places in a journal entry.  You can get to know your fellow travelers and their stories around the country by searching a particular city or add your own experience to the communal journal.</p>",
@@ -255,6 +256,7 @@ $(document).ready(function(){
 		{
 			index: 2,
 			demo: "https://tmchenry93.github.io/quiz/quiz",
+			github: "https://github.com/tmchenry93/quiz",
 			thumb:"./artThumbnails/runnersQuiz",
 			image: "./artThumbnails/runnersQuiz.png",
 			script: "<p style='font-size: 16px; font-weight: bolder;'>Javascript, JQuery, CSS, Bootstrap, HTML.</p><p>This is a trivia assignment with multiple choice and a timer.  In this project, I was using Javascript and JQuery to control the html page based on time.  Being a competitive student-athlete for ten years, races started out against the people around you and ended with you against the clock.  So to me, there are no excuses.  ON YOUR MARK, GET SET, *BOOOOM* </p>",
@@ -264,6 +266,7 @@ $(document).ready(function(){
 		{	
 			index: 3,
 			demo: "https://tmchenry93.github.io/gifs/buttons",
+			github: "https://github.com/tmchenry93/gifs",
 			thumb:"./artThumbnails/gifs",
 			image: "./artThumbnails/gifs",
 			script: "<p style='font-size: 16px; font-weight: bolder;'>API, Javascript, JQuery, HTML, CSS.</p><p>With this application, I am using a Giphy API to dynamically create gifs based off of user input.  The user input creates buttons which allow the gifs to be about that specific topic. Clicking on the images will allow it to move and clicking it a second time will stop the motion.  In the demo you will start out with some of my personal favorites topics as button choices.  Create more buttons and see what comes back.  Enjoy!</p>",
@@ -273,6 +276,7 @@ $(document).ready(function(){
 		{
 			index: 4,
 			demo: "https://tmchenry93.github.io/TrainProject/train",
+			github: "https://github.com/tmchenry93/TrainProject",
 			thumb:"./artThumbnails/train", 
 			image: "./artThumbnails/train.png",
 			script: "<p style='font-size: 16px; font-weight: bolder;'>Google Firebase, MomentJS, Javascript, JQuery, Bootstrap, CSS, HTML</p><p>This train schedule website takes user input to create a new train.  With the information taken, MomentJS is used to calculate the train's arrival time and how many minutes the train is away in real time.",
@@ -312,7 +316,7 @@ $(document).ready(function(){
 
 		var title = $("<div>");
 		title.addClass("codeTitle");
-		title.append(code[codeNumber].artType + "<hr>");
+		title.append(code[codeNumber].artType + "<hr><br>");
 		$("#portfolio").append(title).show();
 
 		var image = $("<img>")
@@ -322,7 +326,7 @@ $(document).ready(function(){
 
 		var script = $("<p>");
 		script.addClass("projectDescription");
-		script.append(code[codeNumber].script);
+		script.append(code[codeNumber].script + "<br>");
 		$("#portfolio").append(script);
 		
 		var demo = $("<button>");
@@ -335,6 +339,18 @@ $(document).ready(function(){
 		link.append(demo);
 
 		$("#portfolio").append(link);
+
+		var githubCode = $("<img>");
+		githubCode.addClass("githubLinkImage");
+		githubCode.attr("src", "./artThumbnails/GitHub-Mark.png");
+
+		var githubLink = $("<a>");
+		githubLink.attr("href", code[codeNumber].github);
+		githubLink.attr("target", "_blank");
+		githubLink.append(githubCode);
+
+		$("#portfolio").append(githubLink);
+
 	});
 
 });

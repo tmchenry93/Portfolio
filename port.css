@@ -59,10 +59,11 @@ body {
 
 	#line2 {
 		width: 100%;
-		height: 3%;
+		/*height: 3%;*/
+		height: 2px;
 		position: absolute;
 		left: 0;
-		top: 42.5%;
+		top: 45%;
 		text-align: right;
 		padding-right: 1%;
 		background:  #de805b; /* For browsers that do not support gradients */
@@ -71,14 +72,16 @@ body {
 	    background: -moz-linear-gradient(-45deg,  #de805b, #d4d8d7); /* For Firefox 3.6 to 15 */
 	    background: linear-gradient(-45deg,  #de805b, #d4d8d7); /* Standard syntax */
 	    z-index: 2;
+	    background : #000;
 	}
 
 	#line3 {
 		width: 100%;
-		height: 3%;
+		/*height: 3%;*/
+		height: 2px;
 		position: absolute;
 		left: 0;
-		top: 47.5%;
+		top: 46.5%;
 		text-align: right;
 		padding-right: 1%;
 		background:  #de805b; /* For browsers that do not support gradients */
@@ -87,6 +90,7 @@ body {
 	    background: -moz-linear-gradient(-90deg,  #de805b, #d4d8d7); /* For Firefox 3.6 to 15 */
 	    background: linear-gradient(-90deg,  #de805b, #d4d8d7); /* Standard syntax */
 	    z-index: 2;
+	    background: #000;
 	}
 
 	#line4 {
@@ -94,11 +98,11 @@ body {
 		height: 3%;
 		position: absolute;
 		right: 0;
-		top: 50%;
-		text-align: left;
+		top: 51.5%;
+		text-align: center;
 		background-color: #000;
 		z-index: 2;
-		padding-left: 6.5%;
+		/*padding-left: 6.5%;*/
 		display: inline-block;
 		vertical-align: middle;
 		/* This section calls the slideInFromLeft animation we defined above */
@@ -107,10 +111,11 @@ body {
 	
 	#line10 {
 		width: 100%;
-		height: 3%;
+		/*height: 3%;*/
+		height: 2px;
 		position: absolute;
 		right: 0;
-		top: 52.5%;
+		top: 53%;
 		text-align: right;
 		padding-right: 1%;
 		background:  #de805b; /* For browsers that do not support gradients */
@@ -118,7 +123,8 @@ body {
 	    background: -o-linear-gradient(-90deg, #de805b, #d4d8d7); /* For Opera 11.1 to 12.0 */
 	    background: -moz-linear-gradient(-90deg, #de805b, #d4d8d7); /* For Firefox 3.6 to 15 */
 	    background: linear-gradient(-90deg, #de805b, #d4d8d7); /* Standard syntax */
-	  	box-shadow: 0 4.5px 4.5px #888888;
+	  	/*box-shadow: 0 4.5px 4.5px #888888;*/
+	  	background: #000;
 	  	z-index: 2;
 	}
 
@@ -128,9 +134,9 @@ body {
 		position: absolute;
 		right: 0;
 		top: 45%;
-		text-align: left;
+		text-align: center;
 		background-color: #000;
-		padding-left: 6.5%;
+		/*padding-left: 6.5%;*/
 		z-index: 2;
 		display: inline-block;
 		/* This section calls the slideInFromLeft animation we defined above */
@@ -139,10 +145,11 @@ body {
 
 	#line7 {
 		width: 100%;
-		height: 3%;
+		/*height: 3%;*/
+		height: 2px;
 		position: absolute;
 		right: 0;
-		top: 42.5%;
+		top: 46.5%;
 		text-align: right;
 		padding-right: 1%;
 		background:  #de805b; /* For browsers that do not support gradients */
@@ -151,14 +158,16 @@ body {
 	    background: -moz-linear-gradient(-90deg,  #d4d8d7, #de805b); /* For Firefox 3.6 to 15 */
 	    background: linear-gradient(-90deg,  #d4d8d7, #de805b); /* Standard syntax */
 	  	z-index: 2;
+	  	background: #000;
 	}
 
 	#line8 {
 		width: 100%;
-		height: 3%;
+		/*height: 3%;*/
+		height: 2px;
 		position: absolute;
 		right: 0;
-		top: 47.5%;
+		top: 48.5%;
 		text-align: right;
 		padding-right: 1%;
 		background:  #de805b; /* For browsers that do not support gradients */
@@ -167,14 +176,16 @@ body {
 	    background: -moz-linear-gradient(-45deg,  #d4d8d7, #de805b); /* For Firefox 3.6 to 15 */
 	    background: linear-gradient(-45deg,  #d4d8d7, #de805b); /* Standard syntax */
 	    z-index: 2;
+	    background: #000;
 	}
 
 	#line9 {
 		width: 100%;
-		height: 3%;
+		/*height: 3%;*/
+		height: 2px;
 		position: absolute;
 		right: 0;
-		top: 52.5%;
+		top: 53%;
 		text-align: right;
 		padding-right: 1%;
 		background:  #de805b; /* For browsers that do not support gradients */
@@ -182,8 +193,9 @@ body {
 	    background: -o-linear-gradient(-90deg,  #d4d8d7, #de805b); /* For Opera 11.1 to 12.0 */
 	    background: -moz-linear-gradient(-90deg,  #d4d8d7, #de805b); /* For Firefox 3.6 to 15 */
 	    background: linear-gradient(-90deg,  #d4d8d7, #de805b); /* Standard syntax */
-	    box-shadow: 0 4.5px 4.5px #888888;
+	    /*box-shadow: 0 4.5px 4.5px #888888;*/
 	    z-index: 2;
+	    background: #000;
 	}
 	  
 
@@ -417,7 +429,7 @@ body {
 
 	.artThumbnails {
 		display: inline-block;
-		margin: 2.5%;
+		margin: 3.5%;
 		color: #000;
 		width: 25vw;
 	    height: 15vw;
@@ -425,11 +437,12 @@ body {
 	    position: relative;
 	    overflow: hidden;
 	    border: 1px solid #000;
+	    background-color: #fff;
 	}
 
 	.codeThumbnails {
 		display: inline-block;
-		margin: 2.5%;
+		margin: 3.5%;
 		overflow: hidden;
 		background-position: right;
 		color: #000;
@@ -446,8 +459,6 @@ body {
 
 	.artThumbnails:hover {
 		box-shadow: 7.5px 7.5px 2.5px #888888;
-		border: 5px double #000;
-		/*background-color: lightgray;*/
 	}
 
 	.artThumbnails:hover .title{
@@ -460,8 +471,6 @@ body {
 
 	.codeThumbnails:hover {
 		box-shadow: 7.5px 7.5px 2.5px #888888;
-		border: 5px double #000;
-		/*background-color: lightgray;*/
 	}
 
 	.codeThumbnails:hover .title{
@@ -479,7 +488,6 @@ body {
 		text-align: center;
 		position: relative;
 		font-size: 2vw;
-		/*font-size: 100%;*/
 		margin: auto;
 		display: none;
 		top: 40%;
@@ -531,4 +539,18 @@ body {
 		margin: auto;
 	}
 
+	.githubLinkImage {
+		width: 40px;
+		height: auto;
+		margin-left: 2%;
+	}
 
+	.demo {
+		background-color: #000;
+		color: #fff;
+		border-radius: 5%;
+	}
+
+	.codingScreenShots {
+		border: 2px solid black;
+	}
