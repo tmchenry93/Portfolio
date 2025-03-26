@@ -1,0 +1,6 @@
+body {
+	background: -webkit-linear-gradient(-90deg, #7d91e4, #DE5D83); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(-90deg, #7d91e4, #DE5D83); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(-90deg, #7d91e4, #DE5D83); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(-90deg, #7d91e4, #DE5D83); /* Standard syntax */
+}

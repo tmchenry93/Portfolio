@@ -1,0 +1,23 @@
+{
+  "name": "art-portfolio",
+  "version": "1.0.0",
+  "description": "This is an art portfolio exhibiting works, contact info and artist info.",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.21.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tmchenry93/Portfolio.git"
+  },
+  "author": "Tianna M",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tmchenry93/Portfolio/issues"
+  },
+  "homepage": "https://github.com/tmchenry93/Portfolio#readme"
+}

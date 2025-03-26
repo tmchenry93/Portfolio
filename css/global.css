@@ -1,0 +1,63 @@
+/* ----------------------------------------------------------------- */
+/* this section is styling the navigation bar on the portfolio page */
+.titleName {
+    /*
+    font-family: diazo-mvb-ex-cond, san-serif;
+    font-style: normal;
+    font-weight: 300;
+    */
+}
+
+#navBar {
+    width: 100%;
+    height: 4vh;
+    margin-bottom: 1%;
+    display: none;
+    color: #fff;
+    background-color: #000;
+    z-index: 1;
+    position: fixed;
+}
+
+#artLink {
+    color: #fff;
+    margin-top: 5.5px;
+}
+
+#codeLink {
+    color: #fff;
+    margin-top: 5.5px;
+}
+
+#artLink > a:hover {
+    text-decoration-line: none;
+    color: gray;
+}
+
+#codeLink > a:hover {
+    text-decoration-line: none;
+    color: gray;
+}
+
+#art > a:hover {
+    text-decoration-line: none;
+}
+
+#code > a:hover {
+    text-decoration-line: none;
+}
+
+.glyphicon-home {
+    color: #fff;
+    margin-top: 5.5px;
+}
+
+.glyphicon-home:hover {
+    color: #de805b;
+}
+
+#x {
+    color: black;
+    margin-top: 5.5px;
+}
+
