@@ -1,20 +1,21 @@
 const express = require('express');
+const app = express();
 const router = express.Router();
 
 router.get('/', function (req, res) {
-  res.send(./html/index.html);
+  res.sendFile(html/index.html);
 });
 
 router.get('/about', function (req, res){
-  res.send(./html/about.html);
+  res.sendFile(html/about.html);
 });
 
 router.get('/contact', function (req, res){
-  res.send(./html/contact.html);
+  res.sendFile(html/contact.html);
 });
 
 router.get('/gallery', function (req, res){
-  res.send(./html/gallery.html);
+  res.sendFile(html/gallery.html);
 });
 
-module.exports = router;
+app.use('/', router);

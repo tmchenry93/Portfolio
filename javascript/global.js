@@ -1,8 +1,5 @@
 $(document).ready(function(){
 
-	const Router = require('/router.js');
-	app.use('/router', Router);
-
 	// this function opens up the portfolio page
 	$("#folio").click(function(){
 		$("#mainContainer").hide("blind", 1500);
