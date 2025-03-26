@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-	const Router = require('/router');
+	const Router = require('/router.js');
 	app.use('/router', Router);
 
 	// this function opens up the portfolio page
