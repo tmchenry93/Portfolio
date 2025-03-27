@@ -18,4 +18,4 @@ router.get('/gallery', function (req, res){
 });
 
 const app = express();
-app.use('/', router);
+app.use('/Portfolio', router);
