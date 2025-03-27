@@ -2,7 +2,7 @@
   "name": "art-portfolio",
   "version": "1.0.0",
   "description": "This is an art portfolio exhibiting works, contact info and artist info.",
-  "main": "index.js",
+  "main": "router.js",
   "dependencies": {
     "express": "^4.21.1"
   },
