@@ -24,3 +24,6 @@ router.get('/gallery', function (req, res){
 
 const app = express();
 app.use(router);
+var port = process.env.PORT || 3000;
+
+app.listen(port);
