@@ -4,7 +4,8 @@
   "description": "This is an art portfolio exhibiting works, contact info and artist info.",
   "main": "server.js",
   "dependencies": {
-    "express": "^4.21.1"
+    "express": "^4.21.1",
+    "path": "^0.12.7"
   },
   "devDependencies": {},
   "scripts": {
