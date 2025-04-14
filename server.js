@@ -22,38 +22,40 @@ function filePath(folderName, page){
 };
 
 router.get('/', function (req, res) {
-  res.sendFile(filePath('html', 'homepage.html'));
-  injectScript(filePath("javascript", "global.js"));
-  injectStyleSheet(filePath("css", "global.css"));
-  injectScript(filePath("javascript", "homepage.js"));
-  injectStyleSheet(filePath("css", "homepage.css"));
+  res.sendFile(path.join(__dirname, 'html', 'homepage.html'));
+  //injectScript(filePath("javascript", "global.js"));
+  //injectStyleSheet(filePath("css", "global.css"));
+  //injectScript(filePath("javascript", "homepage.js"));
+  //injectStyleSheet(filePath("css", "homepage.css"));
 });
 
 router.get('/about', function (req, res){
-  res.sendFile(filePath('html', 'about.html'));
-  injectScript(filePath("javascript", "global.js"));
-  injectStyleSheet(filePath("css", "global.css"));
-  injectScript(filePath("javascript", "about.js"));
-  injectStyleSheet(filePath("css", "about.css"));
+  res.sendFile(path.join(__dirname, 'html', 'about.html'));
+  //injectScript(filePath("javascript", "global.js"));
+  //injectStyleSheet(filePath("css", "global.css"));
+  //injectScript(filePath("javascript", "about.js"));
+  //injectStyleSheet(filePath("css", "about.css"));
 });
 
 router.get('/contact', function (req, res){
-  res.sendFile(filePath('html', 'contact.html'));
-  injectScript(filePath("javascript", "global.js"));
-  injectStyleSheet(filePath("css", "global.css"));
-  injectScript(filePath("javascript", "contact.js"));
-  injectStyleSheet(filePath("css", "contact.css"));
+  res.sendFile(path.join(__dirname, 'html', 'contact.html'));
+  //injectScript(filePath("javascript", "global.js"));
+  //injectStyleSheet(filePath("css", "global.css"));
+  //injectScript(filePath("javascript", "contact.js"));
+  //injectStyleSheet(filePath("css", "contact.css"));
 });
 
 router.get('/gallery', function (req, res){
-  res.sendFile(filePath('html', 'gallery.html'));
-  injectScript(filePath("javascript", "global.js"));
-  injectStyleSheet(filePath("css", "global.css"));
-  injectScript(filePath("javascript", "gallery.js"));
-  injectStyleSheet(filePath("css", "gallery.css"));
+  res.sendFile(path.join(__dirname, 'html', 'gallery.html'));
+  //injectScript(filePath("javascript", "global.js"));
+  //injectStyleSheet(filePath("css", "global.css"));
+  //injectScript(filePath("javascript", "gallery.js"));
+  //injectStyleSheet(filePath("css", "gallery.css"));
 });
 
 const app = express();
+app.use(express.static(__dirname + "/javascript/"));
+app.use(express.static(__dirname + "/css/"));
 app.use(router);
 var port = process.env.PORT || 3000;
 
