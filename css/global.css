@@ -1,11 +1,9 @@
 /* ----------------------------------------------------------------- */
 /* this section is styling the navigation bar on the portfolio page */
-.titleName {
-    /*
+body {
     font-family: diazo-mvb-ex-cond, san-serif;
     font-style: normal;
     font-weight: 300;
-    */
 }
 
 #navBar {
