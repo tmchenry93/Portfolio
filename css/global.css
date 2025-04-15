@@ -6,15 +6,23 @@ body {
     font-weight: 300;
 }
 
+.scribbleBG {
+    background-image: url("./art/illustrations/bg.jpg");
+    z-index: 2;
+}
+
+.scribbleBG > img {
+    opacity: .5;
+}
+
 #navbar {
+    position: fixed;
+    top: 0;
     width: 100%;
     height: 4vh;
     color: #fff;
     z-index: 1;
-    position: fixed;
-    top: 0;
-    border-width: 0 0 2px 0;
-    border-color: white;
+    border-bottom: 3px solid white;
 }
 
 #artLink {

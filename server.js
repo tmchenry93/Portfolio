@@ -56,6 +56,7 @@ router.get('/gallery', function (req, res){
 const app = express();
 app.use(express.static(__dirname + "/javascript/"));
 app.use(express.static(__dirname + "/css/"));
+app.use(express.static(__dirname + "/art/"));
 app.use(router);
 var port = process.env.PORT || 3000;
 
