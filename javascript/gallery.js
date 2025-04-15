@@ -1,4 +1,15 @@
 $(document).ready(function(){
+
+	// this function exits out of the carousel so you can choose another frame
+	$("#x").click(function(){
+		$("#portfolio").hide();
+		$("#portfolio").empty();
+		$("#thumbContainer").show();
+		document.getElementById("x").style.color = "black";
+		document.getElementById("artLink").style.color = "white";
+		document.getElementById("codeLink").style.color = "white";
+
+	});
 	
 	// this is the object of images, image names and thumbnails
 	var art = [

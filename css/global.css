@@ -7,8 +7,7 @@ body {
 }
 
 .scribbleBG {
-    background-image: url("./art/illustrations/bg.jpg");
-    z-index: 2;
+    background-image: url("../art/illustrations/bg.jpg");
 }
 
 .scribbleBG > img {
