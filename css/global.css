@@ -9,20 +9,15 @@ body {
 #navBar {
     width: 100%;
     height: 4vh;
-    margin-bottom: 1%;
-    display: none;
     color: #fff;
-    background-color: #000;
     z-index: 1;
     position: fixed;
+    top: 0;
+    border-width: 0 0 2px 0;
+    border-color: white;
 }
 
 #artLink {
-    color: #fff;
-    margin-top: 5.5px;
-}
-
-#codeLink {
     color: #fff;
     margin-top: 5.5px;
 }
@@ -32,16 +27,7 @@ body {
     color: gray;
 }
 
-#codeLink > a:hover {
-    text-decoration-line: none;
-    color: gray;
-}
-
 #art > a:hover {
-    text-decoration-line: none;
-}
-
-#code > a:hover {
     text-decoration-line: none;
 }
 
