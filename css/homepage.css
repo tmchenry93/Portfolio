@@ -17,6 +17,10 @@ body {
     background: linear-gradient(-90deg, #7d91e4, #DE5D83); /* Standard syntax */
 }
 
+#mainContainer {
+	z-index: 1;
+}
+
 /* ----------------------------------------------------------------- */
 /* this section is styling the main landing page */
 

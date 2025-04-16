@@ -4,3 +4,11 @@ body {
     background: -moz-linear-gradient(-90deg, #7d91e4, #DE5D83); /* For Firefox 3.6 to 15 */
     background: linear-gradient(-90deg, #7d91e4, #DE5D83); /* Standard syntax */
 }
+
+#column1Container {
+    z-index: 1;
+}
+
+#column2Container {
+    z-index: 1;
+}

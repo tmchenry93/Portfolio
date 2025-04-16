@@ -10,6 +10,7 @@ body {
     width: 300%;
     height: auto;
     opacity: .1;
+    z-index: 0;
 }
 
 #navbar {
@@ -22,10 +23,9 @@ body {
 }
 
 #homepageIcon {
-    font-family: diazo-mvb-rf2-cond, san-serif;
     font-style: bold;
     font-weight: 300;
-    font-size: 20px;
+    font-size: 30px;
 }
 
 #aboutIcon {
