@@ -1,16 +1,5 @@
 $(document).ready(function(){
 
-	// this function exits out of the carousel so you can choose another frame
-	$("#x").click(function(){
-		$("#portfolio").hide();
-		$("#portfolio").empty();
-		$("#thumbContainer").show();
-		document.getElementById("x").style.color = "black";
-		document.getElementById("artLink").style.color = "white";
-		document.getElementById("codeLink").style.color = "white";
-
-	});
-	
 	// this is the object of images, image names and thumbnails
 	var art = [
 		{	
@@ -46,33 +35,40 @@ $(document).ready(function(){
 		},
 	];
 
-	// this function creates the thumbnails
-	function createThumbnails(){
-
-		for (var i= 0; i< art.length; i++){
-			var displaySquare = $("<div>");
-			displaySquare.addClass("artThumbnails thumb" + i);
-			displaySquare.append("<div class='title'>" + art[i].artType + "</div>");
-			displaySquare.append("<img class='img' src='" + art[i].thumb + "'/>");
-			displaySquare.attr("attributeNumber", i);
-			displaySquare.attr("thumbName", art[i].artType);
-			document.getElementById("artThumbs").append(displaySquare);
-		}
-	};
-
-	// calling the function so it can generate the thumbnails
-	createThumbnails();
 
 
-	// ---------------------------------------------------------------------
+	var iconElement = document.querySelectorAll(".iconContainer");
 
 	// ---------------------------------------------------------------------
 	// this function will allow the images to scroll within the mainArtDiv
-	$(".artThumbnails").click(function(){
+	$(".iconContainer").click(function(){
 
-		document.getElementById("x").style.color = "white";
+		var GDContainer = document.getElementById("galleryDetailContainer");
+
+		if (GDContainer.style.display = none) {
+			GDContainer.style.display = block;
+			alert("display block");
+		} else {
+			alert("GDContainer refill");
+		};
+
+	});
+
+	function iconHover(){
+
+		var icons = document.getElementByClassnames("iconContainer");
+		
+		icons.addEventListener("mouseover", function(){
+
+		});
+
+		if () {
+
+		}
+	};
+
+	/*	document.getElementById("x").style.color = "white";
 		document.getElementById("artLink").style.color = "black";
-		document.getElementById("codeLink").style.color = "black";
 
 		$this = $(this);
 		var artNumber = $(this).attr("attributeNumber");
@@ -174,5 +170,19 @@ $(document).ready(function(){
 			rightControl.append(next);
 
 	});
+
+	function iconHover(){
+		var icons = document.getElementByClassnames("iconContainer");
+		
+		icons.addEventListener("mouseover", function(){
+
+		});
+
+		if () {
+
+		}
+	};
+
+	*/
 
 });
