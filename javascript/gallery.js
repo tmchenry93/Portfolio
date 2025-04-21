@@ -45,8 +45,10 @@ $(document).ready(function(){
 
 		var GDContainer = document.getElementById("galleryDetailContainer");
 
-		if (GDContainer.style.display = none) {
-			GDContainer.style.display = block;
+		if (GDContainer.style.display = "none") {
+			GDContainer.style.display = "block";
+			GDContainer.style.backgroundColor = green;
+			GDContainer.setAttribute("class", "col-xs-12 col-sm-12 col-md-9 col-lg-9");
 			alert("display block");
 		} else {
 			alert("GDContainer refill");
@@ -54,11 +56,15 @@ $(document).ready(function(){
 
 	});
 
-	function iconHover(){
+	/*function iconHover(){
 
-		var icons = document.getElementByClassnames("iconContainer");
-		
+		$this = $(this);
+		var icons = document.getElementsByClassName("iconContainer");
+		var iconsHoverName = $(this).getAttribute("name");
+
 		icons.addEventListener("mouseover", function(){
+			$this = $(this);
+			var iconsHoverName = $(this).getAttribute("name");
 
 		});
 
