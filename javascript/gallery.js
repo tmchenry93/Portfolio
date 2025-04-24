@@ -44,10 +44,12 @@ $(document).ready(function(){
 	$(".iconContainer").click(function(){
 
 		var GDContainer = document.getElementById("galleryDetailContainer");
+		var GIContainer = document.getElementById("galleryIconContainer");
 
 		if (GDContainer.style.display = "none") {
-			GDContainer.style.display = "block";
-			GDContainer.style.backgroundColor = green;
+			GDContainer.style.display = "inline";
+			GDContainer.style.backgroundColor = "green";
+			GIContainer.setAttribute("class", "col-xs-12 col-sm-12 col-md-3 col-lg-3")
 			GDContainer.setAttribute("class", "col-xs-12 col-sm-12 col-md-9 col-lg-9");
 			alert("display block");
 		} else {
