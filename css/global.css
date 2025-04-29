@@ -14,7 +14,7 @@ body {
 } */
 
 .scribbleBG {
-    background-image: url('illustrations/bg.js');
+    background-image: url('bg.js');
     background-size: cover;
     width: 100%;
     height: 300px;
@@ -25,11 +25,11 @@ body {
     top: 0;
     width: 100%;
     color: #fff;
-    z-index: 1;
+    height: 5vh;
     border-bottom: 1.5px solid white;
 }
 
-#homepageIcon > a {
+#homepageIcon {
     font-style: bold;
     font-weight: 300;
     font-size: 50px;
@@ -37,40 +37,40 @@ body {
     text-decoration: none;
 }
 
-#homepageIcon > a:hover {
+#homepageIcon:hover {
     color: white;
     text-decoration: none;
 }
 
-#aboutIcon > a {
+#aboutIcon {
     font-size: 14px;
     color: white;
     text-decoration: none;
 }
 
-#aboutIcon > a:hover {
+#aboutIcon:hover {
     color: white;
     text-decoration: none;
 }
 
-#galleryIcon > a {
+#galleryIcon {
     font-size: 14px;
     color: white;
     text-decoration: none;
 }
 
-#galleryIcon > a:hover {
+#galleryIcon:hover {
     color: white;
     text-decoration: none;
 }
 
-#contactIcon > a {
+#contactIcon {
     font-size: 14px;
     color: white;
     text-decoration: none;
 }
 
-#contactIcon > a:hover {
+#contactIcon:hover {
     color: white;
     text-decoration: none;
 }

@@ -35,25 +35,27 @@ $(document).ready(function(){
 		},
 	];
 
-
-
 	var iconElement = document.querySelectorAll(".iconContainer");
+	var GDContainer = document.getElementById("galleryDetailContainer");
+	var GIContainer = document.getElementById("galleryIconContainer");
 
 	// ---------------------------------------------------------------------
 	// this function will allow the images to scroll within the mainArtDiv
 	$(".iconContainer").click(function(){
 
-		var GDContainer = document.getElementById("galleryDetailContainer");
-		var GIContainer = document.getElementById("galleryIconContainer");
-
 		if (GDContainer.style.display = "none") {
 			GDContainer.style.display = "inline";
 			GDContainer.style.backgroundColor = "green";
-			GIContainer.setAttribute("class", "col-xs-12 col-sm-12 col-md-3 col-lg-3")
+			GDContainer.style.height = "90vh";
+			iconElement.forEach(function(thumb) {
+				thumb.style.display = "inline";
+			});
+			GIContainer.setAttribute("overflow", "scroll")
+			GIContainer.setAttribute("class", "col-xs-12 col-sm-12 col-md-3 col-lg-3");
 			GDContainer.setAttribute("class", "col-xs-12 col-sm-12 col-md-9 col-lg-9");
 			alert("display block");
 		} else {
-			alert("GDContainer refill");
+			alert("GDContainer refill with new art");
 		};
 
 	});
@@ -73,6 +75,95 @@ $(document).ready(function(){
 		if () {
 
 		}
+	}; */
+
+	function buildCarousel(artArr) {
+		var carousel = document.createElement("div");
+		carousel.setAttribute("class", "carousel slide"); 
+		carousel.setAttribute("id", "carousel-example-generic");
+		carousel.setAttribute("data-ride", "carousel");
+		var cc = document.getElementById("carouselContainer");
+		cc.appendChild(carousel);
+
+		var orderedList = document.createElement("ol");
+		orderedList.setAttribute("class", "carousel-indicators");
+		carousel.appendChild(orderedList);
+
+		var mainList = document.createElement("li");
+		mainList.setAttribute("data-target", "#carousel-example-generic");
+		mainList.setAttribute("data-slide-to", "0");
+		mainList.setAttribute("class", "active");
+		orderedList.appendChild(mainList);
+
+		for (var i = 1; i < art[artNumber].images.length; i++){	
+			var list = document.createElement("li");
+			list.setAttribute("data-target", "#carousel-example-generic");
+			list.setAttribute("data-slide-to", "'" + artNumber + "'");
+			orderedList.appendChild(list);
+		}
+
+		var carouselContainerDiv = document.createElement("div");
+		carouselContainerDiv.setAttribute("class", "container");
+		carousel.appendChild(carouselContainerDiv);
+
+		var carouselInner = document.createElement("div");
+		carouselInner.setAttribute("class", "carousel-inner");
+		carouselInner.setAttribute("role", "listbox");
+		carouselContainerDiv.appendChild(carouselInner);
+
+		var mainItem = document.createElement("div");
+		mainItem.setAttribute("class", "item active");
+		carouselInner.appendChild(mainItem);
+
+		var mainImage = document.createElement("img");
+		mainImage.setAttribute("src", art[artNumber].images[0]);
+		mainImage.setAttribute("class", "img-fluid");
+		(mainItem).appendChild(mainImage);
+
+		var mainCaption = document.createElement("div");
+		mainCaption.setAttribute("class", "carousel-caption");
+		mainCaption.appendChild(art[artNumber].title[0]);
+		mainItem.appendChild(mainCaption);
+
+
+
+
+
+
+
+
+		var leftControl = document.createElement("a");
+		leftControl.setAttribute("class", "left carousel-control");
+		leftControl.setAttribute("href", "#carousel-example-generic");
+		leftControl.setAttribute("role", "button");
+		leftControl.setAttribute("data-slide", "prev");
+		carousel.appendChild(leftControl);
+
+		var shape = document.createElement("span");
+		shape.setAttribute("class", "glyphicon glyphicon-chevron-left");
+		shape.setAttribute("aria-hidden", "true");
+		leftControl.appendChild(shape);
+
+		var prev = document.createElement("span");
+		prev.setAttribute("class", "sr-only");
+		leftControl.appendChild(prev);
+
+		var rightControl = document.createElement("a");
+		rightControl.setAttribute("class", "right carousel-control");
+		rightControl.setAttribute("href", "#carousel-example-generic");
+		rightControl.setAttribute("role", "button");
+		rightControl.setAttribute("data-slide", "next");
+		carousel.appendChild(rightControl);
+
+		var rshape = document.createElement("span");
+		rshape.setAttribute("class", "glyphicon glyphicon-chevron-right");
+		rshape.setAttribute("aria-hidden", "true");
+		rightControl.appendChild(rshape);
+
+		var next = document.createElement("span");
+		next.setAttribute("class", "sr-only");
+		rightControl.appendChild(next);
+
 	};
 
 	/*	document.getElementById("x").style.color = "white";
@@ -178,19 +269,6 @@ $(document).ready(function(){
 			rightControl.append(next);
 
 	});
-
-	function iconHover(){
-		var icons = document.getElementByClassnames("iconContainer");
-		
-		icons.addEventListener("mouseover", function(){
-
-		});
-
-		if () {
-
-		}
-	};
-
 	*/
 
 });

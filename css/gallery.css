@@ -54,7 +54,7 @@
 	display: inline-block;
 	margin: 3.5%;
 	color: #000;		
-	width: 25vw;
+	width: 80%;
 	height: 15vw;
     z-index: 0;
     position: relative;
@@ -65,10 +65,6 @@
 
 .iconContainer:hover {
 	box-shadow: 7.5px 7.5px 2.5px #888888;
-	background: -webkit-linear-gradient(-90deg, #7d91e4, #DE5D83); /* For Safari 5.1 to 6.0 */
-	background: -o-linear-gradient(-90deg, #7d91e4, #DE5D83); /* For Opera 11.1 to 12.0 */
-	background: -moz-linear-gradient(-90deg, #7d91e4, #DE5D83); /* For Firefox 3.6 to 15 */
-	background: linear-gradient(-90deg, #7d91e4, #DE5D83); /* Standard syntax */
 }
 
 .iconContainer:hover .iconTitle{
@@ -77,6 +73,14 @@
 
 .iconContainer:hover .img{
 	display: none;
+}
+
+#galleryDetailContainer {
+	display: none;
+}
+
+#galleryIconContainer {
+	width: 100%;
 }
 
 /* ----------------------------------------------------------------- */
@@ -147,5 +151,5 @@
 	height: 95vh;
 	display: none;
 	top: 5%;
-	 z-index: 0;
+	z-index: 0;
 }
