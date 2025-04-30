@@ -50,14 +50,11 @@
 }
 
 .iconContainer{
-	display: inline-block;
-	margin: 3.5%;
-	color: #000;		
-	width: 80%;
-	height: 15vw;
+    margin: 3.5%;
+    color: #000;		
+    width: 25%;
+    height: 12vw;
     z-index: 0;
-    position: relative;
-	overflow: hidden;
     border: 1px solid #000;
     background-color: #fff;
 }
@@ -79,7 +76,7 @@
 }
 
 #galleryIconContainer {
-	width: 100%;
+	overflow: hidden;
 }
 
 /* ----------------------------------------------------------------- */
