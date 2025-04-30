@@ -5,17 +5,17 @@ $(document).ready(function(){
 		{	
 			index: 0,
 			thumb: "./artThumbnails/figureThumbnail", 
-			images: ["./figures/sketch.jpg"],
-			title: ["30-min Study"],
+			images: [],
+			title: [],
 			artType: "Figures"
 		},
 
 		{
 			index: 1,
-			thumb: "./abstract/iHatePrettyThings", 
-			images: ["./abstract/01.jpg", "./abstract/03.jpg", "./abstract/iHatePrettyThings", "./abstract/brainChild.jpg"],
+			thumb: "Abstract\ Paintings/01.jpg", 
+			images: ["Abstract\ Paintings/01.jpg", "Abstract\ Paintings/deludedStars.jpg", "Abstract\ Paintings/brainChild.jpg", "Abstract\ Paintings/DSC_0037.JPG", "Abstract\ Paintings/Abstract\ Blue.jpg"],
 			title: ["Illusions at Sea", "Afternoon in the park", "I Hate Pretty Things", "Brainchild" ],
-			artType: "Abstract"
+			artType: "Abstract Paintings"
 		}, 
 
 		{
@@ -23,15 +23,15 @@ $(document).ready(function(){
 			thumb: "",
 			images: [],
 			title: [],
-			artType: ""
+			artType: "Caravan"
 		},
 
 		{
 			index: 3,
 			thumb: "",
-			images: [],
+			images: ["I\ Hate\ Pretty\ Things/IHPT1.JPG", "I\ Hate\ Pretty\ Things/IHPT2.JPG"],
 			title: [],
-			artType: ""
+			artType: "I Hate Pretty Things"
 		},
 	];
 
@@ -43,19 +43,34 @@ $(document).ready(function(){
 	// this function will allow the images to scroll within the mainArtDiv
 	$(".iconContainer").click(function(){
 
-		if (GDContainer.style.display = "none") {
-			GDContainer.style.display = "inline";
+		if (GDContainer.style.display = "none" && window.innerWidth <= 768) {
+			GDContainer.style.display = "block";
 			GDContainer.style.backgroundColor = "green";
-			GDContainer.style.height = "90vh";
+			GDContainer.style.height = "65vh";
+			GIContainer.style.height = "65vh"
 			iconElement.forEach(function(thumb) {
 				thumb.style.display = "inline";
 			});
-			GIContainer.setAttribute("overflow", "scroll")
+			GIContainer.setAttribute("overflow", "scroll");
 			GIContainer.setAttribute("class", "col-xs-12 col-sm-12 col-md-3 col-lg-3");
 			GDContainer.setAttribute("class", "col-xs-12 col-sm-12 col-md-9 col-lg-9");
-			alert("display block");
+			var selectedIcon = this.getAttribute("name");
+			buildCarousel(selectedIcon);
+		} else if (GDContainer.style.display = "none" && window.innerWidth > 768) {
+			GDContainer.style.display = "inline";
+			GDContainer.style.backgroundColor = "green";
+			GDContainer.style.height = "85vh";
+			GIContainer.style.height = "85vh"
+			iconElement.forEach(function(thumb) {
+				thumb.style.display = "block";
+			});
+			GIContainer.setAttribute("overflow", "scroll");
+			GIContainer.setAttribute("class", "col-xs-12 col-sm-12 col-md-3 col-lg-3");
+			GDContainer.setAttribute("class", "col-xs-12 col-sm-12 col-md-9 col-lg-9");
+			var selectedIcon = this.getAttribute("name");
+			buildCarousel(selectedIcon);
 		} else {
-			alert("GDContainer refill with new art");
+			
 		};
 
 	});
@@ -77,7 +92,15 @@ $(document).ready(function(){
 		}
 	}; */
 
-	function buildCarousel(artArr) {
+	function buildCarousel(selectedArt) {
+
+		var selected = art.findIndex((element) => element.artType = selectedArt);
+
+		if (selected === undefined || selected == "undefined") {
+			console.log("selected art doesn't exist");
+			return "";
+		} 
+
 		var carousel = document.createElement("div");
 		carousel.setAttribute("class", "carousel slide"); 
 		carousel.setAttribute("id", "carousel-example-generic");
@@ -95,10 +118,10 @@ $(document).ready(function(){
 		mainList.setAttribute("class", "active");
 		orderedList.appendChild(mainList);
 
-		for (var i = 1; i < art[artNumber].images.length; i++){	
+		for (var i = 1; i < art[selected].images.length; i++){	
 			var list = document.createElement("li");
 			list.setAttribute("data-target", "#carousel-example-generic");
-			list.setAttribute("data-slide-to", "'" + artNumber + "'");
+			list.setAttribute("data-slide-to", "'" + selected + "'");
 			orderedList.appendChild(list);
 		}
 
@@ -116,21 +139,30 @@ $(document).ready(function(){
 		carouselInner.appendChild(mainItem);
 
 		var mainImage = document.createElement("img");
-		mainImage.setAttribute("src", art[artNumber].images[0]);
+		mainImage.setAttribute("src", art[selected].images[0]);
 		mainImage.setAttribute("class", "img-fluid");
 		(mainItem).appendChild(mainImage);
 
 		var mainCaption = document.createElement("div");
 		mainCaption.setAttribute("class", "carousel-caption");
-		mainCaption.appendChild(art[artNumber].title[0]);
+		mainCaption.appendChild(art[selected].title[0]);
 		mainItem.appendChild(mainCaption);
 
+		for (var i = 1; i < art[selected].images.length; i++){	
+			var item = document.createElement("div");
+			item.setAttribute("class", "item " + selected);
+			carouselInner.appendChild(item);
 
+			var image = document.createElement("img");
+			image.setAttribute("class", "pieces img-fluid");
+			image.setAttribute("src", art[selected].images[i]);
+			item.appendChild(image);
 
-
-
-
-
+			var caption = document.createElement("div");
+			caption.setAttribute("class", "carousel-caption " + i);
+			caption.appendChild(art[selected].title[i]);
+			item.appendChild(caption)
+		}
 
 		var leftControl = document.createElement("a");
 		leftControl.setAttribute("class", "left carousel-control");
