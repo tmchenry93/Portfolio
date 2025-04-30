@@ -52,10 +52,9 @@ $(document).ready(function(){
 				thumb.style.display = "inline";
 			});
 			GIContainer.setAttribute("overflow", "scroll");
-			GIContainer.setAttribute("class", "col-xs-12 col-sm-12 col-md-3 col-lg-3");
-			GDContainer.setAttribute("class", "col-xs-12 col-sm-12 col-md-9 col-lg-9");
 			var selectedIcon = this.getAttribute("name");
-			buildCarousel(selectedIcon);
+			buildCarousel();
+			addImgToCarousel(selectedIcon);
 		} else if (GDContainer.style.display = "none" && window.innerWidth > 768) {
 			GDContainer.style.display = "inline";
 			GDContainer.style.backgroundColor = "green";
@@ -65,10 +64,9 @@ $(document).ready(function(){
 				thumb.style.display = "block";
 			});
 			GIContainer.setAttribute("overflow", "scroll");
-			GIContainer.setAttribute("class", "col-xs-12 col-sm-12 col-md-3 col-lg-3");
-			GDContainer.setAttribute("class", "col-xs-12 col-sm-12 col-md-9 col-lg-9");
 			var selectedIcon = this.getAttribute("name");
-			buildCarousel(selectedIcon);
+			$('.carousel-inner').empty();
+			addImgToCarousel(selectedIcon);
 		} else {
 			
 		};
@@ -91,110 +89,121 @@ $(document).ready(function(){
 
 		}
 	}; */
+	function addImgToCarousel(selectedArt){
+		function checkNameAttr(element) { 
+			return element.artType = selectedArt
+		};
 
-	function buildCarousel(selectedArt) {
-
-		var selected = art.findIndex((element) => element.artType = selectedArt);
+		var selected = art.findIndex(checkNameAttr);
 
 		if (selected === undefined || selected == "undefined") {
 			console.log("selected art doesn't exist");
 			return "";
-		} 
+		};
+
+		var carousel = document.getElementById("carousel-example-generic");
+
+		var orderedList = document.createElement("ol");
+		orderedList.setAttribute("class", "carousel-indicators");
+		carousel.append(orderedList);
+
+		var mainList = document.createElement("li");
+		mainList.setAttribute("data-target", "#carousel-example-generic");
+		mainList.setAttribute("data-slide-to", "0");
+		mainList.setAttribute("class", "active");
+		orderedList.append(mainList);
+
+		for (var i = 1; i < art[selected].images.length; i++){	
+			var list = document.createElement("li");
+			list.setAttribute("data-target", "#carousel-example-generic");
+			list.setAttribute("data-slide-to", "'" + selected + "'");
+			orderedList.append(list);
+		}
+
+		var mainItem = document.getElementsByClassName("item active");
+
+		var mainImage = document.createElement("img");
+		mainImage.setAttribute("src", art[selected].images[0]);
+		mainImage.setAttribute("class", "img-fluid");
+		(mainItem).append(mainImage);
+
+		var mainCaption = document.createElement("div");
+		mainCaption.setAttribute("class", "carousel-caption");
+		mainCaption.append(art[selected].title[0]);
+		mainItem.append(mainCaption);
+
+		var carouselInner = document.getElementsByClassName("carousel-inner");
+
+		for (var i = 1; i < art[selected].images.length; i++){	
+			var item = document.createElement("div");
+			item.setAttribute("class", "item " + selected);
+			carouselInner.append(item);
+
+			var image = document.createElement("img");
+			image.setAttribute("class", "pieces img-fluid");
+			image.setAttribute("src", art[selected].images[i]);
+			item.append(image);
+
+			var caption = document.createElement("div");
+			caption.setAttribute("class", "carousel-caption " + i);
+			caption.append(art[selected].title[i]);
+			item.append(caption);
+		}
+	}
+
+	function buildCarousel() {
 
 		var carousel = document.createElement("div");
 		carousel.setAttribute("class", "carousel slide"); 
 		carousel.setAttribute("id", "carousel-example-generic");
 		carousel.setAttribute("data-ride", "carousel");
 		var cc = document.getElementById("carouselContainer");
-		cc.appendChild(carousel);
-
-		var orderedList = document.createElement("ol");
-		orderedList.setAttribute("class", "carousel-indicators");
-		carousel.appendChild(orderedList);
-
-		var mainList = document.createElement("li");
-		mainList.setAttribute("data-target", "#carousel-example-generic");
-		mainList.setAttribute("data-slide-to", "0");
-		mainList.setAttribute("class", "active");
-		orderedList.appendChild(mainList);
-
-		for (var i = 1; i < art[selected].images.length; i++){	
-			var list = document.createElement("li");
-			list.setAttribute("data-target", "#carousel-example-generic");
-			list.setAttribute("data-slide-to", "'" + selected + "'");
-			orderedList.appendChild(list);
-		}
+		cc.append(carousel);
 
 		var carouselContainerDiv = document.createElement("div");
 		carouselContainerDiv.setAttribute("class", "container");
-		carousel.appendChild(carouselContainerDiv);
+		carousel.append(carouselContainerDiv);
 
 		var carouselInner = document.createElement("div");
 		carouselInner.setAttribute("class", "carousel-inner");
 		carouselInner.setAttribute("role", "listbox");
-		carouselContainerDiv.appendChild(carouselInner);
+		carouselContainerDiv.append(carouselInner);
 
 		var mainItem = document.createElement("div");
 		mainItem.setAttribute("class", "item active");
-		carouselInner.appendChild(mainItem);
-
-		var mainImage = document.createElement("img");
-		mainImage.setAttribute("src", art[selected].images[0]);
-		mainImage.setAttribute("class", "img-fluid");
-		(mainItem).appendChild(mainImage);
-
-		var mainCaption = document.createElement("div");
-		mainCaption.setAttribute("class", "carousel-caption");
-		mainCaption.appendChild(art[selected].title[0]);
-		mainItem.appendChild(mainCaption);
-
-		for (var i = 1; i < art[selected].images.length; i++){	
-			var item = document.createElement("div");
-			item.setAttribute("class", "item " + selected);
-			carouselInner.appendChild(item);
-
-			var image = document.createElement("img");
-			image.setAttribute("class", "pieces img-fluid");
-			image.setAttribute("src", art[selected].images[i]);
-			item.appendChild(image);
-
-			var caption = document.createElement("div");
-			caption.setAttribute("class", "carousel-caption " + i);
-			caption.appendChild(art[selected].title[i]);
-			item.appendChild(caption)
-		}
+		carouselInner.append(mainItem);
 
 		var leftControl = document.createElement("a");
 		leftControl.setAttribute("class", "left carousel-control");
 		leftControl.setAttribute("href", "#carousel-example-generic");
 		leftControl.setAttribute("role", "button");
 		leftControl.setAttribute("data-slide", "prev");
-		carousel.appendChild(leftControl);
+		carousel.append(leftControl);
 
 		var shape = document.createElement("span");
 		shape.setAttribute("class", "glyphicon glyphicon-chevron-left");
 		shape.setAttribute("aria-hidden", "true");
-		leftControl.appendChild(shape);
+		leftControl.append(shape);
 
 		var prev = document.createElement("span");
 		prev.setAttribute("class", "sr-only");
-		leftControl.appendChild(prev);
+		leftControl.append(prev);
 
 		var rightControl = document.createElement("a");
 		rightControl.setAttribute("class", "right carousel-control");
 		rightControl.setAttribute("href", "#carousel-example-generic");
 		rightControl.setAttribute("role", "button");
 		rightControl.setAttribute("data-slide", "next");
-		carousel.appendChild(rightControl);
+		carousel.append(rightControl);
 
 		var rshape = document.createElement("span");
 		rshape.setAttribute("class", "glyphicon glyphicon-chevron-right");
 		rshape.setAttribute("aria-hidden", "true");
-		rightControl.appendChild(rshape);
+		rightControl.append(rshape);
 
 		var next = document.createElement("span");
 		next.setAttribute("class", "sr-only");
-		rightControl.appendChild(next);
+		rightControl.append(next);
 
 	};
 
