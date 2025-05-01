@@ -46,11 +46,11 @@ $(document).ready(function(){
 		if (GDContainer.style.display = "none" && window.innerWidth <= 768) {
 			GDContainer.setAttribute('display', 'block');
 			buildCarousel();
-			GDContainer.style.class = 'col-xs-12 col-sm-12 col-md-9 col-lg-9';
-			GIContainer.style.class = 'col-xs-12 col-sm-12 col-md-3 col-lg-3';
+			GDContainer.style.class = 'col-xs-12 col-sm-12 col-md-12 col-lg-12';
+			GIContainer.style.class = 'col-xs-12 col-sm-12 col-md-12 col-lg-12';
 			GDContainer.style.backgroundColor = "green";
-			GDContainer.style.height = "65vh";
-			GIContainer.style.height = "65vh"
+			GDContainer.style.height = "70vh";
+			GIContainer.style.height = "20vh"
 			iconElement.forEach(function(thumb) {
 				thumb.style.display = "inline-block";
 			});
@@ -62,9 +62,10 @@ $(document).ready(function(){
 			};
 		} else if (GDContainer.style.display = "none" && window.innerWidth > 768) {
 			GDContainer.setAttribute('display', 'inline');
+			GDContainer.style.backgroundColor = "blue";
 			buildCarousel();
-			GDContainer.style.class = 'col-xs-12 col-sm-12 col-md-12 col-lg-12';
-			GIContainer.style.class = 'col-xs-12 col-sm-12 col-md-12 col-lg-12';
+			GDContainer.style.class = 'col-xs-12 col-sm-12 col-md-9 col-lg-9';
+			GIContainer.style.class = 'col-xs-12 col-sm-12 col-md-3 col-lg-3';
 			GDContainer.style.height = "85vh";
 			GIContainer.style.height = "85vh"
 			iconElement.forEach(function(thumb) {
