@@ -4,7 +4,7 @@ $(document).ready(function(){
 	var art = [
 		{	
 			index: 0,
-			thumb: "./artThumbnails/figureThumbnail", 
+			thumb: "", 
 			images: [],
 			title: [],
 			artType: "Figures"
@@ -44,6 +44,7 @@ $(document).ready(function(){
 	$(".iconContainer").click(function(){
 
 		if (GDContainer.style.display = "none" && window.innerWidth <= 768) {
+			buildCarousel()
 			GDContainer.style.display = "block";
 			GDContainer.style.backgroundColor = "green";
 			GDContainer.style.height = "65vh";
@@ -53,7 +54,6 @@ $(document).ready(function(){
 			});
 			GIContainer.setAttribute("overflow", "scroll");
 			var selectedIcon = this.getAttribute("name");
-			buildCarousel();
 			addImgToCarousel(selectedIcon);
 		} else if (GDContainer.style.display = "none" && window.innerWidth > 768) {
 			GDContainer.style.display = "inline";
@@ -91,7 +91,7 @@ $(document).ready(function(){
 	}; */
 	function addImgToCarousel(selectedArt){
 		function checkNameAttr(element) { 
-			return element.artType = selectedArt
+			return element.artType == selectedArt;
 		};
 
 		var selected = art.findIndex(checkNameAttr);
