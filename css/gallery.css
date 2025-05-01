@@ -12,8 +12,9 @@
 }
 
 .iconContainer{
+	display: inline-block;
     margin: 3.5%;
-    color: #000;		
+    color: #05031b;		
     width: 25%;
     height: 20vw;
     z-index: 0;
@@ -70,7 +71,7 @@
 	width: 50%;
 } */
 
-#carouselContainer > #carousel-example-generic {
+#carouselContainer > #carouselExampleIndicators {
 	max-height: 100%;  
 	max-width: 100%; 
 	position: absolute;  

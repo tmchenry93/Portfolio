@@ -24,7 +24,8 @@ body {
 #artistType {
 	font-style: bold;
     font-weight: 500;
-    font-size: 200px;
+    font-size: 10vw;
+	opacity: 40%;
 }
 
 	#description {
