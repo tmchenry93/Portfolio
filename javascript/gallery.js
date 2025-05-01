@@ -52,23 +52,20 @@ $(document).ready(function(){
 			iconElement.forEach(function(thumb) {
 				thumb.style.display = "inline";
 			});
-			GIContainer.setAttribute("overflow", "scroll");
 			var selectedIcon = this.getAttribute("name");
 			addImgToCarousel(selectedIcon);
 		} else if (GDContainer.style.display = "none" && window.innerWidth > 768) {
 			GDContainer.style.display = "inline";
-			GDContainer.style.backgroundColor = "green";
 			GDContainer.style.height = "85vh";
 			GIContainer.style.height = "85vh"
 			iconElement.forEach(function(thumb) {
 				thumb.style.display = "block";
 			});
-			GIContainer.setAttribute("overflow", "scroll");
 			var selectedIcon = this.getAttribute("name");
 			$('.carousel-inner').empty();
 			addImgToCarousel(selectedIcon);
 		} else {
-			
+			console.log("blue");
 		};
 
 	});
