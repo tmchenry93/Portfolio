@@ -43,11 +43,11 @@ $(document).ready(function(){
 	// this function will allow the images to scroll within the mainArtDiv
 	$(".iconContainer").click(function(){
 
-		if (GDContainer.style.display = "" && window.innerWidth <= 768) {
+		if (GDContainer.style.display = "none" && window.innerWidth <= 768) {
+			GDContainer.setAttribute('display', 'block');
 			buildCarousel();
-			GDContainer.setAttribute("class", 'col-xs-12 col-sm-12 col-md-9 col-lg-9');
+			GDContainer.style.class = 'col-xs-12 col-sm-12 col-md-9 col-lg-9';
 			GIContainer.style.class = 'col-xs-12 col-sm-12 col-md-3 col-lg-3';
-			GDContainer.style.display = "block";
 			GDContainer.style.backgroundColor = "green";
 			GDContainer.style.height = "65vh";
 			GIContainer.style.height = "65vh"
@@ -55,11 +55,16 @@ $(document).ready(function(){
 				thumb.style.display = "inline-block";
 			});
 			var selectedIcon = this.getAttribute("name");
-			addImgToCarousel(selectedIcon);
-		} else if (GDContainer.style.display = "" && window.innerWidth > 768) {
+			if (selectedIcon && selectedIcon != "undefined") {
+			        addImgToCarousel(selectedIcon);
+			} else {
+				alert("green");
+			};
+		} else if (GDContainer.style.display = "none" && window.innerWidth > 768) {
+			GDContainer.setAttribute('display', 'inline');
+			buildCarousel();
 			GDContainer.style.class = 'col-xs-12 col-sm-12 col-md-12 col-lg-12';
 			GIContainer.style.class = 'col-xs-12 col-sm-12 col-md-12 col-lg-12';
-			GDContainer.style.display = "inline";
 			GDContainer.style.height = "85vh";
 			GIContainer.style.height = "85vh"
 			iconElement.forEach(function(thumb) {
@@ -67,9 +72,14 @@ $(document).ready(function(){
 			});
 			var selectedIcon = this.getAttribute("name");
 			$('.carousel-inner').empty();
-			addImgToCarousel(selectedIcon);
+			if (selectedIcon && selectedIcon != "undefined") {
+			        addImgToCarousel(selectedIcon);
+			} else {
+				alert("green");
+			};
 		} else {
-			console.log("blue");
+			alert("blue");
+			
 		};
 
 	});
@@ -156,7 +166,7 @@ $(document).ready(function(){
 
 		var carousel = document.createElement("div");
 		carousel.setAttribute("class", "carousel slide"); 
-		carousel.setAttribute("id", "carouselExampleIndicators");
+		carousel.setAttribute("id", "carousel-example-generic");
 		carousel.setAttribute("data-ride", "carousel");
 		var cc = document.getElementById("carouselContainer");
 		cc.append(carousel);
