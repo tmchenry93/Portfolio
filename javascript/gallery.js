@@ -44,7 +44,9 @@ $(document).ready(function(){
 	$(".iconContainer").click(function(){
 
 		if (GDContainer.style.display = "none" && window.innerWidth <= 768) {
-			buildCarousel()
+			buildCarousel();
+			GDContainer.style.class = 'col-xs-12 col-sm-12 col-md-9 col-lg-9';
+			GIContainer.style.class = 'col-xs-12 col-sm-12 col-md-3 col-lg-3';
 			GDContainer.style.display = "block";
 			GDContainer.style.backgroundColor = "green";
 			GDContainer.style.height = "65vh";
@@ -55,6 +57,8 @@ $(document).ready(function(){
 			var selectedIcon = this.getAttribute("name");
 			addImgToCarousel(selectedIcon);
 		} else if (GDContainer.style.display = "none" && window.innerWidth > 768) {
+			GDContainer.style.class = 'col-xs-12 col-sm-12 col-md-12 col-lg-12';
+			GIContainer.style.class = 'col-xs-12 col-sm-12 col-md-12 col-lg-12';
 			GDContainer.style.display = "inline";
 			GDContainer.style.height = "85vh";
 			GIContainer.style.height = "85vh"
