@@ -132,7 +132,7 @@ $(document).ready(function(){
 			orderedList.append(list);
 		}
 
-		var mainItem = document.getElementsByClassName("item active");
+		var mainItem = document.getElementById("mainitem");
 
 		var mainImage = document.createElement("img");
 		mainImage.setAttribute("src", art[selected].images[0]);
@@ -182,6 +182,7 @@ $(document).ready(function(){
 		carouselContainerDiv.append(carouselInner);
 
 		var mainItem = document.createElement("div");
+		mainItem.setAttribute("id", "mainitem");
 		mainItem.setAttribute("class", "item active");
 		carouselInner.append(mainItem);
 
