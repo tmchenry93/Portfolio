@@ -44,7 +44,7 @@ $(document).ready(function(){
 	$(".iconContainer").click(function(){
 
 		if (GDContainer.style.display = "none" && window.innerWidth <= 768) {
-			GDContainer.setAttribute('display', 'block');
+			GDContainer.setAttribute('display', 'inline-block');
 			buildCarousel();
 			GDContainer.style.class = 'col-xs-12 col-sm-12 col-md-12 col-lg-12';
 			GIContainer.style.class = 'col-xs-12 col-sm-12 col-md-12 col-lg-12';
@@ -144,7 +144,7 @@ $(document).ready(function(){
 		mainCaption.append(art[selected].title[0]);
 		mainItem.append(mainCaption);
 
-		var carouselInner = document.getElementsByClassName("carousel-inner");
+		var carouselInner = document.getElementById("carouselinner");
 
 		for (var i = 1; i < art[selected].images.length; i++){	
 			var item = document.createElement("div");
@@ -177,6 +177,7 @@ $(document).ready(function(){
 		carousel.append(carouselContainerDiv);
 
 		var carouselInner = document.createElement("div");
+		carouselInner.setAttribute("id", "carouselinner");
 		carouselInner.setAttribute("class", "carousel-inner");
 		carouselInner.setAttribute("role", "listbox");
 		carouselContainerDiv.append(carouselInner);
