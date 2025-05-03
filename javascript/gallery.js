@@ -72,7 +72,7 @@ $(document).ready(function(){
 				thumb.style.display = "block";
 			});
 			var selectedIcon = this.getAttribute("name");
-			$('.carousel-inner').empty();
+			//$('.carousel-inner').empty();
 			if (selectedIcon && selectedIcon != "undefined") {
 			        addImgToCarousel(selectedIcon);
 			} else {
@@ -128,7 +128,7 @@ $(document).ready(function(){
 		for (var i = 1; i < art[selected].images.length; i++){	
 			var list = document.createElement("li");
 			list.setAttribute("data-target", "#carousel-example-generic");
-			list.setAttribute("data-slide-to", "'" + selected + "'");
+			list.setAttribute("data-slide-to", "'" + i + "'");
 			orderedList.append(list);
 		}
 
@@ -148,7 +148,7 @@ $(document).ready(function(){
 
 		for (var i = 1; i < art[selected].images.length; i++){	
 			var item = document.createElement("div");
-			item.setAttribute("class", "item " + selected);
+			item.setAttribute("class", "item " + i);
 			carouselInner.append(item);
 
 			var image = document.createElement("img");
@@ -172,15 +172,15 @@ $(document).ready(function(){
 		var cc = document.getElementById("carouselContainer");
 		cc.append(carousel);
 
-		var carouselContainerDiv = document.createElement("div");
-		carouselContainerDiv.setAttribute("class", "container");
-		carousel.append(carouselContainerDiv);
+		//var carouselContainerDiv = document.createElement("div");
+		//carouselContainerDiv.setAttribute("class", "container");
+		//carousel.append(carouselContainerDiv);
 
 		var carouselInner = document.createElement("div");
 		carouselInner.setAttribute("id", "carouselinner");
 		carouselInner.setAttribute("class", "carousel-inner");
 		carouselInner.setAttribute("role", "listbox");
-		carouselContainerDiv.append(carouselInner);
+		carousel.append(carouselInner);
 
 		var mainItem = document.createElement("div");
 		mainItem.setAttribute("id", "mainitem");
