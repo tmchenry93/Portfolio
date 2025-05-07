@@ -40,6 +40,14 @@ $(document).ready(function(){
 	var GIContainer = document.getElementById("galleryIconContainer");
 
 	// ---------------------------------------------------------------------
+	
+	/*
+	If divs with class, "iconContainer", are clicked, 
+	the "galleryIconContainer" div shrinks and the "galleryDetailContainer" appears
+	When the "galleryDetailContainer" appears, 
+	the carousel appears and the images are
+	*/
+
 	// this function will allow the images to scroll within the mainArtDiv
 	$(".iconContainer").click(function(){
 
@@ -101,6 +109,7 @@ $(document).ready(function(){
 
 		}
 	}; */
+	
 	function addImgToCarousel(selectedArt){
 		function checkNameAttr(element) { 
 			return element.artType == selectedArt;
@@ -161,7 +170,7 @@ $(document).ready(function(){
 			caption.append(art[selected].title[i]);
 			item.append(caption);
 		}
-	}
+	} 
 
 	function buildCarousel() {
 
