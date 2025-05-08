@@ -6,13 +6,12 @@ body {
 }
 
 #section1Container {
-    margin: 10%;
+    margin: 2% 0 0 0;
     z-index: 1;
     color: #070422;
 }
 
 #section2Container {
-    margin: 10%;
     z-index: 1;
     color: #070422;
 }
