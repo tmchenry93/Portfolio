@@ -12,6 +12,7 @@ body {
 }
 
 #section2Container {
+    margin: 2% 0 0 0;
     z-index: 1;
     color: #070422;
 }
