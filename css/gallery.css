@@ -113,11 +113,11 @@
 
 .carousel-control.left, .carousel-control.right {
 	background-image: none;
-	color: gray;
+	color: #7f7cb8;
 }
 
 .carousel-inner > .item {
-	width: 50vh;
+	width: 65%;
 	height: auto;
 }
 
