@@ -3,14 +3,24 @@
 @media only screen and (max-width: 768px) {
 	.iconContainer{
 		display: inline;
-		margin: 3.5%;
-		color: #05031b;		
-		width: 25%;
+		margin: 7.5%;
+		color: #070422;		
+		width: 85%;
 		height: 20vw;
 		z-index: 0;
 		border: 1px solid #180976;
 		background-color: #fff;
 	}
+
+	#galleryDetailContainer {
+		height: 60vh;
+	}
+	
+	#galleryIconContainer {
+		overflow: scroll;
+		height: 15vh;
+	}
+	
 }
 
 .glyphicon-menu-right {
@@ -26,9 +36,9 @@
 
 .iconContainer{
 	display: inline-block;
-    margin: 3.5%;
-    color: #05031b;		
-    width: 25%;
+    margin: 7.5%;
+    color: #070422;		
+    width: 85%;
     height: 20vw;
     z-index: 0;
     border: 1px solid #180976;
@@ -41,18 +51,20 @@
 
 .iconContainer:hover .iconTitle{
 	display: block;
+	color: #070422;
 }
 
 .iconContainer:hover .img{
 	display: none;
 }
 
-/*#galleryDetailContainer {
-	display: none;
-}*/
+#galleryDetailContainer {
+	height: 80vh;
+}
 
 #galleryIconContainer {
 	overflow: scroll;
+	height: 80vh;
 }
 
 #artThumbs {
@@ -96,8 +108,7 @@
 }
 
 .carousel-caption {
-	color: #000;
-	background: #fff; /* For browsers that do not support gradients */
+	color: #070422;
 }
 
 .carousel-control.left, .carousel-control.right {
@@ -105,13 +116,14 @@
 	color: gray;
 }
 
-/*.carousel-inner > .item {
-	height: 90vh;
-}*/
+.carousel-inner > .item {
+	width: 50vh;
+	height: auto;
+}
 
 .carousel-inner > .item img {
-	max-height: 100%;  
-	max-width: 100%; 
+	max-height: auto;  
+	max-width: 65%; 
 	position: absolute;  
 	top: 0;  
 	bottom: 0;  

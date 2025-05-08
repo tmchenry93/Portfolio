@@ -5,10 +5,14 @@ body {
     background: linear-gradient(-90deg, #7d91e4, #DE5D83); /* Standard syntax */
 }
 
-#column1Container {
+#section1Container {
+    margin: 10%;
     z-index: 1;
+    color: #070422;
 }
 
-#column2Container {
+#section2Container {
+    margin: 10%;
     z-index: 1;
+    color: #070422;
 }

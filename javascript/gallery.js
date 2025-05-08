@@ -51,7 +51,35 @@ $(document).ready(function(){
 	// this function will allow the images to scroll within the mainArtDiv
 	$(".iconContainer").click(function(){
 
-		buildCarousel();
+		var carouselElement = document.getElementById("carousel-example-generic");
+
+		if (!carouselElement){
+
+			buildCarousel();
+
+			var selectedIcon = this.getAttribute("name");
+
+			if (selectedIcon && selectedIcon != "undefined") {
+		        addImgToCarousel(selectedIcon);
+			} else {
+				alert("green");
+			};
+
+		} else {
+
+			$('.carousel-inner').empty();
+
+			var selectedIcon = this.getAttribute("name");
+
+			if (selectedIcon && selectedIcon != "undefined") {
+		        addImgToCarousel(selectedIcon);
+			} else {
+				alert("green");
+			};
+			
+		}
+		
+		/*buildCarousel();
 
 		var selectedIcon = this.getAttribute("name");
 
@@ -60,7 +88,7 @@ $(document).ready(function(){
 		} else {
 			alert("green");
 		};
-		
+
 		/*
 		if (GDContainer.style.display = "none" && window.innerWidth <= 768) {
 			buildCarousel();
@@ -126,6 +154,7 @@ $(document).ready(function(){
 		};
 
 		var carousel = document.getElementById("carousel-example-generic");
+		var carouselInner = document.getElementById("carouselinner");
 
 		var orderedList = document.createElement("ol");
 		orderedList.setAttribute("class", "carousel-indicators");
@@ -144,7 +173,10 @@ $(document).ready(function(){
 			orderedList.append(list);
 		}
 
-		var mainItem = document.getElementById("mainitem");
+		var mainItem = document.createElement("div");
+		mainItem.setAttribute("id", "mainitem");
+		mainItem.setAttribute("class", "item active");
+		carouselInner.append(mainItem);
 
 		var mainImage = document.createElement("img");
 		mainImage.setAttribute("src", art[selected].images[0]);
@@ -155,8 +187,6 @@ $(document).ready(function(){
 		mainCaption.setAttribute("class", "carousel-caption");
 		mainCaption.append(art[selected].title[0]);
 		mainItem.append(mainCaption);
-
-		var carouselInner = document.getElementById("carouselinner");
 
 		for (var i = 1; i < art[selected].images.length; i++){	
 			var item = document.createElement("div");
@@ -193,11 +223,6 @@ $(document).ready(function(){
 		carouselInner.setAttribute("class", "carousel-inner");
 		carouselInner.setAttribute("role", "listbox");
 		carousel.append(carouselInner);
-
-		var mainItem = document.createElement("div");
-		mainItem.setAttribute("id", "mainitem");
-		mainItem.setAttribute("class", "item active");
-		carouselInner.append(mainItem);
 
 		var leftControl = document.createElement("a");
 		leftControl.setAttribute("class", "left carousel-control");
