@@ -1,5 +1,18 @@
 /* ----------------------------------------------------------------- */
 /* this section is styling the thumb container and the actual thumbnails */
+@media only screen and (max-width: 768px) {
+	.iconContainer{
+		display: inline;
+		margin: 3.5%;
+		color: #05031b;		
+		width: 25%;
+		height: 20vw;
+		z-index: 0;
+		border: 1px solid #180976;
+		background-color: #fff;
+	}
+}
+
 .glyphicon-menu-right {
 	display: inline-block;
 	position: absolute;
@@ -34,9 +47,9 @@
 	display: none;
 }
 
-#galleryDetailContainer {
+/*#galleryDetailContainer {
 	display: none;
-}
+}*/
 
 #galleryIconContainer {
 	overflow: scroll;
@@ -92,9 +105,9 @@
 	color: gray;
 }
 
-.carousel-inner > .item {
+/*.carousel-inner > .item {
 	height: 90vh;
-}
+}*/
 
 .carousel-inner > .item img {
 	max-height: 100%;  

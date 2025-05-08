@@ -51,12 +51,19 @@ $(document).ready(function(){
 	// this function will allow the images to scroll within the mainArtDiv
 	$(".iconContainer").click(function(){
 
+		buildCarousel();
+
+		var selectedIcon = this.getAttribute("name");
+
+		if (selectedIcon && selectedIcon != "undefined") {
+		        addImgToCarousel(selectedIcon);
+		} else {
+			alert("green");
+		};
+		
+		/*
 		if (GDContainer.style.display = "none" && window.innerWidth <= 768) {
-			GDContainer.setAttribute('display', 'inline-block');
 			buildCarousel();
-			GDContainer.style.class = 'col-xs-12 col-sm-12 col-md-12 col-lg-12';
-			GIContainer.style.class = 'col-xs-12 col-sm-12 col-md-12 col-lg-12';
-			GDContainer.style.backgroundColor = "green";
 			GDContainer.style.height = "70vh";
 			GIContainer.style.height = "20vh"
 			iconElement.forEach(function(thumb) {
@@ -69,11 +76,7 @@ $(document).ready(function(){
 				alert("green");
 			};
 		} else if (GDContainer.style.display = "none" && window.innerWidth > 768) {
-			GDContainer.setAttribute('display', 'inline');
-			GDContainer.style.backgroundColor = "blue";
 			buildCarousel();
-			GDContainer.style.class = 'col-xs-12 col-sm-12 col-md-9 col-lg-9';
-			GIContainer.style.class = 'col-xs-12 col-sm-12 col-md-3 col-lg-3';
 			GDContainer.style.height = "85vh";
 			GIContainer.style.height = "85vh"
 			iconElement.forEach(function(thumb) {
@@ -90,7 +93,7 @@ $(document).ready(function(){
 			alert("blue");
 			
 		};
-
+		*/
 	});
 
 	/*function iconHover(){
