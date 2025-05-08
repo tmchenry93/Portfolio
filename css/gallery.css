@@ -6,7 +6,7 @@
 		margin: 7.5%;
 		color: #070422;		
 		width: 30%;
-		height: 20vw;
+		height: 18%;
 		z-index: 0;
 		border: 1px solid #180976;
 		background-color: #fff;
@@ -35,7 +35,7 @@
 }
 
 .iconContainer{
-	display: inline-block;
+	display: block;
     margin: 7.5%;
     color: #070422;		
     width: 85%;
@@ -111,13 +111,17 @@
 	color: #070422;
 }
 
+.carousel-inner {
+	height: 75%;
+}
+
 .carousel-control.left, .carousel-control.right {
 	background-image: none;
 	color: #7f7cb8;
 }
 
 .carousel-inner > .item {
-	width: 65%;
+	width: 70%;
 	height: auto;
 }
 
