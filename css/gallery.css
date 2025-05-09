@@ -59,6 +59,7 @@
 	color: #180976;
 	font-size: 2.5em;
 	text-align: center;
+	vertical-align: middle;
 	display: block;
 	margin: auto;
 }
@@ -146,6 +147,7 @@
 	margin-right: auto;
 	margin-top: auto;
 	margin-bottom: auto;
+	align-items: center;
 }
 
 /* ----------------------------------------------------------------- */
