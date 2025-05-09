@@ -37,16 +37,18 @@
 .iconContainer{
 	display: block;
     margin: 7.5%;
-    color: #070422;		
+    color: #fff;		
     width: 85%;
     height: 20vw;
     z-index: 0;
     border: 1px solid #180976;
-    background-color: #fff;
+    background-color: #7f7cb8;
 }
 
 .iconContainer:hover {
 	box-shadow: 7.5px 7.5px 2.5px #7f7cb8;
+	background-image: url("./assets/bg.jpg");
+	opacity: .2;
 }
 
 .iconContainer:hover .iconTitle{
@@ -142,9 +144,8 @@
 .carousel-inner > .item img {
 	max-width: 65%;
 	max-height: auto;  
-	display: flex;
-        justify-content: center;
-	align-items: center;
+	display: block;
+	margin: auto;
 }
 
 /* ----------------------------------------------------------------- */
