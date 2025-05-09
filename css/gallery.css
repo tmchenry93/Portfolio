@@ -54,6 +54,12 @@
 	color: #070422;
 }
 
+.iconContainer > .iconTitle {
+	margin: auto;
+	color: #180976;
+	font-size: 3.5em;
+}
+
 .iconContainer:hover .img{
 	display: none;
 }
