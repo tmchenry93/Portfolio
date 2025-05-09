@@ -42,7 +42,7 @@ $(document).ready(function(){
 	// ---------------------------------------------------------------------
 
 	function writeIcon(iconName){
-		iconName.innerHTML = iconName.getAttribute(name);
+		iconName.innerHTML = "<div class='iconTitle'>" + iconName.getAttribute(name) + "</div>"
 	}
 
 	iconElement.forEach(writeIcon);
