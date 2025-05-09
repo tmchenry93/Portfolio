@@ -60,6 +60,9 @@
 	color: #180976;
 	font-size: 2.25em;
 	text-align: center;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 
 .iconContainer:hover .img{
@@ -134,14 +137,16 @@
 }
 
 .carousel-inner > .item img {
-	max-height: auto;  
-	max-width: 65%; 
+	width: 70%;
+	height: auto;  
 	position: absolute;  
 	top: 0;  
 	bottom: 0;  
 	left: 0;  
 	right: 0;  
-	margin: auto;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 /* ----------------------------------------------------------------- */
