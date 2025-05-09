@@ -40,7 +40,12 @@ $(document).ready(function(){
 	var GIContainer = document.getElementById("galleryIconContainer");
 
 	// ---------------------------------------------------------------------
-	
+
+	function writeIcon(iconName){
+		iconName.innerHTML = iconName.getAttribute(name);
+	}
+
+	iconElement.forEach(writeIcon);
 	/*
 	If divs with class, "iconContainer", are clicked, 
 	the "galleryIconContainer" div shrinks and the "galleryDetailContainer" appears
