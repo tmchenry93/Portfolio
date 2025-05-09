@@ -56,8 +56,10 @@
 
 .iconContainer > .iconTitle {
 	margin: auto;
+	width: 70%;
 	color: #180976;
-	font-size: 3.5em;
+	font-size: 2.25em;
+	text-align: center;
 }
 
 .iconContainer:hover .img{
