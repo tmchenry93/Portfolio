@@ -13,7 +13,7 @@ $(document).ready(function(){
 		{
 			index: 1,
 			thumb: "Abstract\ Paintings/01.jpg", 
-			images: ["Abstract\ Paintings/01.jpg", "Abstract\ Paintings/deludedStars.jpg", "Abstract\ Paintings/brainChild.jpg", "Abstract\ Paintings/DSC_0037.JPG", "Abstract\ Paintings/Abstract\ Blue.jpg"],
+			images: ["Abstract\ Paintings/01.jpg", "Abstract\ Paintings/20230628_014835.jpg", "Abstract\ Paintings/brainChild.jpg", "Abstract\ Paintings/DSC_0037.JPG", "Abstract\ Paintings/Abstract\ Blue.jpg"],
 			title: ["Illusions at Sea", "Afternoon in the park", "I Hate Pretty Things", "Brainchild" ],
 			artType: "Abstract Paintings"
 		}, 
