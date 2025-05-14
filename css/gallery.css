@@ -23,6 +23,13 @@
 	
 }
 
+body {
+	background: -webkit-linear-gradient(-90deg, #fff, #e2dff2); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(-90deg, #fff, #e2dff2); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(-90deg, #fff, #e2dff2); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(-90deg, #fff, #e2dff2); /* Standard syntax */
+}
+
 .glyphicon-menu-right {
 	display: inline-block;
 	position: absolute;
@@ -36,32 +43,25 @@
 
 .iconContainer{
 	display: block;
-    margin: 7.5%;
-    color: #fff;		
+    margin: 7.5%;		
     width: 85%;
     height: 20vw;
     z-index: 0;
     border: 1px solid #180976;
-    background-color: #7f7cb8;
+    background-color: #fff;
 }
 
 .iconContainer:hover {
 	box-shadow: 7.5px 7.5px 2.5px #7f7cb8;
-	background-image: url("./assets/bg.jpg");
-	opacity: .2;
-}
-
-.iconContainer:hover .iconTitle{
-	display: block;
-	color: #070422;
+	/* background-image: url("../assets/bg.jpg"); 
+	opacity: .2; */
 }
 
 .iconContainer > .iconTitle {
 	width: 70%;
-	color: #180976;
+	color: #7f7cb8;
 	font-size: 2.5em;
 	text-align: center;
-	vertical-align: middle;
 	display: block;
 	margin: auto;
 }
@@ -145,7 +145,12 @@
 	max-width: 65%;
 	max-height: auto;  
 	display: block;
-	margin: auto;
+	margin-left: auto;
+  	margin-right: auto;
+	top: 0;
+	bottom: 0; 
+	left: 0; 
+	right: 0;
 }
 
 /* ----------------------------------------------------------------- */
