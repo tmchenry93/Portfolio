@@ -22,10 +22,18 @@ body {
 }
 
 #artistType {
-	font-style: bold;
+    font-style: regular;
     font-weight: 500;
-    font-size: 10vw;
+    font-size: 6.5vw;
 	opacity: 40%;
+	text-align: left;
+}
+
+#artistName {
+	font-style: bold;
+	font-size: 9vw;
+	text-align: left;
+	opacity: .85;
 }
 
 	#description {
