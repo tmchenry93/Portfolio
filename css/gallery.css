@@ -23,13 +23,6 @@
 	
 }
 
-body {
-	background: -webkit-linear-gradient(-90deg, #fff, #e2dff2); /* For Safari 5.1 to 6.0 */
-	background: -o-linear-gradient(-90deg, #fff, #e2dff2); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(-90deg, #fff, #e2dff2); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(-90deg, #fff, #e2dff2); /* Standard syntax */
-}
-
 .glyphicon-menu-right {
 	display: inline-block;
 	position: absolute;
@@ -71,7 +64,8 @@ body {
 }
 
 #galleryDetailContainer {
-	height: 80vh;
+	max-height: 100%;  
+	max-width: 100%; 
 }
 
 #galleryIconContainer {
@@ -126,8 +120,6 @@ body {
 .carousel-inner {
 	max-height: 100%;  
 	max-width: 100%; 
-	position: absolute;  
-	margin: auto;
 }
 
 .carousel-control.left, .carousel-control.right {
@@ -138,8 +130,6 @@ body {
 .carousel-inner > .item {
 	max-height: 100%;  
 	max-width: 100%; 
-	margin: auto;
-	position: relative;
 }
 
 .carousel-inner > .item img {
