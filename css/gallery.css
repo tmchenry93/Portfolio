@@ -93,14 +93,11 @@
 .carousel-inner {
 	max-height: 100%;  
 	max-width: 100%; 
-	margin: auto;
 }
 
 .carousel-inner > .item {
 	max-height: 100%;  
 	max-width: 100%; 
-	margin: auto;
-	position: relative;
 }
 
 .carousel-inner > .item img {
