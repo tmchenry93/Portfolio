@@ -16,7 +16,7 @@
 	display: block;
     margin: 7.5%;		
     width: 85%;
-    height: 20vw;
+    height: 17.5vw;
     z-index: 0;
     border: 1px solid #180976;
     background-color: #fff;
@@ -29,9 +29,9 @@
 }
 
 .iconContainer > .iconTitle {
-	width: 70%;
+	width: 75%;
 	color: #7f7cb8;
-	font-size: 2.5em;
+	font-size: 1.5em;
 	text-align: center;
 	display: block;
 	margin: auto;
@@ -104,10 +104,10 @@
 	display: block;
 	margin-left: auto;
   	margin-right: auto;
-	top: 0;
-	bottom: 0; 
-	left: 0; 
-	right: 0;
+	top: 50%;
+	bottom: 50%; 
+	/*left: 0; 
+	right: 0;*/
 	position: absolute;
 }
 
