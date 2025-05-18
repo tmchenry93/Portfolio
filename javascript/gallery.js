@@ -21,7 +21,7 @@ $(document).ready(function(){
 		{
 			index: 2,
 			thumb: "",
-			images: ["caravanv1.png"],
+			images: ["Caravan/caravanv1.png"],
 			title: [],
 			artType: "Caravan"
 		},
