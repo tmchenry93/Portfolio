@@ -23,6 +23,7 @@ body {
 #navbar {
     top: 0;
     border-bottom: 1.5px solid white;
+    height: 10vh;
 }
 
 #homepageIcon {
