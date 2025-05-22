@@ -5,7 +5,7 @@ $(document).ready(function(){
 		{	
 			index: 0,
 			thumb: "", 
-			images: ["Wishing\ Bed/DSC_0003.JPG", "Wishing\ Bed/DSC_0013.JPG", "Wishing\ Bed/Wishing\ Bed.JPG"]
+			images: ["Wishing\ Bed/DSC_0003.JPG", "Wishing\ Bed/DSC_0013.JPG", "Wishing\ Bed/Wishing\ Bed.JPG"],
 			title: [],
 			artType: "Wishing Bed"
 		},
