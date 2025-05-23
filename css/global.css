@@ -58,7 +58,7 @@ body {
     opacity: .5;
 }
 
-#contactIcon {
+/*#contactIcon {
     font-size: 20px;
     text-decoration: none;
 }
@@ -66,7 +66,7 @@ body {
 #contactIcon:hover {
     text-decoration: none;
     opacity: .5;
-}
+}*/
 
 .mainContainer {
     z-index: 1;

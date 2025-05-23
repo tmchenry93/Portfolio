@@ -1,6 +1,8 @@
 $(document).ready(function(){
 
-	// this is the object of images, image names and thumbnails
+	/*
+	this is the object of images, image names and thumbnails
+	*/
 	var art = [
 		{	
 			index: 0,
@@ -8,7 +10,7 @@ $(document).ready(function(){
 			images: ["Wishing\ Bed/DSC_0003.JPG", "Wishing\ Bed/DSC_0013.JPG", "Wishing\ Bed/Wishing\ Bed.JPG"],
 			title: [],
 			artType: "Wishing Bed", 
-			decription: ""
+			description: ""
 		},
 
 		{
@@ -17,7 +19,7 @@ $(document).ready(function(){
 			images: ["Abstract\ Paintings/01.jpg", "Abstract\ Paintings/20230628_014835.jpg", "Abstract\ Paintings/brainChild.jpg", "Abstract\ Paintings/DSC_0037.JPG", "Abstract\ Paintings/Abstract\ Blue.jpg"],
 			title: [],
 			artType: "Abstract Paintings",
-			decription: ""
+			description: ""
 		}, 
 
 		{
@@ -26,7 +28,7 @@ $(document).ready(function(){
 			images: ["Caravan/caravanv1.png"],
 			title: [],
 			artType: "Caravan",
-			decription: ""
+			description: ""
 		},
 
 		{
@@ -35,29 +37,136 @@ $(document).ready(function(){
 			images: ["I\ Hate\ Pretty\ Things/IHPT1.JPG", "I\ Hate\ Pretty\ Things/IHPT2.JPG"],
 			title: [],
 			artType: "I Hate Pretty Things", 
-			decription: "This series is an examination of the convoluted relationship I have with my fantasies. The pretty things are the catalysts to some of my fantasies and unique to my experience. They consume my thoughts and fuel my imagination. These pretty things serve as calculated distractions. In my works, I reference people I have met and formed some level of attractive toward, a crush or a muse."
+			description: "This series is an examination of the convoluted relationship I have with my fantasies. The pretty things are the catalysts to some of my fantasies and unique to my experience. They consume my thoughts and fuel my imagination. These pretty things serve as calculated distractions. In my works, I reference people I have met and formed some level of attractive toward, a crush or a muse."
 		},
 	];
-
+	// ----------------------------------------------------------------------------------------------------------------------------------
+	
+	
+	/* */
 	var iconElement = document.querySelectorAll(".iconContainer");
 	var GDContainer = document.getElementById("galleryDetailContainer");
 	var GIContainer = document.getElementById("galleryIconContainer");
+	// ----------------------------------------------------------------------------------------------------------------------------------
 
-	// ---------------------------------------------------------------------
 
+	/* */
 	function writeIcon(iconName){
 		iconName.innerHTML = "<div class='iconTitle'>" + iconName.getAttribute("name") + "</div>"
 	}
 
 	iconElement.forEach(writeIcon);
-	/*
-	If divs with class, "iconContainer", are clicked, 
-	the "galleryIconContainer" div shrinks and the "galleryDetailContainer" appears
-	When the "galleryDetailContainer" appears, 
-	the carousel appears and the images are
-	*/
 
-	// this function will allow the images to scroll within the mainArtDiv
+
+	/* */
+	function buildCarousel() {
+
+		var carousel = document.createElement("div");
+		carousel.setAttribute("class", "carousel slide"); 
+		carousel.setAttribute("id", "carousel-example-generic");
+		carousel.setAttribute("data-ride", "carousel");
+		var cc = document.getElementById("carouselContainer");
+		cc.append(carousel);
+
+		var carouselInner = document.createElement("div");
+		carouselInner.setAttribute("id", "carouselinner");
+		carouselInner.setAttribute("class", "carousel-inner");
+		carouselInner.setAttribute("role", "listbox");
+		carousel.append(carouselInner);
+
+		var leftControl = document.createElement("a");
+		leftControl.setAttribute("class", "left carousel-control");
+		leftControl.setAttribute("href", "#carousel-example-generic");
+		leftControl.setAttribute("role", "button");
+		leftControl.setAttribute("data-slide", "prev");
+		carousel.append(leftControl);
+
+		var shape = document.createElement("span");
+		shape.setAttribute("class", "glyphicon glyphicon-chevron-left");
+		shape.setAttribute("aria-hidden", "true");
+		leftControl.append(shape);
+
+		var prev = document.createElement("span");
+		prev.setAttribute("class", "sr-only");
+		leftControl.append(prev);
+
+		var rightControl = document.createElement("a");
+		rightControl.setAttribute("class", "right carousel-control");
+		rightControl.setAttribute("href", "#carousel-example-generic");
+		rightControl.setAttribute("role", "button");
+		rightControl.setAttribute("data-slide", "next");
+		carousel.append(rightControl);
+
+		var rshape = document.createElement("span");
+		rshape.setAttribute("class", "glyphicon glyphicon-chevron-right");
+		rshape.setAttribute("aria-hidden", "true");
+		rightControl.append(rshape);
+
+		var next = document.createElement("span");
+		next.setAttribute("class", "sr-only");
+		rightControl.append(next);
+
+	};
+
+
+	/* */
+	function projectDescriptionCarousel(){
+		
+		var carousel = document.getElementById("carousel-example-generic");
+		var carouselInner = document.getElementById("carouselinner");
+
+		var orderedList = document.createElement("ol");
+		orderedList.setAttribute("class", "carousel-indicators");
+		carousel.append(orderedList);
+
+		var mainList = document.createElement("li");
+		mainList.setAttribute("data-target", "#carousel-example-generic");
+		mainList.setAttribute("data-slide-to", "0");
+		mainList.setAttribute("class", "active");
+		orderedList.append(mainList);
+
+		for (var i = 1; i < art.length; i++){	
+			var list = document.createElement("li");
+			list.setAttribute("data-target", "#carousel-example-generic");
+			list.setAttribute("data-slide-to", "'" + i + "'");
+			orderedList.append(list);
+		}
+
+		var mainItem = document.createElement("div");
+		mainItem.setAttribute("id", "mainitem");
+		mainItem.setAttribute("class", "item active");
+		carouselInner.append(mainItem);
+
+		var mainCaption = document.createElement("div");
+		mainCaption.setAttribute("class", "carousel-caption");
+		mainCaption.append(art[0].description);
+		mainItem.append(mainCaption);
+
+		for (var i = 1; i < art.length; i++){	
+			var item = document.createElement("div");
+			item.setAttribute("class", "item " + i);
+			carouselInner.append(item);
+
+			var caption = document.createElement("div");
+			caption.setAttribute("class", "carousel-caption " + i);
+			caption.append(art[i].description);
+			item.append(caption);
+		}
+	};
+
+
+	/*
+	this section is for the start of the page. The project descriptions carousel will be open.
+	*/
+	buildCarousel();
+	projectDescriptionCarousel();
+	// ----------------------------------------------------------------------------------------------------------------------------------
+
+
+	/*
+	If divs with class, "iconContainer", are clicked, the "galleryIconContainer" div shrinks and the "galleryDetailContainer" appears.
+	When the "galleryDetailContainer" appears, the carousel appears and the images are
+	*/
 	$(".iconContainer").click(function(){
 
 		var carouselElement = document.getElementById("carousel-example-generic");
@@ -77,6 +186,7 @@ $(document).ready(function(){
 		} else {
 
 			$('.carousel-inner').empty();
+			$(".carousel-indicators").remove();
 
 			var selectedIcon = this.getAttribute("name");
 
@@ -88,68 +198,18 @@ $(document).ready(function(){
 			
 		}
 		
-		/*buildCarousel();
-
-		var selectedIcon = this.getAttribute("name");
-
-		if (selectedIcon && selectedIcon != "undefined") {
-		        addImgToCarousel(selectedIcon);
-		} else {
-			alert("green");
-		};
-
-		/*
-		if (GDContainer.style.display = "none" && window.innerWidth <= 768) {
-			buildCarousel();
-			GDContainer.style.height = "70vh";
-			GIContainer.style.height = "20vh"
-			iconElement.forEach(function(thumb) {
-				thumb.style.display = "inline-block";
-			});
-			var selectedIcon = this.getAttribute("name");
-			if (selectedIcon && selectedIcon != "undefined") {
-			        addImgToCarousel(selectedIcon);
-			} else {
-				alert("green");
-			};
-		} else if (GDContainer.style.display = "none" && window.innerWidth > 768) {
-			buildCarousel();
-			GDContainer.style.height = "85vh";
-			GIContainer.style.height = "85vh"
-			iconElement.forEach(function(thumb) {
-				thumb.style.display = "block";
-			});
-			var selectedIcon = this.getAttribute("name");
-			//$('.carousel-inner').empty();
-			if (selectedIcon && selectedIcon != "undefined") {
-			        addImgToCarousel(selectedIcon);
-			} else {
-				alert("green");
-			};
-		} else {
-			alert("blue");
-			
-		};
-		*/
 	});
 
-	/*function iconHover(){
 
-		$this = $(this);
-		var icons = document.getElementsByClassName("iconContainer");
-		var iconsHoverName = $(this).getAttribute("name");
-
-		icons.addEventListener("mouseover", function(){
-			$this = $(this);
-			var iconsHoverName = $(this).getAttribute("name");
-
-		});
-
-		if () {
-
-		}
-	}; */
+	/* */
+	$("#closeImageCarousel").click(function(){
+		$('.carousel-inner').empty();
+		$(".carousel-indicators").remove();
+		projectDescriptionCarousel();
+	});
 	
+
+	/* */
 	function addImgToCarousel(selectedArt){
 		function checkNameAttr(element) { 
 			return element.artType == selectedArt;
@@ -212,164 +272,6 @@ $(document).ready(function(){
 			caption.append(art[selected].title[i]);
 			item.append(caption);
 		}
-	} 
-
-	function buildCarousel() {
-
-		var carousel = document.createElement("div");
-		carousel.setAttribute("class", "carousel slide"); 
-		carousel.setAttribute("id", "carousel-example-generic");
-		carousel.setAttribute("data-ride", "carousel");
-		var cc = document.getElementById("carouselContainer");
-		cc.append(carousel);
-
-		//var carouselContainerDiv = document.createElement("div");
-		//carouselContainerDiv.setAttribute("class", "container");
-		//carousel.append(carouselContainerDiv);
-
-		var carouselInner = document.createElement("div");
-		carouselInner.setAttribute("id", "carouselinner");
-		carouselInner.setAttribute("class", "carousel-inner");
-		carouselInner.setAttribute("role", "listbox");
-		carousel.append(carouselInner);
-
-		var leftControl = document.createElement("a");
-		leftControl.setAttribute("class", "left carousel-control");
-		leftControl.setAttribute("href", "#carousel-example-generic");
-		leftControl.setAttribute("role", "button");
-		leftControl.setAttribute("data-slide", "prev");
-		carousel.append(leftControl);
-
-		var shape = document.createElement("span");
-		shape.setAttribute("class", "glyphicon glyphicon-chevron-left");
-		shape.setAttribute("aria-hidden", "true");
-		leftControl.append(shape);
-
-		var prev = document.createElement("span");
-		prev.setAttribute("class", "sr-only");
-		leftControl.append(prev);
-
-		var rightControl = document.createElement("a");
-		rightControl.setAttribute("class", "right carousel-control");
-		rightControl.setAttribute("href", "#carousel-example-generic");
-		rightControl.setAttribute("role", "button");
-		rightControl.setAttribute("data-slide", "next");
-		carousel.append(rightControl);
-
-		var rshape = document.createElement("span");
-		rshape.setAttribute("class", "glyphicon glyphicon-chevron-right");
-		rshape.setAttribute("aria-hidden", "true");
-		rightControl.append(rshape);
-
-		var next = document.createElement("span");
-		next.setAttribute("class", "sr-only");
-		rightControl.append(next);
-
 	};
-
-	/*	document.getElementById("x").style.color = "white";
-		document.getElementById("artLink").style.color = "black";
-
-		$this = $(this);
-		var artNumber = $(this).attr("attributeNumber");
-
-		$("#thumbContainer").hide();
-
-			var carousel = $("<div>");
-			carousel.addClass("carousel slide"); 
-			carousel.attr("id", "carousel-example-generic");
-			carousel.attr("data-ride", "carousel");
-			$("#portfolio").append(carousel).show();
-
-			var orderedList = $("<ol>");
-			orderedList.addClass("carousel-indicators");
-			carousel.append(orderedList);
-
-			var mainList = $("<li>");
-			mainList.attr("data-target", "#carousel-example-generic");
-			mainList.attr("data-slide-to", "0");
-			mainList.addClass("active");
-			orderedList.append(mainList);
-
-		for (var i = 1; i < art[artNumber].images.length; i++){	
-			var list = $("<li>");
-			list.attr("data-target", "#carousel-example-generic");
-			list.attr("data-slide-to", "'" + artNumber + "'");
-			orderedList.append(list);
-		}
-
-			var carouselContainer = $("<div>");
-			carouselContainer.addClass("container");
-			carousel.append(carouselContainer);
-
-			var carouselInner = $("<div>");
-			carouselInner.addClass("carousel-inner");
-			carouselInner.attr("role", "listbox");
-			carouselContainer.append(carouselInner);
-
-			var mainItem = $("<div>");
-			mainItem.addClass("item active");
-			carouselInner.append(mainItem);
-	
-			var mainImage = $("<img>");
-			mainImage.attr("src", art[artNumber].images[0]);
-			mainImage.addClass("img-fluid");
-			(mainItem).append(mainImage);
-
-			var mainCaption = $("<div>");
-			mainCaption.addClass("carousel-caption");
-			mainCaption.append(art[artNumber].title[0]);
-			mainItem.append(mainCaption);
-
-		for (var i = 1; i < art[artNumber].images.length; i++){	
-			var item = $("<div>");
-			item.addClass("item " + artNumber);
-			carouselInner.append(item);
-
-			var image = $("<img>");
-			image.addClass("pieces img-fluid");
-			image.attr("src", art[artNumber].images[i]);
-			item.append(image);
-
-			var caption = $("<div>");
-			caption.addClass("carousel-caption " + i);
-			caption.append(art[artNumber].title[i]);
-			item.append(caption)
-		}
-
-			var leftControl = $("<a>");
-			leftControl.addClass("left carousel-control");
-			leftControl.attr("href", "#carousel-example-generic");
-			leftControl.attr("role", "button");
-			leftControl.attr("data-slide", "prev");
-			carousel.append(leftControl);
-
-			var shape = $("<span>");
-			shape.addClass("glyphicon glyphicon-chevron-left");
-			shape.attr("aria-hidden", "true");
-			leftControl.append(shape);
-
-			var prev = $("<span>");
-			prev.addClass("sr-only");
-			leftControl.append(prev);
-
-			var rightControl = $("<a>");
-			rightControl.addClass("right carousel-control");
-			rightControl.attr("href", "#carousel-example-generic");
-			rightControl.attr("role", "button");
-			rightControl.attr("data-slide", "next");
-			carousel.append(rightControl);
-
-			var rshape = $("<span>");
-			rshape.addClass("glyphicon glyphicon-chevron-right");
-			rshape.attr("aria-hidden", "true");
-			rightControl.append(rshape);
-
-			var next = $("<span>");
-			next.addClass("sr-only");
-			rightControl.append(next);
-
-	});
-	*/
 
 });
