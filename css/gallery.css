@@ -93,8 +93,9 @@
 }
 
 .descriptionItems {
-	position: absolute;
-	top: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .descriptionTitle {
