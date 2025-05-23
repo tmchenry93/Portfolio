@@ -16,13 +16,15 @@
 }
 
 .iconContainer{
-	display: block;
+    display: flex;
     margin: 0 7.5% 25% 7.5%;		
     width: 12.5vw;
     height: 12.5vw;
     z-index: 0;
     border: 1px solid #180976;
     background-color: #fff;
+    justify-content: center;
+    align-items: center;
 }
 
 .iconContainer:hover {
@@ -64,6 +66,9 @@
 	left: 0;  
 	right: 0;
 	margin: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .carousel-inner {
