@@ -134,7 +134,7 @@ $(document).ready(function(){
 
 		var mainItem = document.createElement("div");
 		mainItem.setAttribute("id", "mainitem");
-		mainItem.setAttribute("class", "item active");
+		mainItem.setAttribute("class", "item active descriptionItems");
 		carouselInner.append(mainItem);
 
 		var mainCaption = document.createElement("div");
@@ -144,7 +144,7 @@ $(document).ready(function(){
 
 		for (var i = 1; i < art.length; i++){	
 			var item = document.createElement("div");
-			item.setAttribute("class", "item " + i);
+			item.setAttribute("class", "descriptionItems item " + i);
 			carouselInner.append(item);
 
 			var caption = document.createElement("div");
