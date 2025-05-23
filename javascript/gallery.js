@@ -7,15 +7,17 @@ $(document).ready(function(){
 			thumb: "", 
 			images: ["Wishing\ Bed/DSC_0003.JPG", "Wishing\ Bed/DSC_0013.JPG", "Wishing\ Bed/Wishing\ Bed.JPG"],
 			title: [],
-			artType: "Wishing Bed"
+			artType: "Wishing Bed", 
+			decription: ""
 		},
 
 		{
 			index: 1,
 			thumb: "Abstract\ Paintings/01.jpg", 
 			images: ["Abstract\ Paintings/01.jpg", "Abstract\ Paintings/20230628_014835.jpg", "Abstract\ Paintings/brainChild.jpg", "Abstract\ Paintings/DSC_0037.JPG", "Abstract\ Paintings/Abstract\ Blue.jpg"],
-			title: [ ],
-			artType: "Abstract Paintings"
+			title: [],
+			artType: "Abstract Paintings",
+			decription: ""
 		}, 
 
 		{
@@ -23,7 +25,8 @@ $(document).ready(function(){
 			thumb: "",
 			images: ["Caravan/caravanv1.png"],
 			title: [],
-			artType: "Caravan"
+			artType: "Caravan",
+			decription: ""
 		},
 
 		{
@@ -31,7 +34,8 @@ $(document).ready(function(){
 			thumb: "",
 			images: ["I\ Hate\ Pretty\ Things/IHPT1.JPG", "I\ Hate\ Pretty\ Things/IHPT2.JPG"],
 			title: [],
-			artType: "I Hate Pretty Things"
+			artType: "I Hate Pretty Things", 
+			decription: "This series is an examination of the convoluted relationship I have with my fantasies. The pretty things are the catalysts to some of my fantasies and unique to my experience. They consume my thoughts and fuel my imagination. These pretty things serve as calculated distractions. In my works, I reference people I have met and formed some level of attractive toward, a crush or a muse."
 		},
 	];
 

@@ -19,11 +19,14 @@
 .iconContainer{
 	display: block;
     margin: 7.5%;		
-    width: 85%;
-    height: 17.5vw;
+    width: 12.5vw;
+    height: 12.5vw;
     z-index: 0;
     border: 1px solid #180976;
     background-color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .iconContainer:hover {
@@ -105,14 +108,11 @@
 }
 
 .carousel-inner > .item img {
-	max-width: 65%;
-	max-height: auto;  
+	max-width: 60%;
+	max-height: 80%;  
 	display: block;
 	margin-left: auto;
   	margin-right: auto;
-	margin-top: auto;
-	margin-bottom: auto;
-	position: relative;
 }
 
 .carousel-caption {
@@ -144,24 +144,32 @@
 } */
 
 @media only screen and (max-width: 768px) {
-	.iconContainer{
+
+	.iconContainer {
 		display: inline-block;
 		margin: 7.5%;
 		color: #070422;		
-		width: 30%;
-		height: 18%;
+		width: 10vh;
+		height: 10vh;
 		z-index: 0;
 		border: 1px solid #180976;
 		background-color: #fff;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 
 	#galleryDetailContainer {
-		height: 60vh;
+		height: 75vh;
+		margin-top: 0vh;
 	}
 	
 	#galleryIconContainer {
-		overflow: scroll;
+		overflow: auto;
+		white-space: nowrap;
 		height: 15vh;
+		border-bottom: 1px solid #7f7cb8;
+		margin-top: 0vh;
 	}
 	
 }
