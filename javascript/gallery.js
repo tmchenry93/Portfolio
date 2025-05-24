@@ -149,7 +149,7 @@ $(document).ready(function(){
 
 			var caption = document.createElement("div");
 			caption.setAttribute("class", "carousel-caption " + i);
-			caption.append(<p class="descriptionTitle">art[i].artType</p> + <p>art[i].description</p>);
+			caption.append('<p class="descriptionTitle">' + art[i].artType + '</p> <p>' + art[i].description + '</p> <div class="seeGallery" onclick="">See ' + art[i].artType + ' Gallery</div>');
 			item.append(caption);
 		}
 	};
