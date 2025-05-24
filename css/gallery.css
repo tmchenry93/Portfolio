@@ -89,23 +89,28 @@
 
 .carousel-caption {
 	color: #070422;
-	font-size: 25px;
+	font-size: 22.5px;
 }
 
 .descriptionItems {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	height: 50vh;
 }
 
 .descriptionTitle {
 	font-style: italic;
-	font-size: 45px;
+	font-size: 40px;
+	color: -webkit-linear-gradient(-90deg, #7d91e4, #DE5D83); /* For Safari 5.1 to 6.0 */
+	color: -o-linear-gradient(-90deg, #7d91e4, #DE5D83); /* For Opera 11.1 to 12.0 */
+    color: -moz-linear-gradient(-90deg, #7d91e4, #DE5D83); /* For Firefox 3.6 to 15 */
+    color: linear-gradient(-90deg, #7d91e4, #DE5D83); /* Standard syntax */
 }
 
 .seeGallery {
 	text-decoration: none;
-	font-size: 30px;
+	font-size: 27.5px;
 }
 
 .carousel-control.left, .carousel-control.right {

@@ -10,7 +10,7 @@ $(document).ready(function(){
 			images: ["Wishing\ Bed/DSC_0003.JPG", "Wishing\ Bed/DSC_0013.JPG", "Wishing\ Bed/Wishing\ Bed.JPG"],
 			title: [],
 			artType: "Wishing Bed", 
-			description: ""
+			description: "My friends and I showcased Mimosa Daydreams post graduation. This exhibition’s main purpose was to depict our experiences, departures and anxieties through our transition into adulthood.  The ‘Wishing Bed’ was an interactive piece which directed the audience to write their dreams on notecards and throw it back into the bed, as you do a coin into a well.  Unbeknownst to me, this piece served as a bittersweet microscope emphasizing how lonely we are as people and how much we need a genuine community."
 		},
 
 		{
@@ -28,7 +28,7 @@ $(document).ready(function(){
 			images: ["Caravan/caravanv1.png"],
 			title: [],
 			artType: "Caravan",
-			description: ""
+			description: "“Caravan” exhibition centers around the idea and the process of taking adventures and/ or risks in life. This exhibition’s inspiration stems from my first road trip through Kansas and the Romantic period’s ideology surrounding Nature and the Sublime. Through a Romantic lens, I think about what motivated me to take that first road trip and what pushes me to continue to seek out more risk and adventure. Has it benefited or harmed me in the grand scheme of things?Through a romantic lens, I reflected on my road trips out west and used reference photos from them. The wide open fields and never-ending views of road and land were the epitome of the Sublime. You won’t know how far the destination is or what the journey will be like."
 		},
 
 		{
@@ -149,7 +149,7 @@ $(document).ready(function(){
 
 			var caption = document.createElement("div");
 			caption.setAttribute("class", "carousel-caption " + i);
-			caption.append(art[i].description);
+			caption.append(<p class="descriptionTitle">art[i].artType</p> + <p>art[i].description</p>);
 			item.append(caption);
 		}
 	};
