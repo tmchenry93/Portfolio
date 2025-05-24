@@ -138,9 +138,11 @@ $(document).ready(function(){
 		carouselInner.append(mainItem);
 
 		var mainCaption = document.createElement("div");
+		mainCaption.setAttribute("id", "cc0")
 		mainCaption.setAttribute("class", "carousel-caption");
-		mainCaption.innerHTML('<p class="descriptionTitle">' + art[0].artType + '</p> <p>' + art[0].description + '</p> <div class="seeGallery" onclick="">See ' + art[0].artType + ' Gallery</div>');
 		mainItem.append(mainCaption);
+
+		document.getElementById("cc0").innerHTML = '<p class="descriptionTitle">' + art[0].artType + '</p> <p>' + art[0].description + '</p> <div class="seeGallery" onclick="">See ' + art[0].artType + ' Gallery</div>';
 
 		for (var i = 1; i < art.length; i++){	
 			var item = document.createElement("div");
@@ -148,9 +150,11 @@ $(document).ready(function(){
 			carouselInner.append(item);
 
 			var caption = document.createElement("div");
+			caption.setAttribute("id", "cc" + i);
 			caption.setAttribute("class", "carousel-caption " + i);
-			caption.innerHTML('<p class="descriptionTitle">' + art[i].artType + '</p> <p>' + art[i].description + '</p> <div class="seeGallery" onclick="">See ' + art[i].artType + ' Gallery</div>');
 			item.append(caption);
+
+			document.getElementById("cc" + i).innerHTML = '<p class="descriptionTitle">' + art[i].artType + '</p> <p>' + art[i].description + '</p> <div class="seeGallery" onclick="">See ' + art[i].artType + ' Gallery</div>';
 		}
 	};
 
