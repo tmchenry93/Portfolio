@@ -139,7 +139,7 @@ $(document).ready(function(){
 
 		var mainCaption = document.createElement("div");
 		mainCaption.setAttribute("class", "carousel-caption");
-		mainCaption.append(art[0].description);
+		mainCaption.innerHTML('<p class="descriptionTitle">' + art[0].artType + '</p> <p>' + art[0].description + '</p> <div class="seeGallery" onclick="">See ' + art[0].artType + ' Gallery</div>');
 		mainItem.append(mainCaption);
 
 		for (var i = 1; i < art.length; i++){	
@@ -149,7 +149,7 @@ $(document).ready(function(){
 
 			var caption = document.createElement("div");
 			caption.setAttribute("class", "carousel-caption " + i);
-			caption.append('<p class="descriptionTitle">' + art[i].artType + '</p> <p>' + art[i].description + '</p> <div class="seeGallery" onclick="">See ' + art[i].artType + ' Gallery</div>');
+			caption.innerHTML('<p class="descriptionTitle">' + art[i].artType + '</p> <p>' + art[i].description + '</p> <div class="seeGallery" onclick="">See ' + art[i].artType + ' Gallery</div>');
 			item.append(caption);
 		}
 	};
