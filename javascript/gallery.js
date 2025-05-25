@@ -4,61 +4,82 @@ $(document).ready(function(){
 	this is the object of images, image names and thumbnails
 	*/
 	var art = [
+
 		{	
+
 			index: 0,
 			thumb: "", 
 			images: ["Wishing\ Bed/DSC_0003.JPG", "Wishing\ Bed/DSC_0013.JPG", "Wishing\ Bed/Wishing\ Bed.JPG"],
 			title: [],
 			artType: "Wishing Bed", 
-			description: "My friends and I showcased Mimosa Daydreams post graduation. This exhibition’s main purpose was to depict our experiences, departures and anxieties through our transition into adulthood.  The ‘Wishing Bed’ was an interactive piece which directed the audience to write their dreams on notecards and throw it back into the bed, as you do a coin into a well.  Unbeknownst to me, this piece served as a bittersweet microscope emphasizing how lonely we are as people and how much we need a genuine community."
+			description: "is an interactive piece which directed the audience to write their dreams and aspirations on notecards.  Then, throw the back into the bed, as you do a coin into a well. This piece was showcased in the exhibition, <i>Mimosa Daydreams</i>. The exhibition's main purpose was to depict the experiences, departures and anxieties transitioning into adulthood.  <i>Wishing Bed</i> serves as a bittersweet microscope emphasizing how lonely we are as people and how much we need a genuine community."
+		
 		},
 
 		{
+
 			index: 1,
 			thumb: "Abstract\ Paintings/01.jpg", 
 			images: ["Abstract\ Paintings/01.jpg", "Abstract\ Paintings/20230628_014835.jpg", "Abstract\ Paintings/brainChild.jpg", "Abstract\ Paintings/DSC_0037.JPG", "Abstract\ Paintings/Abstract\ Blue.jpg"],
 			title: [],
 			artType: "Abstract Paintings",
-			description: ""
+			description: "is a collection of paintings throughout the years. My process is expressive and at random.  I randomly pick color palettes or use inspirations from color combinations I enjoy seeing out in the world (nature, fashion, architectural elements). I visually enjoy stripes so I try to incorporate line work anyway I can."
+		
 		}, 
 
 		{
+
 			index: 2,
 			thumb: "",
 			images: ["Caravan/caravanv1.png"],
 			title: [],
 			artType: "Caravan",
-			description: "“Caravan” exhibition centers around the idea and the process of taking adventures and/ or risks in life. This exhibition’s inspiration stems from my first road trip through Kansas and the Romantic period’s ideology surrounding Nature and the Sublime. Through a Romantic lens, I think about what motivated me to take that first road trip and what pushes me to continue to seek out more risk and adventure. Has it benefited or harmed me in the grand scheme of things?Through a romantic lens, I reflected on my road trips out west and used reference photos from them. The wide open fields and never-ending views of road and land were the epitome of the Sublime. You won’t know how far the destination is or what the journey will be like."
+			description: "centers around the idea and the process of taking adventures and/ or risks in life. This exhibition’s inspiration stems from my first road trip through Kansas and the Romantic period’s ideology surrounding Nature and the Sublime. Through a Romantic lens, I think about what motivated me to take that first road trip and what pushes me to continue to seek out more risk and adventure. Has it benefited or harmed me in the grand scheme of things?Through a romantic lens, I reflected on my road trips out west and used reference photos from them. The wide open fields and never-ending views of road and land were the epitome of the Sublime. You won’t know how far the destination is or what the journey will be like."
+		
 		},
 
 		{
+
 			index: 3,
 			thumb: "",
 			images: ["I\ Hate\ Pretty\ Things/IHPT1.JPG", "I\ Hate\ Pretty\ Things/IHPT2.JPG"],
 			title: [],
 			artType: "I Hate Pretty Things", 
-			description: "This series is an examination of the convoluted relationship I have with my fantasies. The pretty things are the catalysts to some of my fantasies and unique to my experience. They consume my thoughts and fuel my imagination. These pretty things serve as calculated distractions. In my works, I reference people I have met and formed some level of attractive toward, a crush or a muse."
+			description: "is an examination of the convoluted relationship I have with my fantasies. The pretty things are the catalysts to some of my fantasies and unique to my experience. They consume my thoughts and fuel my imagination. These pretty things serve as calculated distractions. In my works, I reference people I have met and formed some level of attractive toward, a crush or a muse. Pinks, blush tones and warm colors are intentionally used to portray a sense of intimacy, sexuality and the idealism behind rose-tinted glasses."
+		
 		},
+
 	];
 	// ----------------------------------------------------------------------------------------------------------------------------------
 	
 	
-	/* */
+	/*
+	global variables for 'iconcontainers', 'gallerydetailcontainer', 'galleryiconcontainer' divs
+	*/
 	var iconElement = document.querySelectorAll(".iconContainer");
+
 	var GDContainer = document.getElementById("galleryDetailContainer");
+
 	var GIContainer = document.getElementById("galleryIconContainer");
 	// ----------------------------------------------------------------------------------------------------------------------------------
 
 
-	/* */
+	/* 
+	this function writes the art type inside of the art icons
+	*/
 	function writeIcon(iconName){
+
 		iconName.innerHTML = "<div class='iconTitle'>" + iconName.getAttribute("name") + "</div>"
+
 	}
 
 	iconElement.forEach(writeIcon);
+	// ----------------------------------------------------------------------------------------------------------------------------------
 
 
-	/* */
+	/* 
+	this function builds the carousel
+	*/
 	function buildCarousel() {
 
 		var carousel = document.createElement("div");
@@ -109,7 +130,9 @@ $(document).ready(function(){
 	};
 
 
-	/* */
+	/*
+	this function populates the carousel with descriptions of each project and creates a new 'carousel-indicators' div 
+	*/
 	function projectDescriptionCarousel(){
 		
 		var carousel = document.getElementById("carousel-example-generic");
@@ -142,7 +165,7 @@ $(document).ready(function(){
 		mainCaption.setAttribute("class", "carousel-caption");
 		mainItem.append(mainCaption);
 
-		document.getElementById("cc0").innerHTML = '<p class="descriptionTitle">' + art[0].artType + '</p> <p>' + art[0].description + '</p> <div class="seeGallery" onclick="">See ' + art[0].artType + ' Gallery</div>';
+		document.getElementById("cc0").innerHTML = '<p class="descriptionTitle">' + art[0].artType + '</p> <p>' + art[0].description + '</p> <button class="seeGallery" name="' + art[0].artType + '">See ' + art[0].artType + ' Gallery</button>';
 
 		for (var i = 1; i < art.length; i++){	
 			var item = document.createElement("div");
@@ -154,8 +177,9 @@ $(document).ready(function(){
 			caption.setAttribute("class", "carousel-caption " + i);
 			item.append(caption);
 
-			document.getElementById("cc" + i).innerHTML = '<p class="descriptionTitle">' + art[i].artType + '</p> <p>' + art[i].description + '</p> <div class="seeGallery" onclick="">See ' + art[i].artType + ' Gallery</div>';
+			document.getElementById("cc" + i).innerHTML = '<p class="descriptionTitle">' + art[i].artType + '</p> <p>' + art[i].description + '</p> <button class="seeGallery" name="' + art[i].artType + '">See ' + art[i].artType + ' Gallery</button>';
 		}
+
 	};
 
 
@@ -163,58 +187,15 @@ $(document).ready(function(){
 	this section is for the start of the page. The project descriptions carousel will be open.
 	*/
 	buildCarousel();
+
 	projectDescriptionCarousel();
-	// ----------------------------------------------------------------------------------------------------------------------------------
 
 
-	/*
-	If divs with class, "iconContainer", are clicked, the "galleryIconContainer" div shrinks and the "galleryDetailContainer" appears.
-	When the "galleryDetailContainer" appears, the carousel appears and the images are
+	/* 
+	this function populates the 'carouselinner' div with images and creates a new 'carousel-indicators' div
 	*/
-	$(".iconContainer").click(function(){
-
-		var carouselElement = document.getElementById("carousel-example-generic");
-
-		if (!carouselElement){
-
-			buildCarousel();
-
-			var selectedIcon = this.getAttribute("name");
-
-			if (selectedIcon && selectedIcon != "undefined") {
-		        addImgToCarousel(selectedIcon);
-			} else {
-				alert("green");
-			};
-
-		} else {
-
-			$('.carousel-inner').empty();
-			$(".carousel-indicators").remove();
-
-			var selectedIcon = this.getAttribute("name");
-
-			if (selectedIcon && selectedIcon != "undefined") {
-		        addImgToCarousel(selectedIcon);
-			} else {
-				alert("green");
-			};
-			
-		}
-		
-	});
-
-
-	/* */
-	$("#closeImageCarousel").click(function(){
-		$('.carousel-inner').empty();
-		$(".carousel-indicators").remove();
-		projectDescriptionCarousel();
-	});
-	
-
-	/* */
 	function addImgToCarousel(selectedArt){
+
 		function checkNameAttr(element) { 
 			return element.artType == selectedArt;
 		};
@@ -276,6 +257,77 @@ $(document).ready(function(){
 			caption.append(art[selected].title[i]);
 			item.append(caption);
 		}
-	};
 
+	};
+	// ----------------------------------------------------------------------------------------------------------------------------------
+
+
+	/*
+	If divs with class, "iconContainer", are clicked, the "galleryIconContainer" div shrinks and the "galleryDetailContainer" appears.
+	When the "galleryDetailContainer" appears, the carousel appears and the images are
+	*/
+	$(".iconContainer").click(function(){
+
+		var carouselElement = document.getElementById("carousel-example-generic");
+
+		if (!carouselElement){
+
+			buildCarousel();
+
+			var selectedIcon = this.getAttribute("name");
+
+			if (selectedIcon && selectedIcon != "undefined") {
+		        addImgToCarousel(selectedIcon);
+			} else {
+				alert("green");
+			};
+
+		} else {
+
+			$('.carousel-inner').empty();
+			$(".carousel-indicators").remove();
+
+			var selectedIcon = this.getAttribute("name");
+
+			if (selectedIcon && selectedIcon != "undefined") {
+		        addImgToCarousel(selectedIcon);
+			} else {
+				alert("green");
+			};
+			
+		}
+		
+	});
+
+
+	/* 
+	this click function removes the description section from the carousel and re-populates it with the respective images.
+	*/
+	$(".seeGallery").click(function(){
+
+		$('.carousel-inner').empty();
+		$(".carousel-indicators").remove();
+
+		var descriptionButton = this.getAttribute("name");
+
+		if (descriptionButton && descriptionButton != "undefined") {
+		    addImgToCarousel(descriptionButton);
+		} else {
+			alert("green");
+		};
+
+	});
+
+
+	/*
+	this click function empties the images from the carousel and re-populates it with the description sections 
+	*/
+	$("#closeImageCarousel").click(function(){
+
+		$('.carousel-inner').empty();
+		$(".carousel-indicators").remove();
+		projectDescriptionCarousel();
+
+	});
+	
 });

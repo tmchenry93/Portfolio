@@ -29,8 +29,6 @@
 
 .iconContainer:hover {
 	box-shadow: 7.5px 7.5px 2.5px #7f7cb8;
-	/* background-image: url("../assets/bg.jpg"); 
-	opacity: .2; */
 }
 
 .iconContainer > .iconTitle {
@@ -96,20 +94,21 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 50vh;
+	height: 80vh;
 }
 
 .descriptionTitle {
 	font-style: italic;
-	font-size: 40px;
-	color: -webkit-linear-gradient(-90deg, #7d91e4, #DE5D83); /* For Safari 5.1 to 6.0 */
-	color: -o-linear-gradient(-90deg, #7d91e4, #DE5D83); /* For Opera 11.1 to 12.0 */
-    color: -moz-linear-gradient(-90deg, #7d91e4, #DE5D83); /* For Firefox 3.6 to 15 */
-    color: linear-gradient(-90deg, #7d91e4, #DE5D83); /* Standard syntax */
+	font-size: 38px;
 }
 
 .seeGallery {
 	font-size: 27.5px;
+	color: #7f7cb8;
+}
+
+#closeImageCarousel{
+	font-size: 15px;
 	color: #7f7cb8;
 }
 
