@@ -165,7 +165,7 @@ $(document).ready(function(){
 		mainCaption.setAttribute("class", "carousel-caption");
 		mainItem.append(mainCaption);
 
-		document.getElementById("cc0").innerHTML = '<p class="descriptionTitle">' + art[0].artType + '</p> <p>' + art[0].description + '</p> <button class="seeGallery" name="' + art[0].artType + '">See ' + art[0].artType + ' Gallery</button>';
+		document.getElementById("cc0").innerHTML = '<p class="descriptionTitle">' + art[0].artType + '</p> <p>' + art[0].description + '</p> <button class="seeGallery" onclick="seeGalleryFunc()" name="' + art[0].artType + '">See ' + art[0].artType + ' Gallery</button>';
 
 		for (var i = 1; i < art.length; i++){	
 
@@ -178,7 +178,7 @@ $(document).ready(function(){
 			caption.setAttribute("class", "carousel-caption " + i);
 			item.append(caption);
 
-			document.getElementById("cc" + i).innerHTML = '<p class="descriptionTitle">' + art[i].artType + '</p> <p>' + art[i].description + '</p> <button class="seeGallery" name="' + art[i].artType + '">See ' + art[i].artType + ' Gallery</button>';
+			document.getElementById("cc" + i).innerHTML = '<p class="descriptionTitle">' + art[i].artType + '</p> <p>' + art[i].description + '</p> <button class="seeGallery" onclick="seeGalleryFunc()" name="' + art[i].artType + '">See ' + art[i].artType + ' Gallery</button>';
 		
 		}
 
@@ -307,26 +307,20 @@ $(document).ready(function(){
 	/* 
 	this click function removes the description section from the carousel and re-populates it with the respective images.
 	*/
-	function seeGalleryFunc(button){
+	function seeGalleryFunc(){
 
-		button.addEventListener("click", function (e) {
+  		$('.carousel-inner').empty();
+		$(".carousel-indicators").remove();
 
-  			$('.carousel-inner').empty();
-			$(".carousel-indicators").remove();
+		var descriptionButton = this.getAttribute("name");
 
-			var descriptionButton = this.getAttribute("name");
-
-			if (descriptionButton && descriptionButton != "undefined") {
-		    	addImgToCarousel(descriptionButton);
-			} else {
-				alert("green");
-			};
-
-		});
+		if (descriptionButton && descriptionButton != "undefined") {
+		    addImgToCarousel(descriptionButton);
+		} else {
+		    alert("green");
+		};
 
 	};
-
-	seeGallery.forEach(seeGalleryFunc);
 
 
 	/*
