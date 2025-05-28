@@ -58,9 +58,7 @@ $(document).ready(function(){
 	*/
 	var iconElement = document.querySelectorAll(".iconContainer");
 
-	var GDContainer = document.getElementById("galleryDetailContainer");
-
-	var GIContainer = document.getElementById("galleryIconContainer");
+	var seeGallery = document.querySelectorAll(".seeGallery");
 	// ----------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -76,7 +74,7 @@ $(document).ready(function(){
 	iconElement.forEach(writeIcon);
 	// ----------------------------------------------------------------------------------------------------------------------------------
 
-
+	
 	/* 
 	this function builds the carousel
 	*/
@@ -149,10 +147,12 @@ $(document).ready(function(){
 		orderedList.append(mainList);
 
 		for (var i = 1; i < art.length; i++){	
+
 			var list = document.createElement("li");
 			list.setAttribute("data-target", "#carousel-example-generic");
 			list.setAttribute("data-slide-to", "'" + i + "'");
 			orderedList.append(list);
+		
 		}
 
 		var mainItem = document.createElement("div");
@@ -168,6 +168,7 @@ $(document).ready(function(){
 		document.getElementById("cc0").innerHTML = '<p class="descriptionTitle">' + art[0].artType + '</p> <p>' + art[0].description + '</p> <button class="seeGallery" name="' + art[0].artType + '">See ' + art[0].artType + ' Gallery</button>';
 
 		for (var i = 1; i < art.length; i++){	
+
 			var item = document.createElement("div");
 			item.setAttribute("class", "descriptionItems item " + i);
 			carouselInner.append(item);
@@ -178,6 +179,7 @@ $(document).ready(function(){
 			item.append(caption);
 
 			document.getElementById("cc" + i).innerHTML = '<p class="descriptionTitle">' + art[i].artType + '</p> <p>' + art[i].description + '</p> <button class="seeGallery" name="' + art[i].artType + '">See ' + art[i].artType + ' Gallery</button>';
+		
 		}
 
 	};
@@ -197,7 +199,9 @@ $(document).ready(function(){
 	function addImgToCarousel(selectedArt){
 
 		function checkNameAttr(element) { 
+
 			return element.artType == selectedArt;
+
 		};
 
 		var selected = art.findIndex(checkNameAttr);
@@ -221,10 +225,12 @@ $(document).ready(function(){
 		orderedList.append(mainList);
 
 		for (var i = 1; i < art[selected].images.length; i++){	
+
 			var list = document.createElement("li");
 			list.setAttribute("data-target", "#carousel-example-generic");
 			list.setAttribute("data-slide-to", "'" + i + "'");
 			orderedList.append(list);
+
 		}
 
 		var mainItem = document.createElement("div");
@@ -243,6 +249,7 @@ $(document).ready(function(){
 		mainItem.append(mainCaption);
 
 		for (var i = 1; i < art[selected].images.length; i++){	
+
 			var item = document.createElement("div");
 			item.setAttribute("class", "item " + i);
 			carouselInner.append(item);
@@ -256,6 +263,7 @@ $(document).ready(function(){
 			caption.setAttribute("class", "carousel-caption " + i);
 			caption.append(art[selected].title[i]);
 			item.append(caption);
+
 		}
 
 	};
@@ -271,7 +279,6 @@ $(document).ready(function(){
 		var carouselElement = document.getElementById("carousel-example-generic");
 
 		if (!carouselElement){
-
 			buildCarousel();
 
 			var selectedIcon = this.getAttribute("name");
@@ -281,9 +288,7 @@ $(document).ready(function(){
 			} else {
 				alert("green");
 			};
-
 		} else {
-
 			$('.carousel-inner').empty();
 			$(".carousel-indicators").remove();
 
@@ -293,8 +298,7 @@ $(document).ready(function(){
 		        addImgToCarousel(selectedIcon);
 			} else {
 				alert("green");
-			};
-			
+			};	
 		}
 		
 	});
@@ -303,27 +307,35 @@ $(document).ready(function(){
 	/* 
 	this click function removes the description section from the carousel and re-populates it with the respective images.
 	*/
-	$(".seeGallery").click(function(){
+	function seeGalleryFunc(button){
 
-		$('.carousel-inner').empty();
-		$(".carousel-indicators").remove();
+		button.addEventListener("click", function (e) {
 
-		var descriptionButton = this.getAttribute("name");
+  			$('.carousel-inner').empty();
+			$(".carousel-indicators").remove();
 
-		if (descriptionButton && descriptionButton != "undefined") {
-		    addImgToCarousel(descriptionButton);
-		} else {
-			alert("green");
-		};
+			var descriptionButton = this.getAttribute("name");
 
-	});
+			if (descriptionButton && descriptionButton != "undefined") {
+		    	addImgToCarousel(descriptionButton);
+			} else {
+				alert("green");
+			};
+
+		});
+
+	};
+
+	seeGallery.forEach(seeGalleryFunc);
 
 
 	/*
 	this click function empties the images from the carousel and re-populates it with the description sections 
 	*/
-	$("#closeImageCarousel").click(function(){
+	var closeImgCar = document.getElementById("closeImageCarousel");
 
+	closeImgCar.addEventListener("click", function (e) {
+  		
 		$('.carousel-inner').empty();
 		$(".carousel-indicators").remove();
 		projectDescriptionCarousel();

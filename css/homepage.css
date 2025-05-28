@@ -24,14 +24,14 @@ body {
 #artistType {
     font-style: regular;
     font-weight: 500;
-    font-size: 6.5vw;
+    font-size: 4vw;
 	opacity: 40%;
 	text-align: left;
 }
 
 #artistName {
 	font-style: bold;
-	font-size: 9vw;
+	font-size: 10vw;
 	text-align: left;
 	opacity: .85;
 }

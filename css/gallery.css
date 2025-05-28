@@ -108,8 +108,11 @@
 }
 
 #closeImageCarousel{
-	font-size: 15px;
+	font-size: 27.5px;
 	color: #7f7cb8;
+	position: absolute;
+	right: 3vw;
+	z-index: 2;
 }
 
 .carousel-control.left, .carousel-control.right {

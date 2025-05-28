@@ -41,6 +41,8 @@ body {
 #aboutIcon {
     font-size: 20px;
     text-decoration: none;
+    position: relative;
+    top: 5vh;
 }
 
 #aboutIcon:hover {
@@ -51,6 +53,8 @@ body {
 #galleryIcon {
     font-size: 20px;
     text-decoration: none;
+    position: relative;
+    top: 5vh;
 }
 
 #galleryIcon:hover {
