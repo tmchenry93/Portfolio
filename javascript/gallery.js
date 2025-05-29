@@ -7,10 +7,9 @@ $(document).ready(function(){
 
 		{	
 
-			index: 0,
-			thumb: "", 
+			index: 0, 
 			images: ["Wishing\ Bed/DSC_0003.JPG", "Wishing\ Bed/DSC_0013.JPG", "Wishing\ Bed/Wishing\ Bed.JPG"],
-			title: [],
+			title: ["Wishing Bed - Interactive/ Conceptual/ Mixed Media - 2017"],
 			artType: "Wishing Bed", 
 			description: "is an interactive piece which directed the audience to write their dreams and aspirations on notecards.  Then, throw the back into the bed, as you do a coin into a well. This piece was showcased in the exhibition, <i>Mimosa Daydreams</i>. The exhibition's main purpose was to depict the experiences, departures and anxieties transitioning into adulthood.  <i>Wishing Bed</i> serves as a bittersweet microscope emphasizing how lonely we are as people and how much we need a genuine community."
 		
@@ -19,9 +18,8 @@ $(document).ready(function(){
 		{
 
 			index: 1,
-			thumb: "Abstract\ Paintings/01.jpg", 
 			images: ["Abstract\ Paintings/01.jpg", "Abstract\ Paintings/20230628_014835.jpg", "Abstract\ Paintings/brainChild.jpg", "Abstract\ Paintings/DSC_0037.JPG", "Abstract\ Paintings/Abstract\ Blue.jpg"],
-			title: [],
+			title: ["Illusions at Sea - Acrylic on Wood - 4ft by 3 ft - 2016", "Deluded Stars - Acrylic on Canvas - 4ft by 2ft - 2023", "Brainchild - Acrylic on Wood - 2016", "Abstract Pink - Acrylic on Wood Panel - 3ft by 1ft - 2019", "Abstract Blue - Acrylic on Canvas - 4ft by 2.5ft - 2020" ],
 			artType: "Abstract Paintings",
 			description: "is a collection of paintings throughout the years. My process is expressive and at random.  I randomly pick color palettes or use inspirations from color combinations I enjoy seeing out in the world (nature, fashion, architectural elements). I visually enjoy stripes so I try to incorporate line work anyway I can."
 		
@@ -30,9 +28,8 @@ $(document).ready(function(){
 		{
 
 			index: 2,
-			thumb: "",
 			images: ["Caravan/caravanv1.png"],
-			title: [],
+			title: ["Caravan v1 - Acrylic on Wood - 1.5ft by 1.5ft - 2022"],
 			artType: "Caravan",
 			description: "centers around the idea and the process of taking adventures and/ or risks in life. This exhibition’s inspiration stems from my first road trip through Kansas and the Romantic period’s ideology surrounding Nature and the Sublime. Through a Romantic lens, I think about what motivated me to take that first road trip and what pushes me to continue to seek out more risk and adventure. Has it benefited or harmed me in the grand scheme of things?Through a romantic lens, I reflected on my road trips out west and used reference photos from them. The wide open fields and never-ending views of road and land were the epitome of the Sublime. You won’t know how far the destination is or what the journey will be like."
 		
@@ -41,9 +38,8 @@ $(document).ready(function(){
 		{
 
 			index: 3,
-			thumb: "",
 			images: ["I\ Hate\ Pretty\ Things/IHPT1.JPG", "I\ Hate\ Pretty\ Things/IHPT2.JPG"],
-			title: [],
+			title: ["IHPT v1 - Acrylic on Canvas - 4ft by 5ft - 2017", "IHPT v2 - Acrylic on Canvas - 9in by 9in - 2018" ],
 			artType: "I Hate Pretty Things", 
 			description: "is an examination of the convoluted relationship I have with my fantasies. The pretty things are the catalysts to some of my fantasies and unique to my experience. They consume my thoughts and fuel my imagination. These pretty things serve as calculated distractions. In my works, I reference people I have met and formed some level of attractive toward, a crush or a muse. Pinks, blush tones and warm colors are intentionally used to portray a sense of intimacy, sexuality and the idealism behind rose-tinted glasses."
 		
@@ -175,7 +171,7 @@ $(document).ready(function(){
 		mainCaption.setAttribute("class", "carousel-caption");
 		mainItem.append(mainCaption);
 
-		document.getElementById("cc0").innerHTML = '<p class="descriptionTitle">' + art[0].artType + '</p> <p>' + art[0].description + '</p> <div class="seeGallery" onclick="seeGalleryFunc(event)" name="' + art[0].artType + '">See ' + art[0].artType + ' Gallery</div>';
+		document.getElementById("cc0").innerHTML = '<p class="descriptionTitle">' + art[0].artType + '</p> <p>' + art[0].description + '</p> <div class="seeGallery" onclick="seeGalleryFunc(event)" name="' + art[0].artType + '">Click to see ' + art[0].artType + ' Gallery</div>';
 
 		for (var i = 1; i < art.length; i++){	
 
@@ -188,7 +184,7 @@ $(document).ready(function(){
 			caption.setAttribute("class", "carousel-caption " + i);
 			item.append(caption);
 
-			document.getElementById("cc" + i).innerHTML = '<p class="descriptionTitle">' + art[i].artType + '</p> <p>' + art[i].description + '</p> <div class="seeGallery" onclick="seeGalleryFunc(event)" name="' + art[i].artType + '">See ' + art[i].artType + ' Gallery</div>';
+			document.getElementById("cc" + i).innerHTML = '<p class="descriptionTitle">' + art[i].artType + '</p> <p>' + art[i].description + '</p> <div class="seeGallery" onclick="seeGalleryFunc(event)" name="' + art[i].artType + '">Click to see ' + art[i].artType + ' Gallery</div>';
 		
 		}
 
