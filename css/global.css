@@ -29,13 +29,17 @@ body {
 #homepageIcon {
     font-style: bold;
     font-weight: 300;
-    font-size: 50px;
+    font-size: 4vh;
     text-decoration: none;
-    border: .75px solid white;
     display: flex;
-    justify-content: center;
     align-items: center;
-    height: 8vh;
+}
+
+#homepageIcon > span {
+    border: .5vh solid white;
+    margin: 1.5vh;
+    padding: 0 1vw;
+    border-radius: .25vw
 }
 
 #homepageIcon:hover {

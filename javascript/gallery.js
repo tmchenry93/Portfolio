@@ -165,7 +165,7 @@ $(document).ready(function(){
 		mainCaption.setAttribute("class", "carousel-caption");
 		mainItem.append(mainCaption);
 
-		document.getElementById("cc0").innerHTML = '<p class="descriptionTitle">' + art[0].artType + '</p> <p>' + art[0].description + '</p> <button class="seeGallery" onclick="seeGalleryFunc()" name="' + art[0].artType + '">See ' + art[0].artType + ' Gallery</button>';
+		document.getElementById("cc0").innerHTML = '<p class="descriptionTitle">' + art[0].artType + '</p> <p>' + art[0].description + '</p> <button class="seeGallery" onclick="seeGalleryFunc(event)" name="' + art[0].artType + '">See ' + art[0].artType + ' Gallery</button>';
 
 		for (var i = 1; i < art.length; i++){	
 
@@ -178,7 +178,7 @@ $(document).ready(function(){
 			caption.setAttribute("class", "carousel-caption " + i);
 			item.append(caption);
 
-			document.getElementById("cc" + i).innerHTML = '<p class="descriptionTitle">' + art[i].artType + '</p> <p>' + art[i].description + '</p> <button class="seeGallery" onclick="seeGalleryFunc()" name="' + art[i].artType + '">See ' + art[i].artType + ' Gallery</button>';
+			document.getElementById("cc" + i).innerHTML = '<p class="descriptionTitle">' + art[i].artType + '</p> <p>' + art[i].description + '</p> <button class="seeGallery" onclick="seeGalleryFunc(event)" name="' + art[i].artType + '">See ' + art[i].artType + ' Gallery</button>';
 		
 		}
 
@@ -197,6 +197,8 @@ $(document).ready(function(){
 	this function populates the 'carouselinner' div with images and creates a new 'carousel-indicators' div
 	*/
 	function addImgToCarousel(selectedArt){
+
+		$("#closeImageCarousel").show();
 
 		function checkNameAttr(element) { 
 
@@ -307,12 +309,13 @@ $(document).ready(function(){
 	/* 
 	this click function removes the description section from the carousel and re-populates it with the respective images.
 	*/
-	function seeGalleryFunc(){
+	window.seeGalleryFunc = function (event){
 
+		$("#closeImageCarousel").show();
   		$('.carousel-inner').empty();
 		$(".carousel-indicators").remove();
 
-		var descriptionButton = this.getAttribute("name");
+		var descriptionButton = event.currentTarget.getAttribute("name");
 
 		if (descriptionButton && descriptionButton != "undefined") {
 		    addImgToCarousel(descriptionButton);
@@ -329,7 +332,8 @@ $(document).ready(function(){
 	var closeImgCar = document.getElementById("closeImageCarousel");
 
 	closeImgCar.addEventListener("click", function (e) {
-  		
+
+  		$("#closeImageCarousel").hide();
 		$('.carousel-inner').empty();
 		$(".carousel-indicators").remove();
 		projectDescriptionCarousel();
