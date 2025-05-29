@@ -1,11 +1,11 @@
 /* ----------------------------------------------------------------- */
 /* this section is styling the thumb container and the actual thumbnails */
 #navbar {
-    border-bottom: 1.5px solid #180976;
+    border-bottom: 1px solid #180976;
 }
 
 #homepageIcon > span {
-    border: 3.5px solid #7d91e4;
+    border: .5vh solid #7d91e4;
 }
 
 .glyphicon-menu-right {
@@ -75,15 +75,17 @@
 
 .carousel-inner {
 	max-height: 80vh;  
+	margin: auto;
 }
 
 .carousel-inner > .item {
-	max-height: 80vh;  
+	height: 75vh;
+	margin: auto;  
 }
 
 .carousel-inner > .item img {
 	max-width: 55vw;
-	max-height: 65vh;  
+	max-height: 62.5vh;  
 	display: block;
 	margin-left: auto;
   	margin-right: auto;
@@ -92,6 +94,7 @@
 .carousel-caption {
 	color: #070422;
 	font-size: 2.75vh;
+	height: 7.5vh;
 }
 
 #cc0, #cc1, #cc2, #cc3 {

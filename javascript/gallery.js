@@ -94,32 +94,42 @@ $(document).ready(function(){
 		carousel.append(carouselInner);
 
 		var leftControl = document.createElement("a");
+		leftControl.setAttribute("id", "leftCarouselNav");
 		leftControl.setAttribute("class", "left carousel-control");
 		leftControl.setAttribute("href", "#carousel-example-generic");
 		leftControl.setAttribute("role", "button");
 		leftControl.setAttribute("data-slide", "prev");
 		carousel.append(leftControl);
 
+		document.getElementById("leftCarouselNav").innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" style="color:#180976;" width="30" height="30" fill="currentColor" aria-hidden="true" class="bi bi-chevron-compact-left glyphicon glyphicon-chevron-left" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M9.224 1.553a.5.5 0 0 1 .223.67L6.56 8l2.888 5.776a.5.5 0 1 1-.894.448l-3-6a.5.5 0 0 1 0-.448l3-6a.5.5 0 0 1 .67-.223"/></svg>';
+
+		/*
 		var shape = document.createElement("span");
 		shape.setAttribute("class", "glyphicon glyphicon-chevron-left");
 		shape.setAttribute("aria-hidden", "true");
 		leftControl.append(shape);
+		*/
 
 		var prev = document.createElement("span");
 		prev.setAttribute("class", "sr-only");
 		leftControl.append(prev);
 
 		var rightControl = document.createElement("a");
+		rightControl.setAttribute("id", "rightCarouselNav");
 		rightControl.setAttribute("class", "right carousel-control");
 		rightControl.setAttribute("href", "#carousel-example-generic");
 		rightControl.setAttribute("role", "button");
 		rightControl.setAttribute("data-slide", "next");
 		carousel.append(rightControl);
 
+		document.getElementById("rightCarouselNav").innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" style="color:#180976;" width="30" height="30" fill="currentColor" aria-hidden="true" class="bi bi-chevron-compact-right glyphicon glyphicon-chevron-right" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671"/></svg>'
+
+		/*
 		var rshape = document.createElement("span");
 		rshape.setAttribute("class", "glyphicon glyphicon-chevron-right");
 		rshape.setAttribute("aria-hidden", "true");
 		rightControl.append(rshape);
+		*/
 
 		var next = document.createElement("span");
 		next.setAttribute("class", "sr-only");
@@ -165,7 +175,7 @@ $(document).ready(function(){
 		mainCaption.setAttribute("class", "carousel-caption");
 		mainItem.append(mainCaption);
 
-		document.getElementById("cc0").innerHTML = '<p class="descriptionTitle">' + art[0].artType + '</p> <p>' + art[0].description + '</p> <button class="seeGallery" onclick="seeGalleryFunc(event)" name="' + art[0].artType + '">See ' + art[0].artType + ' Gallery</button>';
+		document.getElementById("cc0").innerHTML = '<p class="descriptionTitle">' + art[0].artType + '</p> <p>' + art[0].description + '</p> <div class="seeGallery" onclick="seeGalleryFunc(event)" name="' + art[0].artType + '">See ' + art[0].artType + ' Gallery</div>';
 
 		for (var i = 1; i < art.length; i++){	
 
@@ -178,7 +188,7 @@ $(document).ready(function(){
 			caption.setAttribute("class", "carousel-caption " + i);
 			item.append(caption);
 
-			document.getElementById("cc" + i).innerHTML = '<p class="descriptionTitle">' + art[i].artType + '</p> <p>' + art[i].description + '</p> <button class="seeGallery" onclick="seeGalleryFunc(event)" name="' + art[i].artType + '">See ' + art[i].artType + ' Gallery</button>';
+			document.getElementById("cc" + i).innerHTML = '<p class="descriptionTitle">' + art[i].artType + '</p> <p>' + art[i].description + '</p> <div class="seeGallery" onclick="seeGalleryFunc(event)" name="' + art[i].artType + '">See ' + art[i].artType + ' Gallery</div>';
 		
 		}
 
