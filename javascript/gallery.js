@@ -38,8 +38,8 @@ $(document).ready(function(){
 		{
 
 			index: 3,
-			images: ["I\ Hate\ Pretty\ Things/IHPT1.JPG", "I\ Hate\ Pretty\ Things/IHPT2.JPG"],
-			title: ["IHPT v1 - Acrylic on Canvas - 4ft by 5ft - 2017", "IHPT v2 - Acrylic on Canvas - 9in by 9in - 2018" ],
+			images: ["I\ Hate\ Pretty\ Things/IHPT1.JPG", "I\ Hate\ Pretty\ Things/IHPT2.JPG", "I\ Hate\ Pretty\ Things/ihpt4.jpg", "I\ Hate\ Pretty\ Things/ihpthings.jpg"],
+			title: ["IHPT v1 - Acrylic on Canvas - 4ft by 5ft - 2017", "IHPT v2 - Acrylic on Canvas - 9in by 9in - 2018", "IHPT v3 - Acrylic on Canvas - 3ft by 3ft - 2022", "IHPT: Lust - Mixed Media - 2019"],
 			artType: "I Hate Pretty Things", 
 			description: "is an examination of the convoluted relationship I have with my fantasies. The pretty things are the catalysts to some of my fantasies and unique to my experience. They consume my thoughts and fuel my imagination. These pretty things serve as calculated distractions. In my works, I reference people I have met and formed some level of attractive toward, a crush or a muse. Pinks, blush tones and warm colors are intentionally used to portray a sense of intimacy, sexuality and the idealism behind rose-tinted glasses."
 		
