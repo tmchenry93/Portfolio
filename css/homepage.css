@@ -17,6 +17,19 @@ body {
     background: linear-gradient(-90deg, #7d91e4, #DE5D83); /* Standard syntax */
 }
 
+.scribbleBG {
+	background-image: url("bg.png");
+    width: 300%;
+    height: auto;
+    -webkit-mask-image: -webkit-gradient(linear, left top, right bottom, from(rgba(0, 0, 0, .75)), to(rgba(0, 0, 0, 0)));
+    mask-image: linear-gradient( to bottom, rgba(0,0,0,.75), rgba(0,0,0,0));
+    z-index: 0;
+} 
+
+.scribbleBG {
+    background-size: cover;
+} 
+
 #mainContainer {
 	z-index: 1;
 }
