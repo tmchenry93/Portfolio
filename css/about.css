@@ -24,10 +24,14 @@ body {
 	height: auto;
 	border: .5vw solid #070422;
 
-#information {
-    font-size: 2.5vh;
+#socialMedia {
+    font-size: 3.5vh;
 }
 
+#emailMedia {
+    font-size: 3.5vh;
+}
+	
 @media (max-width: 991.98px) {
     #section1Container {
         margin: 0;
