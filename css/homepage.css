@@ -18,17 +18,16 @@ body {
 }
 
 .scribbleBG {
-	background-image: url("bg.png");
-    width: 300%;
+    width: 100%;
     height: auto;
-    -webkit-mask-image: -webkit-gradient(linear, left top, right bottom, from(rgba(0, 0, 0, .75)), to(rgba(0, 0, 0, 0)));
-    mask-image: linear-gradient( to bottom, rgba(0,0,0,.75), rgba(0,0,0,0));
+    -webkit-mask-image: -webkit-gradient(linear, right bottom, left top, from(rgba(0, 0, 0, .15)), to(rgba(0, 0, 0, 0)));
+    mask-image: linear-gradient( to top, rgba(0,0,0,.15), rgba(0,0,0,0));
     z-index: 0;
 } 
 
-.scribbleBG {
-    background-size: cover;
-} 
+#navbar {
+	z-index: 1;
+}
 
 #mainContainer {
 	z-index: 1;
