@@ -19,6 +19,11 @@ body {
     font-size: 2.5vh;
 }
 
+#photoImg {
+	width: 7.5vh;
+	height: auto;
+	border: .5vw solid #070422;
+
 #information {
     font-size: 2.5vh;
 }
