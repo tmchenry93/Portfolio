@@ -17,22 +17,6 @@ body {
     background: linear-gradient(-90deg, #7d91e4, #DE5D83); /* Standard syntax */
 }
 
-.scribbleBG {
-    width: 100%;
-    height: auto;
-    -webkit-mask-image: -webkit-gradient(linear, right bottom, left top, from(rgba(0, 0, 0, .25)), to(rgba(0, 0, 0, 0)));
-    mask-image: linear-gradient( to top, rgba(0,0,0,.25), rgba(0,0,0,0));
-    z-index: 0;
-} 
-
-img {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100vw;
-	height: 100vh;
-}
-
 #navbar {
 	z-index: 1;
 }
@@ -81,4 +65,10 @@ img {
 		color: gray;
 	}
 
-
+@media (max-width: 991.98px) {
+	img {
+		width: 100vw;
+		height: auto;
+		
+	}
+}

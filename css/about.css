@@ -9,7 +9,7 @@ body {
     margin: 2% 0 0 0;
     z-index: 1;
     color: #070422;
-    font-size: 12.5vh;
+    font-size: 10vh;
 }
 
 #section2Container {
@@ -20,16 +20,17 @@ body {
 }
 
 #photoImg {
-	width: 25vh;
+	width: 40vh;
 	height: auto;
 	border: .5vw solid #070422;
+}
 
 #socialMedia {
-    font-size: 3.5vh;
+    font-size: 3vh;
 }
 
 #emailMedia {
-    font-size: 3.5vh;
+    font-size: 3vh;
 }
 	
 @media (max-width: 991.98px) {
@@ -39,5 +40,7 @@ body {
 
     #section2Container {
         margin: 0;
+        padding: 3vh;
+        border-top: 1px solid #070422;
     }
 }
