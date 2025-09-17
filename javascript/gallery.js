@@ -11,7 +11,7 @@ $(document).ready(function(){
 			images: ["Wishing\ Bed/DSC_0003.JPG", "Wishing\ Bed/DSC_0013.JPG", "Wishing\ Bed/Wishing\ Bed.JPG"],
 			title: ["Wishing Bed - Interactive/ Conceptual/ Mixed Media - 2017", "Wishing Bed - Interactive/ Conceptual/ Mixed Media - 2017", "Wishing Bed - Interactive/ Conceptual/ Mixed Media - 2017"],
 			artType: "Wishing Bed", 
-			description: "is an interactive piece which directed the audience to write their dreams and aspirations on notecards.  Then, throw the back into the bed, as you do a coin into a well. This piece was showcased in the exhibition, <i>Mimosa Daydreams</i>. The exhibition's main purpose was to depict the experiences, departures and anxieties transitioning into adulthood.  <i>Wishing Bed</i> serves as a bittersweet microscope emphasizing how lonely we are as people and how much we need a genuine community."
+			description: "is an interactive piece which directed the audience to write their dreams and aspirations on notecards.  Then, throw them back in the bed, as you throw a coin in a well. This piece was showcased in the exhibition, <i>Mimosa Daydreams</i>. The exhibition's main purpose was to depict the experiences, departures and anxieties transitioning into adulthood.  <i>Wishing Bed</i> serves as a bittersweet microscope emphasizing how lonely we are as people and how much we need a genuine community."
 		
 		},
 

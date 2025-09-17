@@ -40,7 +40,21 @@ body {
 	opacity: .85;
 }
 
-	#description {
+#artistName, #artistType{
+    opacity: 0; /* Start completely transparent */
+    animation: fadeIn 3s forwards; /* Apply the animation */
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: .8;
+    }
+}
+
+#description {
 		z-index: 2;
 		text-align: left;
 		position: relative;

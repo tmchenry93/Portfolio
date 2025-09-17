@@ -4,10 +4,6 @@
     border-bottom: 1px solid #180976;
 }
 
-#homepageIcon > span {
-    border: .5vh solid #7d91e4;
-}
-
 .glyphicon-menu-right {
 	display: inline-block;
 	position: absolute;
@@ -32,7 +28,8 @@
 }
 
 .iconContainer:hover {
-	box-shadow: 7.5px 7.5px 2.5px #7f7cb8;
+	/*box-shadow: 7.5px 7.5px 2.5px #7f7cb8;*/
+	border: 2.5px solid #000;
 }
 
 .iconContainer > .iconTitle {

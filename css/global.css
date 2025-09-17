@@ -34,10 +34,8 @@ body {
 }
 
 #homepageIcon > span {
-    border: .5vh solid white;
     margin: 1.5vh;
     padding: 0 1vw;
-    border-radius: .25vw
 }
 
 #homepageIcon:hover {
