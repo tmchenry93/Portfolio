@@ -21,7 +21,7 @@ body {
 #navbar {
     top: 0;
     border-bottom: 1px solid white;
-    height: 10vh;
+    height: 7.5vh;
 }
 
 #homepageIcon {
@@ -29,8 +29,7 @@ body {
     font-weight: 300;
     font-size: 4vh;
     text-decoration: none;
-    display: flex;
-    align-items: center;
+    top: 2.5vh;
 }
 
 #homepageIcon > span {
@@ -47,7 +46,7 @@ body {
     font-size: 2.75vh;
     text-decoration: none;
     position: relative;
-    top: 5vh;
+    top: 3.75vh;
 }
 
 #aboutIcon:hover {
@@ -59,7 +58,7 @@ body {
     font-size: 2.75vh;
     text-decoration: none;
     position: relative;
-    top: 5vh;
+    top: 3.75vh;
 }
 
 #galleryIcon:hover {
@@ -79,6 +78,12 @@ body {
 
 .mainContainer {
     z-index: 1;
+}
+
+.paragraph {
+    font-family: "Zain", sans-serif;
+    font-weight: 300;
+    font-style: normal;
 }
 
 #artLink {

@@ -171,7 +171,7 @@ $(document).ready(function(){
 		mainCaption.setAttribute("class", "carousel-caption");
 		mainItem.append(mainCaption);
 
-		document.getElementById("cc0").innerHTML = '<p class="descriptionTitle">' + art[0].artType + '</p> <p>' + art[0].description + '</p> <div class="seeGallery" onclick="seeGalleryFunc(event)" name="' + art[0].artType + '">Click to see ' + art[0].artType + ' Gallery</div>';
+		document.getElementById("cc0").innerHTML = '<p class="descriptionTitle paragraph">' + art[0].artType + '</p> <p>' + art[0].description + '</p> <div class="seeGallery" onclick="seeGalleryFunc(event)" name="' + art[0].artType + '">Click to see ' + art[0].artType + ' Gallery</div>';
 
 		for (var i = 1; i < art.length; i++){	
 
@@ -184,7 +184,7 @@ $(document).ready(function(){
 			caption.setAttribute("class", "carousel-caption " + i);
 			item.append(caption);
 
-			document.getElementById("cc" + i).innerHTML = '<p class="descriptionTitle">' + art[i].artType + '</p> <p>' + art[i].description + '</p> <div class="seeGallery" onclick="seeGalleryFunc(event)" name="' + art[i].artType + '">Click to see ' + art[i].artType + ' Gallery</div>';
+			document.getElementById("cc" + i).innerHTML = '<p class="descriptionTitle paragraph">' + art[i].artType + '</p> <p>' + art[i].description + '</p> <div class="seeGallery" onclick="seeGalleryFunc(event)" name="' + art[i].artType + '">Click to see ' + art[i].artType + ' Gallery</div>';
 		
 		}
 
