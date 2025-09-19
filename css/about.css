@@ -36,12 +36,16 @@
 	
 @media (max-width: 991.98px) {
     #section1Container {
-        margin: 0;
+        margin: 5% 0 0 0;
     }
 
     #section2Container {
         margin: 0;
         padding: 3vh;
-        border-top: 1px solid #070422;
+    }
+
+    #titleName {
+        color: #180976;
+        font-size: 6.5vh
     }
 }
