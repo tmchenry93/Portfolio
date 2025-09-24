@@ -118,14 +118,7 @@ $(document).ready(function(){
 		rightControl.setAttribute("data-slide", "next");
 		carousel.append(rightControl);
 
-		document.getElementById("rightCarouselNav").innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" style="color:#180976;" width="30" height="30" fill="currentColor" aria-hidden="true" class="bi bi-chevron-compact-right glyphicon glyphicon-chevron-right" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671"/></svg>'
-
-		/*
-		var rshape = document.createElement("span");
-		rshape.setAttribute("class", "glyphicon glyphicon-chevron-right");
-		rshape.setAttribute("aria-hidden", "true");
-		rightControl.append(rshape);
-		*/
+		document.getElementById("rightCarouselNav").innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" style="color:#180976;" width="30" height="30" fill="currentColor" aria-hidden="true" class="bi bi-chevron-compact-right glyphicon glyphicon-chevron-right" viewBox="0 0 22 22"><path fill-rule="evenodd" d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671"/></svg>'
 
 		var next = document.createElement("span");
 		next.setAttribute("class", "sr-only");
@@ -139,27 +132,7 @@ $(document).ready(function(){
 	*/
 	function projectDescriptionCarousel(){
 		
-		var carousel = document.getElementById("carousel-example-generic");
 		var carouselInner = document.getElementById("carouselinner");
-
-		var orderedList = document.createElement("ol");
-		orderedList.setAttribute("class", "carousel-indicators");
-		carousel.append(orderedList);
-
-		var mainList = document.createElement("li");
-		mainList.setAttribute("data-target", "#carousel-example-generic");
-		mainList.setAttribute("data-slide-to", "0");
-		mainList.setAttribute("class", "active");
-		orderedList.append(mainList);
-
-		for (var i = 1; i < art.length; i++){	
-
-			var list = document.createElement("li");
-			list.setAttribute("data-target", "#carousel-example-generic");
-			list.setAttribute("data-slide-to", "'" + i + "'");
-			orderedList.append(list);
-		
-		}
 
 		var mainItem = document.createElement("div");
 		mainItem.setAttribute("id", "mainitem");
@@ -219,18 +192,7 @@ $(document).ready(function(){
 			return "";
 		};
 
-		var carousel = document.getElementById("carousel-example-generic");
 		var carouselInner = document.getElementById("carouselinner");
-
-		var orderedList = document.createElement("ol");
-		orderedList.setAttribute("class", "carousel-indicators");
-		carousel.append(orderedList);
-
-		var mainList = document.createElement("li");
-		mainList.setAttribute("data-target", "#carousel-example-generic");
-		mainList.setAttribute("data-slide-to", "0");
-		mainList.setAttribute("class", "active");
-		orderedList.append(mainList);
 
 		for (var i = 1; i < art[selected].images.length; i++){	
 
@@ -298,7 +260,6 @@ $(document).ready(function(){
 			};
 		} else {
 			$('.carousel-inner').empty();
-			$(".carousel-indicators").remove();
 
 			var selectedIcon = this.getAttribute("name");
 
@@ -341,7 +302,6 @@ $(document).ready(function(){
 
   		$("#closeImageCarousel").hide();
 		$('.carousel-inner').empty();
-		$(".carousel-indicators").remove();
 		projectDescriptionCarousel();
 
 	});
