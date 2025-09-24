@@ -27,33 +27,39 @@ body {
 #photoImg {
 	width: 40vh;
 	height: auto;
-	border: .5vw solid #070422;
+	border: .25vw solid #070422;
+}
+
+#socialMedia {
+    margin: 0 1vw 0;
+}
+
+#emailMedia {
+    margin: 0 1vw 0;
 }
 
 #email {
+    display: flex;
+    align-items: center;
     height: 5vh;
 }
 
 #instagram {
+    display: flex;
+    align-items: center;
     height: 5vh;
-}
-
-#socialMedia {
-    font-size: 3vh;
-}
-
-#emailMedia {
-    font-size: 3vh;
+    margin: 2.5% 0 0 0;
 }
 	
 @media (max-width: 991.98px) {
     #section1Container {
-        margin: 5% 0 0 0;
+        margin: 5% 0 2.5% 0;
+        padding: 0 0 0 7.5vh;
     }
 
     #section2Container {
-        margin: 0;
-        padding: 3vh;
+        margin: 2.5% 0;
+        padding: 0 7.5vh;
     }
 
     #titleName {
@@ -61,11 +67,11 @@ body {
         font-size: 6.5vh
     }
 
-    #email {
-        height: 5vh;
+    #socialMedia {
+        margin: 0 2vw 0;
     }
 
-    #instagram {
-        height: 5vh;
+    #emailMedia {
+        margin: 0 2vw 0;
     }
 }
