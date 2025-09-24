@@ -97,14 +97,7 @@ $(document).ready(function(){
 		leftControl.setAttribute("data-slide", "prev");
 		carousel.append(leftControl);
 
-		document.getElementById("leftCarouselNav").innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" style="color:#180976;" width="30" height="30" fill="currentColor" aria-hidden="true" class="bi bi-chevron-compact-left glyphicon glyphicon-chevron-left" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M9.224 1.553a.5.5 0 0 1 .223.67L6.56 8l2.888 5.776a.5.5 0 1 1-.894.448l-3-6a.5.5 0 0 1 0-.448l3-6a.5.5 0 0 1 .67-.223"/></svg>';
-
-		/*
-		var shape = document.createElement("span");
-		shape.setAttribute("class", "glyphicon glyphicon-chevron-left");
-		shape.setAttribute("aria-hidden", "true");
-		leftControl.append(shape);
-		*/
+		document.getElementById("leftCarouselNav").innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" style="color:#180976;" width="50" height="50" fill="currentColor" aria-hidden="true" class="bi bi-chevron-compact-left glyphicon glyphicon-chevron-left" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.224 1.553a.5.5 0 0 1 .223.67L6.56 8l2.888 5.776a.5.5 0 1 1-.894.448l-3-6a.5.5 0 0 1 0-.448l3-6a.5.5 0 0 1 .67-.223"/></svg>';
 
 		var prev = document.createElement("span");
 		prev.setAttribute("class", "sr-only");
@@ -118,7 +111,7 @@ $(document).ready(function(){
 		rightControl.setAttribute("data-slide", "next");
 		carousel.append(rightControl);
 
-		document.getElementById("rightCarouselNav").innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" style="color:#180976;" width="30" height="30" fill="currentColor" aria-hidden="true" class="bi bi-chevron-compact-right glyphicon glyphicon-chevron-right" viewBox="0 0 22 22"><path fill-rule="evenodd" d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671"/></svg>'
+		document.getElementById("rightCarouselNav").innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" style="color:#180976;" width="50" height="50" fill="currentColor" aria-hidden="true" class="bi bi-chevron-compact-right glyphicon glyphicon-chevron-right" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671"/></svg>'
 
 		var next = document.createElement("span");
 		next.setAttribute("class", "sr-only");
@@ -194,15 +187,6 @@ $(document).ready(function(){
 
 		var carouselInner = document.getElementById("carouselinner");
 
-		for (var i = 1; i < art[selected].images.length; i++){	
-
-			var list = document.createElement("li");
-			list.setAttribute("data-target", "#carousel-example-generic");
-			list.setAttribute("data-slide-to", "'" + i + "'");
-			orderedList.append(list);
-
-		}
-
 		var mainItem = document.createElement("div");
 		mainItem.setAttribute("id", "mainitem");
 		mainItem.setAttribute("class", "item active");
@@ -260,6 +244,7 @@ $(document).ready(function(){
 			};
 		} else {
 			$('.carousel-inner').empty();
+			$(".carousel-indicators").remove();
 
 			var selectedIcon = this.getAttribute("name");
 
@@ -280,7 +265,6 @@ $(document).ready(function(){
 
 		$("#closeImageCarousel").show();
   		$('.carousel-inner').empty();
-		$(".carousel-indicators").remove();
 
 		var descriptionButton = event.currentTarget.getAttribute("name");
 
