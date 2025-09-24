@@ -74,4 +74,18 @@ body {
     #emailMedia {
         margin: 0 2vw 0;
     }
+
+    #email {
+        font-size: 5vw;
+    }
+
+    #instagram {
+        font-size: 5vw;
+    }
+
+    #photoImg {
+	    width: 50vw;
+	    height: auto;
+	    border: .25vw solid #070422;
+    }
 }

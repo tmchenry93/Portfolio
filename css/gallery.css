@@ -193,7 +193,7 @@
 		font-size: 2.25vh;
 	}
 
-	#cc0, #cc1, #cc2, #cc3 {
+	#cc0, #cc1, #cc2, #cc3, .img-fluid {
 		position: absolute;  
 		top: 0;  
 		bottom: 0;  
