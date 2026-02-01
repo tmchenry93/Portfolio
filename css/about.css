@@ -32,10 +32,12 @@ body {
 
 #socialMedia {
     margin: 0 1vw 0;
+	font-size: 3vh;
 }
 
 #emailMedia {
     margin: 0 1vw 0;
+	font-size: 3vh;
 }
 
 #email {
