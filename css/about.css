@@ -52,6 +52,10 @@ body {
     height: 5vh;
     margin: 2.5% 0 0 0;
 }
+
+#resumeButton {
+	font-size: 3vh;
+}
 	
 @media (max-width: 991.98px) {
     #section1Container {
