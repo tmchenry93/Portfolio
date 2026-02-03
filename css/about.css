@@ -55,6 +55,8 @@ body {
 
 #resumeButton {
 	font-size: 3vh;
+	background-color: #dbddec;
+	color: #070422;
 }
 	
 @media (max-width: 991.98px) {
@@ -87,6 +89,10 @@ body {
 
     #instagram {
         font-size: 5vw;
+    }
+
+	#resumeButton {
+	   font-size: 5vw;
     }
 
     #photoImg {
