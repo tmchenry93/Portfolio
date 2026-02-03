@@ -85,4 +85,19 @@ body {
 		height: auto;
 		
 	}
+
+	#artistType {
+       font-style: regular;
+       font-weight: 500;
+       font-size: 6vw;
+	   opacity: 40%;
+	   text-align: left;
+    }
+
+    #artistName {
+	   font-style: bold;
+	   font-size: 22.5vw;
+	   text-align: left;
+	   opacity: .85;
+    }
 }
