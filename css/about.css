@@ -58,6 +58,10 @@ body {
 	background-color: #dbddec;
 	color: #070422;
 }
+
+#cvContainer{
+	display: none;
+}
 	
 @media (max-width: 991.98px) {
     #section1Container {
@@ -100,8 +104,4 @@ body {
 	    height: auto;
 	    border: .25vw solid #070422;
     }
-
-	#cvContainer{
-		display: none;
-	}
 }
