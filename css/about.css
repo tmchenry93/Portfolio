@@ -100,4 +100,8 @@ body {
 	    height: auto;
 	    border: .25vw solid #070422;
     }
+
+	#cvContainer{
+		display: none;
+	}
 }
