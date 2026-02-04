@@ -1,13 +1,13 @@
 $(document).ready(function(){
      // this button makes the resume div appear
      // this is a toggle class on the div
+	var buttonText = document.getElementById("resumeButton").innerText;
      $("#resumeButton").click(function(){
-		 document.getElementById("resumeButton").innerText;
-	     $("#cvContainer").toggle(500);
-		 document.getElementById("resumeButton").innerText = "Hide Resume";
 		 if (buttonText = "Hide Resume"){
-			 $("#cvContainer").hide();
+			 $("#cvContainer").toggle(500);
 			 buttonText = "Display Resume";
 		 };
+	     $("#cvContainer").toggle(500);
+		 buttonText= "Hide Resume";
 	 });
 });
