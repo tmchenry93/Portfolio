@@ -4,7 +4,6 @@ $(document).ready(function(){
 	var buttonText = document.getElementById("resumeButton").innerText;
      $("#resumeButton").click(function(){
 		 if (buttonText = "Hide Resume"){
-			 $("#cvContainer").toggle(500);
 			 buttonText = "Display Resume";
 		 };
 	     $("#cvContainer").toggle(500);
