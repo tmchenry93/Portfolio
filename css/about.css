@@ -67,12 +67,12 @@ body {
 	
 @media (max-width: 991.98px) {
     #section1Container {
-        margin: 5% 0 2.5% 0;
+        margin: 5% 0 0 0;
         padding: 0 0 0 7.5vh;
     }
 
     #section2Container {
-        margin: 2.5% 0;
+        margin: 3% 0;
         padding: 0 7.5vh;
     }
 
@@ -103,6 +103,8 @@ body {
 
 	#cvContainer {
 	   font-size: 5vw;
+	   margin-left: 10%;
+	   margin-right: 10%;
     }
 
     #photoImg {
