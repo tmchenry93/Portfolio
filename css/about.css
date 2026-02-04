@@ -26,8 +26,9 @@ body {
 
 #cvContainer {
 	font-size: 2.5vh;
-	margin-left: 5%;
-	margin-right: 5%;
+	padding-left: 7.5%;
+	padding-right: 7.5%;
+	border-bottom: 1px solid #180976;
 }
 
 #photoImg {
@@ -60,9 +61,11 @@ body {
 }
 
 #resumeButton {
+	height: 5vh;
 	font-size: 3vh;
 	background-color: #dbddec;
 	color: #070422;
+	border-radius: 25%;
 }
 	
 @media (max-width: 991.98px) {
