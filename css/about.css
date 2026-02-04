@@ -65,7 +65,7 @@ body {
 	font-size: 3vh;
 	background-color: #dbddec;
 	color: #070422;
-	border-radius: 25%;
+	border-radius: 35%;
 }
 	
 @media (max-width: 991.98px) {
@@ -76,7 +76,7 @@ body {
 
     #section2Container {
         margin: 3% 0;
-        padding: 2.5vh 7.5vh 0 0;
+        padding: 2.5vh 7.5vh;
     }
 
     #titleName {
@@ -107,7 +107,7 @@ body {
 
 	#cvContainer {
 	   font-size: 5vw;
-	   padding: 10%;
+	   padding: 0 7.5% 10% 7.5%;
 	   border-bottom: 1px solid #180976;
     }
 
