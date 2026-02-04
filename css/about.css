@@ -60,23 +60,23 @@ body {
 }
 
 #resumeButton {
-	height: 5vh;
-	width: 20vh;
-	font-size: 3vh;
+	height: 6vh;
+	width: 25vh;
+	font-size: 2.5vh;
 	background-color: #dbddec;
 	color: #070422;
-	border-radius: 35%;
+	border-radius: 50%;
 }
 	
 @media (max-width: 991.98px) {
     #section1Container {
         margin: 5% 0 0 0;
-        padding: 0 0 0 7.5vh;
+        padding: 0 0 0 5vh;
     }
 
     #section2Container {
         margin: 3% 0;
-        padding: 2.5vh 7.5vh;
+        padding: 2.5vh 5vh;
     }
 
     #titleName {
@@ -101,15 +101,19 @@ body {
     }
 
 	#resumeButton {
-	   font-size: 5vw;
-	   width: 25vw;
+	   font-size: 4vw;
+	   width: 33vw;
     }
 
 	#cvContainer {
 	   font-size: 5vw;
-	   padding: 0 7.5% 10% 7.5%;
+	   padding: 0 5% 10% 5%;
 	   border-bottom: 1px solid #180976;
     }
+
+	.cvTitle {
+		font-size: 5.5vw
+	}
 
     #photoImg {
 	    width: 50vw;
