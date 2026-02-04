@@ -11,6 +11,7 @@ body {
     z-index: 1;
     color: #070422;
     font-size: 10vh;
+	height: 92.5vh;
 }
 
 #titleName {
@@ -22,6 +23,7 @@ body {
     z-index: 1;
     color: #070422;
     font-size: 2.5vh;
+	height: 92.5vh;
 }
 
 #cvContainer {
