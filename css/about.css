@@ -86,10 +86,12 @@ body {
 
     #socialMedia {
         margin: 0 2vw 0;
+		height: 3.5vh;
     }
 
     #emailMedia {
         margin: 0 2vw 0;
+		height: 3.5vh;
     }
 
     #email {
