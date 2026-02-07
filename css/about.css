@@ -77,7 +77,7 @@ body {
 	background-color: #dbddec;
 	color: #180976;
 	border-color: #180976;
-	border-radius: 35%;
+	border-radius: 50%;
 }
 	
 @media (max-width: 991.98px) {
@@ -93,7 +93,7 @@ body {
 
     #titleName {
         color: #180976;
-        font-size: 6.5vh
+        font-size: 6vh
     }
 
     #socialMedia {
