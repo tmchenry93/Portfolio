@@ -6,10 +6,6 @@ body {
     border-bottom: 1px solid #180976;
 }
 
-#information {
-	height: 20vh;
-}
-
 #section1Container {
     margin: 2vh 0 0 0;
     z-index: 1;
